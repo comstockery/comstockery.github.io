@@ -15,8 +15,11 @@ donutbox <- ggplot(data = tracks,
                                    order = is.ordered(trackname), decreasing = FALSE), 
                        y = length)) + 
   geom_bar(stat = "identity") +
+  scale_y_discrete(name = "test") +
   coord_flip() +
-  theme_minimal()
+  
+  theme_minimal() +
+  theme(axis.title.y = element_blank()) 
 
 print(donutbox)                   
 
