@@ -8,9 +8,8 @@ library(googlesheets4)
 # Read in data
 tracks <- read_csv('donutstracks.csv', show_col_types = FALSE)
 
+# Set up the whole album's donut chart
 
-
-# Set up the whole album donut chart
 # Compute percentages and cumulative percentages
 tracks$fraction = tracks$length / sum(tracks$length)
 # ymax is the right (clockwise) edge of each slice
@@ -18,7 +17,7 @@ tracks$ymax = cumsum(tracks$fraction)
 # ymin is the left (clockwise) edge of each slice
 tracks$ymin = c(0, head(tracks$ymax, n=-1))
 
-# Make the plot
+# Make the donut
 donutrecord <- ggplot(tracks, aes(ymax=ymax, ymin=ymin, 
                                xmax=5.75, xmin=1.875, # diameters of recording spiral
                                fill = BPM)) + 
