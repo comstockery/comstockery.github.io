@@ -1,14 +1,12 @@
 
-# 
+# Load libraries
 library(tidyverse)
 library(svglite)
 library(ggtext)
 library(googlesheets4)
 
-
-
-tracks <- read_csv('donutstracks.csv',
-                   show_col_types = FALSE)
+# Read in data
+tracks <- read_csv('donutstracks.csv', show_col_types = FALSE)
 
 
 
@@ -20,10 +18,11 @@ tracks$ymax = cumsum(tracks$fraction)
 # ymin is the left (clockwise) edge of each slice
 tracks$ymin = c(0, head(tracks$ymax, n=-1))
 
-# Make the plot. 
+# Make the plot
 donutrecord <- ggplot(tracks, aes(ymax=ymax, ymin=ymin, 
-                               xmax=5.75, xmin=1.5)) + #outermost edge and center hole radius
-  geom_rect(fill = NA, color = 'gray80') + # rectangles that will be converted to 4-edged slices
+                               xmax=5.75, xmin=1.875, # diameters of recording spiral
+                               fill = BPM)) + 
+  geom_rect(fill = NA, color = 'gray66') + # rectangles that will be converted to 4-edged slices
   coord_polar(theta='y') + # converts rectangles to radial slices
   xlim(c(0, 6)) + # radius of a 12" record
   theme_void() +
