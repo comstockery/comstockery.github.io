@@ -21,67 +21,10 @@
     <p>I plan on using this site to build out a data visualization based on J. Dilla's <strong>Donuts</strong>.</p>
   
   
+  <div><img src="1.svg"></div>
   
-  
 
 
-
-    <script type="module">
-        import * as Plot from "https://cdn.skypack.dev/@observablehq/plot@0.6";
-        document.body.append(Plot.plot({
-        width,
-        y: {tickFormat: "s"},
-        color: {scheme: "spectral", domain: ages},
-        marks: [
-                 Plot.barY(stateages, {
-                 x: "state",
-                 y: "population",
-                 fill: "age",
-                 sort: {x: "y", reverse: true}
-            }),
-    Plot.ruleY([0])
-         ]
-        }));
-
-</script>
-
-
-<div class='container'>
-  <div class='title'>Distribution of the weight of Olympic athletes</div>
-  <figure id='graphic'></figure>
-</div>
-
-
-<script>
-d3.csv('https://static.observableusercontent.com/files/31ca24545a0603dce099d10ee89ee5ae72d29fa55e8fc7c9ffb5ded87ac83060d80f1d9e21f4ae8eb04c1e8940b7287d179fe8060d887fb1f055f430e210007c?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27athletes.csv', d3.autoType).then(data => {
-  var options = {
-    height: 396,
-    width: 640,
-    x: {
-      label: "Weight (kg) →"
-    },
-    y: {
-      grid: true,
-      label: "↑ Frequency"
-    },
-    caption: "Source: flother.is/blog/olympic-games-data",
-    facet: {
-      data: data,
-      y: "sex"
-    },
-    marks: [
-      Plot.rectY(data, Plot.binX({
-        y: "count"
-      }, {
-        x: "weight",
-        fill: "sex"
-      })),
-      Plot.ruleY([0])
-    ]
-  };
-  document.getElementById('graphic').appendChild(Plot.plot(options));
-});
-</script>
 
 </body>
 </html>
