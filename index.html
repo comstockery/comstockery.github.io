@@ -13,16 +13,29 @@ body {
         font-size: 24px;
         }
         
-.album {
-        position: relative;
-        text-align: center;
+span {
+        font-weight: bold;
+        margin: 0;
         }
         
-.albumlabel {
+#album {
+        position: relative;
+        text-align: center;
+        margin: 0;
+        }
+        
+#albumlabel {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        font-size: 1.5em;
+        }
+        
+#albumlegend {
+        text-align: center;
+        margin: 0;
+        font-size: 1.2em;
         }
   
   </style>
@@ -37,21 +50,29 @@ body {
     <p>I plan on using this site to build out a data visualization based on J Dilla's <strong>Donuts</strong>.</p>
   
 
-  <div class = "album">
+  <div id = "album">
     <img src="donutrecord.svg">
-    <div class = "albumlabel">
+    <div id = "albumlabel">
         J DILLA<br>
         <strong>DONUTS</strong>
     </div>
   </div>
+  
+  <p id = "albumlegend">
+    <span style="color:#2D9BF0">soul / funk / disco</span>
+    <span style="color:#D33A8C">hip-hop / rap / r & b</span>
+    <span style="color:#F9D7CE">electronic / dance</span>
+    <span style="color:#483620">rock / pop</span>
+    <span style="color:#EAE4C5">other</span>
+  </p>
 
     <p><strong>RUFF DRAFT visual 1:</strong> the entire album</p>
     
     <p><strong>Intention:</strong> Show the entire album at once. For the entire album, the main attribute is the number of tracks. For each track, data attributes include duration, beats per minute, number of samples. Then for each sample, attributes include genre and release year. </p>
     
-    <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration.</p>
+    <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration. Each has some 'sprinkles' on it. The number of sprinkles per slice represents the number of unique samples per track. Sprinkles are colored based on their genre and placed radially based on their release year.</p>
     
-    <p><strong>Next up:</strong> Place sprinkles on the donut. Each sprinkle represents a sample within that track. Sprinkles are colored based on their genre and located (distance from radius) based on their release year.</p>
+    <p><strong>Notes:</strong> Add scales and labels! Improve color scheme! Avoid that  overplotting issue that's hiding certain samples! Not using BPM attribute. Some spacing issues with the legend; may make sense to bring that within the div for the album.</p>
 
 </body>
 </html>

@@ -12,7 +12,7 @@ samples <- read_csv('donutssamples.csv', show_col_types = FALSE)
 
 # Define dimensions of the album donut
 outer = 6       # Half of a 12" record
-leadin = 5.75   # Start of the recording groove
+leadin = 5.75   # Start of the recording groove 5.75
 leadout = 1.875 # End of the recording groove
 
 
@@ -30,29 +30,33 @@ latestyear = max(samples$sampleyear)
 earliestyear = min(samples$sampleyear)
 samples$place = 1 - ((samples$sampleyear-earliestyear) / (2006-earliestyear))
 samples$groove = leadout + ((samples$place) * (leadin - leadout))
-sprinklewidth = (1/20)
+sprinklewidth = (1/10)
 
 df = inner_join(tracks, samples, by="donutstrack")
 
-genres = count(df, samplegenre)
+# genres = count(df, samplegenre)
 
 # Make the donut
 donutrecord <- ggplot(df, aes(ymax = ymax, ymin = ymin, 
                                xmax = leadin, xmin = leadout)) + 
-  geom_rect(fill = NA, color = 'gray66') + # rectangles that will be converted to 4-edged slices
+  geom_rect(fill = NA, color = 'gray77') + # rectangles that will be converted to 4-edged slices
   geom_rect(aes(ymax = ymax, ymin = ymin,
-                xmax = groove+sprinklewidth,
+                xmax = groove,
                 xmin = groove-sprinklewidth, 
-                fill = samplegenre)) +
+                fill = samplegenre), color = 'gray77') + #sprinkles
+  scale_fill_manual(values = c("#F9D7CE", "#D33A8C", "#EAE4C5", "#483620", "#2D9BF0"), 
+                    expand = c(0, 0)) + #sprinklecolors
   coord_polar(theta = 'y') + # converts rectangles to radial slices
   xlim(c(0, outer)) + 
   theme_void() +
-  theme(legend.position = 'none')
+  theme(legend.position = 'none',
+        plot.margin = margin(0,0,0,0))
 
 print(donutrecord)                   
 
-# Save the plot as a 12" SVG
-ggsave(file="donutrecord.svg", plot=donutrecord, width=9, height=9)
+# Save the plot as an SVG
+ggsave(file = "donutrecord.svg", plot = donutrecord, 
+       width = 7, height = 7, dpi = 72)
 
 # donutbox <- ggplot(data = tracks, 
 #                    aes(x = reorder(trackname, donutstrack, 
