@@ -10,7 +10,7 @@
 
 body {
         font-family: 'Inter Tight';
-        font-size: 24px;
+        font-size: 20px;
         }
         
 span {
@@ -45,10 +45,9 @@ span {
 
 <body>
 
-    <p><strong>WORKINONIT!</strong></p>
+    <p><strong>WORKINONIT!</strong> &#127849; &#127849; &#127849; </p>
 
     <p>I plan on using this site to build out a data visualization based on J Dilla's <strong>Donuts</strong>.</p>
-  
 
   <div id = "album">
     <img src="donutrecord.svg">
@@ -66,13 +65,47 @@ span {
     <span style="color:#EAE4C5">other</span>
   </p>
 
-    <p><strong>RUFF DRAFT visual 1:</strong> the entire album</p>
+    <p><strong>RUFF DRAFT visual 1:</strong> Showing the entire album</p>
     
     <p><strong>Intention:</strong> Show the entire album at once. For the entire album, the main attribute is the number of tracks. For each track, data attributes include duration, beats per minute, number of samples. Then for each sample, attributes include genre and release year. </p>
     
     <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration. Each has some 'sprinkles' on it. The number of sprinkles per slice represents the number of unique samples per track. Sprinkles are colored based on their genre and placed radially based on their release year.</p>
     
-    <p><strong>Notes:</strong> Add scales and labels! Improve color scheme! Avoid that  overplotting issue that's hiding certain samples! Not using BPM attribute. Some spacing issues with the legend; may make sense to bring that within the div for the album.</p>
+    <p><strong>Notes:</strong> Still to-do: 
+    <ul>
+      <li>Add scales and labels</li>
+      <li>Improve color scheme</li>
+      <li>Consider highlighting Mantronix's King of the Beats</li>
+      <li>Avoid the overplotting issue that's hiding certain samples</li>
+      <li>Consider using the beats-per-minute attribute</li>
+      <li>Revisit the spacing issues with the legend</li>
+    </ul>
+    </p>
+
+<hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+
+<img src="KINGOFTHEBEATS.svg">
+
+    <p><strong>RUFF DRAFT visual 2:</strong> Generations of samples</p>
+    
+    <p><strong>Intention:</strong> Display the multiple generations of music contained within certain Donuts samples.</p>
+    
+    <p><strong>Progress:</strong> Pulled the data for the samples within Mantronix's King of the Beats, the most-used sample on Donuts.</p>
+    
+    <p><strong>Notes:</strong> I'm not sure if this counts as a "visualization" so I need to double-check on that. I want to make this an interactive element with <a href="https://www.w3schools.com/bootstrap/bootstrap_collapse.asp">Bootstrap collapse</a>. The interactive nature of this approach would be similar to the practice of reading albums' credits and liner notes to discover connections and influences. Other samples I'd explore are Run-DMC's Here We Go (Live at the Funhouse), the Beastie Boys' The New Style, and Jaylib's No Games.</p>
+    
+    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+
+<img src="LIGHTMYFIRE.svg">
+
+    <p><strong>RUFF DRAFT visual 3:</strong> Track-by-track donut charts</p>
+    
+    <p><strong>Intention:</strong> Display the samples used within each track on Donuts. Think of each track 'starting' at the 12:00 position, then rotating clockwise you encounter each sample based on its timing. The positions within the 'record grooves' reflect how those samples are used on the Donuts track: structural, surface, and lyric. </p>
+    
+    <p><strong>Progress:</strong> I have the data for all of the samples but need to set up a consistent scheme so that these can be batch-generated in R.</p>
+    
+    <p><strong>Notes:</strong> I think I'm going to have an issue labeling the sampled tracks and artists. I haven't figured out a way to label those without overlapping the data itself. I hope to avoid requiring mouseover for labeling.</p>
+    
 
 </body>
 </html>
