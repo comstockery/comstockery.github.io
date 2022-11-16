@@ -44,7 +44,7 @@ donutrecord <- ggplot(df, aes(ymax = ymax, ymin = ymin,
                 xmax = groove,
                 xmin = groove-sprinklewidth, 
                 fill = samplegenre), color = 'gray77') + #sprinkles
-  scale_fill_manual(values = c("#F9D7CE", "#D33A8C", "#EAE4C5", "#483620", "#2D9BF0"), 
+  scale_fill_manual(values = c("#E05822", "#F72585", "#F0AC24", "#4071FF", "#7F16E0"), 
                     expand = c(0, 0)) + #sprinklecolors
   coord_polar(theta = 'y') + # converts rectangles to radial slices
   xlim(c(0, outer)) + 
