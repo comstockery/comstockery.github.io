@@ -21,7 +21,13 @@ samplelist <- donutsmain[!duplicated(donutsmain[c('donutstrack','sampledtrack')]
   na.exclude %>%
   filter(!is.na(sampledyear))
 
+# Sample instances list
+instancelist <- donutsmain %>%
+  select(donutstrack, trackname, sampledtrack:duration) %>%
+  select(-c(sampledyear, sampledelement))
 
+
+# Start making donuts!
 # Define dimensions of the album donut
 outer = 6       # Half of a 12" record
 leadin = 5.75   # Start of the recording groove 5.75
@@ -40,21 +46,32 @@ tracklist$ymin = c(0, head(tracklist$ymax, n=-1))
 # Set up each sprinkle
 latestyear = max(samplelist$sampledyear)
 earliestyear = min(samplelist$sampledyear)
-samplelist$place = 1 - ((samplelist$sampledyear-earliestyear) / (2006-earliestyear))
-samplelist$groove = leadout + ((samplelist$place) * (leadin - leadout))
+samplelist$radius = 1 - ((samplelist$sampledyear-earliestyear) / (2006-earliestyear))
+samplelist$groove = leadout + ((samplelist$radius) * (leadin - leadout))
 sprinklewidth = (1/10)
+
+
 
 df = inner_join(tracklist, samplelist, by="donutstrack")
 
+df$sprinkle = df$ymin + ((df$ymax - df$ymin)*(runif(nrow(df), 0.10, 0.9)))
+
+
+genres = count(df, sampledgenre)
+
 # Make the donut
-donutrecord <- ggplot(df, aes(ymax = ymax, ymin = ymin, 
-                               xmax = leadin, xmin = leadout)) + 
-  geom_rect(fill = NA, color = 'gray77') + # rectangles that will be converted to 4-edged slices
-  geom_rect(aes(ymax = ymax, ymin = ymin,
-                xmax = groove,
-                xmin = groove-sprinklewidth, 
-                fill = sampledgenre), color = 'gray77') + #sprinkles
-  scale_fill_manual(values = c("#E05822", "#F72585", "#F0AC24", "#4071FF", "#7F16E0"), 
+donutrecord <- ggplot(df) + 
+  geom_rect(aes(ymax = ymax, ymin = ymin, 
+                xmax = leadin, xmin = leadout), # rectangles that will be converted to 4-edged slices
+            fill = NA, color = 'gray77') + 
+  # geom_rect(aes(ymax = ymax, ymin = ymin,
+  #               xmax = groove,
+  #               xmin = groove-sprinklewidth, 
+  #               fill = sampledgenre), color = 'gray77') + #widesprinkles
+  geom_point(aes(x = groove, y = sprinkle,
+                 fill = sampledgenre), 
+             shape = 21, color = 'gray90', size = 5, stroke = 0.6) + #dotsprinkles
+  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6"), 
                     expand = c(0, 0)) + #sprinklecolors
   coord_polar(theta = 'y') + # converts rectangles to radial slices
   xlim(c(0, outer)) + 
