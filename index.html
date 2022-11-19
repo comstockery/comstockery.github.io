@@ -15,16 +15,16 @@ body {
         font-size: 20px;
         }
         
+p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        }
+        
 span {
         font-weight: bold;
         margin: 0;
         }
-/*
-strong {
-        font-weight: 800;
-        }
-*/ 
- 
+
 .soul {
       color: #9B53E6; /*purple*/ 
       }   
@@ -63,7 +63,6 @@ strong {
         
 #albumlabel {
         font-family: 'Raleway';
-        font-weight: 300;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -76,43 +75,12 @@ strong {
         margin: 0;
         font-size: 1.2em;
         }
-
-.alphahead {
-        font-family: Raleway;
-        font-size: 30px;
-        }
         
-.alphatext {
-        font-family: Open Sans;
-        font-size: 16px;
-        width: 67%;
-        }
-        
-.betahead {
-        font-family: Inter Tight;
-        font-size: 30px;
-        }
-        
-.betatext {
-        font-family: Open Sans;
-        font-size: 16px;
-        width: 67%;
-        }
-        
-
-.gammahead {
-        font-family: Raleway;
-        font-size: 30px;
-        }
-        
-.gammatext {
-        font-family: Inter Tight;
-        font-size: 16px;
-        width: 67%;
+.charttitle {
+        margin: 0px 10px;
         }        
-
+        
   </style>
-
 
 </head>
 
@@ -121,6 +89,7 @@ strong {
     <p><strong>WORKINONIT!</strong> &#127849; &#127849; &#127849; </p>
 
     <p>I plan on using this site to build out a data visualization based on J Dilla's <strong>Donuts</strong>.</p>
+
 
   <div id = "album">
     <img src="donutrecord.svg">
@@ -131,13 +100,13 @@ strong {
     </div>
   </div>
   
-  <p id = "albumlegend">
+  <div id = "albumlegend">
     <span class="genre soul">soul / funk / disco</span>
     <span class="genre hiphop">hip-hop / rap / r & b</span>
     <span class="genre electronic">electronic / dance</span>
     <span class="genre rock">rock / pop</span>
     <span class="genre other">other</span>
-  </p>
+  </div>
 
     <p><strong>RUFF DRAFT visual 1:</strong> Showing the entire album</p>
     
@@ -157,9 +126,54 @@ strong {
 
 <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
+  <div>
+    <p class="charttitle"><strong>Release year of known samples on <em>Donuts</em></strong>
+    <br>count</p>
+    <img src="samplesbyyear.svg">
+  </div>  
+    
+    <p><strong>RUFF DRAFT visual 2:</strong> Simpler view of the samples' genre by year</p>
+    
+    <p><strong>Intention:</strong> This graph only focuses on the release year of the 63 known samples in Donuts.</p>
+    
+    <p><strong>Progress:</strong> I feel OK about the basics here! I plan on adding the legend within HTML, not R (similar to the current chart title and units). Will add some notation near the graph that helps connect the genre colors to the values here, especially the soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and early 2000s.</p>
+    
+    <p><strong>Notes:</strong> Still to-do: 
+    <ul>
+      <li>Add legend in HTML</li>
+      <li>Add narrative text near figure</li>
+    </ul>
+    </p>
+    
+<hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+
+  <div>
+    <p class="charttitle"><strong>Type known samples on <em>Donuts</em></strong>
+    <br>count</p>
+    <img src="samplesbytype.svg">
+  </div>  
+    
+    <p><strong>RUFF DRAFT visual 3:</strong> Type of samples and their genre by track</p>
+    
+    <p><strong>Intention:</strong> Introduce the type attribute and show how different genres are used.</p>
+    
+    <p><strong>Progress:</strong> The data is close but not quite correct. Need to revisit my piping that formed this data.frame.</p>
+    
+    <p><strong>Notes:</strong> Still to-do: 
+    <ul>
+      <li>Add legend in HTML</li>
+      <li>Add narrative text near figure</li>
+      <li>Clean up theme</li>
+      <li>Fix data pipe</li>
+    </ul>
+    </p> 
+    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+
+
+
 <img src="KINGOFTHEBEATS.svg">
 
-    <p><strong>RUFF DRAFT visual 2:</strong> Generations of samples</p>
+    <p><strong>RUFF DRAFT visual 4:</strong> Generations of samples</p>
     
     <p><strong>Intention:</strong> Display the multiple generations of music contained within certain Donuts samples.</p>
     
@@ -171,7 +185,7 @@ strong {
 
 <img src="LIGHTMYFIRE.svg">
 
-    <p><strong>RUFF DRAFT visual 3:</strong> Track-by-track donut charts</p>
+    <p><strong>RUFF DRAFT visual 5:</strong> Track-by-track donut charts</p>
     
     <p><strong>Intention:</strong> Display the samples used within each track on Donuts. Think of each track 'starting' at the 12:00 position, then rotating clockwise you encounter each sample based on its timing. The positions within the 'record grooves' reflect how those samples are used on the Donuts track: structural, surface, and lyric. </p>
     
@@ -181,43 +195,9 @@ strong {
     
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">  
     
-    <img src="samplesbyyear.svg">
-    
-    <p><strong>RUFF DRAFT visual 4:</strong> Simpler view of the samples' genre by year</p>
-    
-    <p><strong>Intention:</strong> This graph only focuses on the release year of the 63 known samples in Donuts.</p>
-    
-    <p><strong>Progress:</strong> I feel OK about the basics here! I plan on doing the labeling for plot title, units, and legend within HTML, not R. Will add some notation near the graph that helps connect the genre colors to the values here, especially the soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and early 2000s.</p>
-    
-    <p><strong>Notes:</strong> Still to-do: 
-    <ul>
-      <li>Add plot title and units in HTML</li>
-      <li>Add narrative text near figure</li>
-    </ul>
-    </p>
-    
-    
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-    
-<h1>FONT OPTIONS</h1>
-    
-<p>OPTION ALPHA:</p>
-<p class = "alphahead"><strong>J DILLA DONUTS</strong> J Dilla Donuts // <strong>Mantronix</strong> - <em>King of the Beats</em></p>
-<p class = "alphatext">An instrumental <strong>hip-hop</strong> album. <em>Donuts</em> is the second studio album by the American hip hop producer J Dilla, released on February 7, 2006, by Stones Throw Records. It was released on the day of his 32nd birthday, three days before his death. The album was recorded in 2005, largely during J Dilla's extended stay at <strong>Cedars-Sinai Medical Center</strong> due to complications from thrombotic thrombocytopenic purpura (TTP) and lupus. Twenty-nine of the album's thirty-one tracks were recorded in J Dilla's hospital room, using a <strong>45-rpm record player</strong> and a <strong>Boss SP-303 sampler</strong>. [RW+OS]</p>
 
-<br><br><br><br>
 
-<p>OPTION BETA:</p>
-<p class = "betahead"><strong>J DILLA DONUTS</strong> J Dilla Donuts // <strong>Mantronix</strong> - <em>King of the Beats</em></p>
-<p class = "betatext">An instrumental <strong>hip-hop</strong> album. <em>Donuts</em> is the second studio album by the American hip hop producer J Dilla, released on February 7, 2006, by Stones Throw Records. It was released on the day of his 32nd birthday, three days before his death. The album was recorded in 2005, largely during J Dilla's extended stay at <strong>Cedars-Sinai Medical Center</strong> due to complications from thrombotic thrombocytopenic purpura (TTP) and lupus. Twenty-nine of the album's thirty-one tracks were recorded in J Dilla's hospital room, using a <strong>45-rpm record player</strong> and a <strong>Boss SP-303 sampler</strong>. [IT+OS]</p>
 
-<br><br><br><br>
-
-<p>OPTION GAMMA:</p>
-<p class = "gammahead"><strong>J DILLA DONUTS</strong> J Dilla Donuts // <strong>Mantronix</strong> - <em>King of the Beats</em></p>
-<p class = "gammatext">An instrumental <strong>hip-hop</strong> album. <em>Donuts</em> is the second studio album by the American hip hop producer J Dilla, released on February 7, 2006, by Stones Throw Records. It was released on the day of his 32nd birthday, three days before his death. The album was recorded in 2005, largely during J Dilla's extended stay at <strong>Cedars-Sinai Medical Center</strong> due to complications from thrombotic thrombocytopenic purpura (TTP) and lupus. Twenty-nine of the album's thirty-one tracks were recorded in J Dilla's hospital room, using a <strong>45-rpm record player</strong> and a <strong>Boss SP-303 sampler</strong>. [RW+IT]</p>
 
 </body>
 </html>

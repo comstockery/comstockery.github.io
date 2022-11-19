@@ -5,10 +5,11 @@ library(svglite)
 library(ggtext)
 library(googlesheets4)
 library(emojifont)
+library(cowplot)
 
 # Flags for code chunks
-datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 
 
 if(datamaker) {
@@ -80,7 +81,7 @@ df1$sprinkle = df1$ymin + ((df1$ymax - df1$ymin)*(runif(nrow(df1), 0.10, 0.90)))
 # Make a table for year labels
 yearlabels <- data.frame(
   label = c(1955, 1970, 1990, 2005),
-  x= vlinecalc(c(1955, 1970, 1990, 2005)),
+  x = vlinecalc(c(1955, 1970, 1990, 2005)),
   y = 1,
   angle = 0)
 
@@ -107,26 +108,23 @@ donutrecord <- ggplot(df1) +
   # Add gridlines for certain years (grooves)
   geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray77') +
 
+  # Add dots representing samples in each track (sprinkles)
+  geom_point(aes(x = groove, y = sprinkle,
+                 fill = sampledgenre), 
+             shape = 21, color = 'gray88', size = 5, stroke = 0.5) +
+  
+  # Add colors for the sprinkles and remove plot buffers
+  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) + 
+
   # Add labels for gridlines (grooves)
   geom_richtext(data = yearlabels,
                 mapping = aes(x = x, y = y, label = label,
                               hjust = 0.5, vjust = 0.5,
                               angle = angle),
-                color = 'gray50', fill = NA, 
+                color = 'gray44', fill = NA, 
                 label.color = NA,
                 size = 4,
                 label.padding = unit(rep(0, 4), "pt")) +
- 
-  # Add dots representing samples in each track (sprinkles)
-  geom_point(aes(x = groove, y = sprinkle,
-                 fill = sampledgenre), 
-             shape = 21, color = 'gray90', size = 5, stroke = 0.6) + 
-  
-  # Add colors for the sprinkles and remove plot buffers
-  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) + 
-
-  # geom_text(aes(x = groove, y = sprinkle, 
-  #               label = emoji('cow')), family="OpenSansEmoji", size=5) + #emoji?
   
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(0, 6), expand = expansion(0,0)) +
@@ -147,6 +145,7 @@ donutrecord <- ggplot(df1) +
 
 print(donutrecord)
 
+
 # Save the plot as an SVG
 ggsave(file = "donutrecord.svg", plot = donutrecord, 
        width = 7, height = 7, dpi = 72)
@@ -162,11 +161,11 @@ df2 <- samplelist %>%
 # Plot the values on an axis from 1955 through 2005. 
 samplesbyyear <- ggplot(df2,
        aes(sampledyear, fill = sampledgenre)) +
-  geom_bar(color = "gray77", width = 1) +
+  geom_bar(color = "gray88", size = 0.5, width = 1) +
   scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) +
 # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(1955, 2005), expand = expansion(0,0)) +
-  scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 1)),
+  scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
                      breaks = seq(0, 8, 2)) +
   theme_minimal() +
   theme(legend.position = 'none',
@@ -183,4 +182,25 @@ print(samplesbyyear)
 # Save the plot as an SVG
 ggsave(file = "samplesbyyear.svg", plot = samplesbyyear, 
        width = 7, height = 2, dpi = 72) 
+
+
+df3 <- instancelist %>%
+  group_by(donutstrack, trackname, sampledgenre, type) %>%
+  summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
+  arrange(donutstrack) 
+
+
+samplesbytype <- ggplot(df3,
+                        aes(y = reorder(trackname, -donutstrack),
+                            fill = sampledgenre)) +
+  geom_bar(color = "gray88", size = 0.5, width = 1) +
+  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6", "gray99")) +
+  facet_grid(cols = vars(type))
+
+
+print(samplesbytype)
+
+ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
+       width = 7, height = 2, dpi = 72) 
+  
   
