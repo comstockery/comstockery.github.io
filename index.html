@@ -126,7 +126,8 @@ strong {
     <img src="donutrecord.svg">
     <div id = "albumlabel">
         J DILLA<br>
-        <strong>DONUTS</strong> (2006)
+        <strong>DONUTS</strong><br>
+        (2006)
     </div>
   </div>
   
@@ -144,9 +145,12 @@ strong {
     
     <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration. Each has some 'sprinkles' on it. The number of sprinkles per slice represents the number of unique samples per track. Sprinkles are colored based on their genre and placed radially based on their release year.</p>
     
+    <p>Ideally this shows that Donuts uses plenty of soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and then-contemporary (early 2000s).</p>
+    
     <p><strong>Notes:</strong> Still to-do: 
     <ul>
-      <li>Add scales and labels</li>
+      <li>Add labels for tracks (or track numbers?)</li>
+      <li>Consider moving year labels out left?</li>
       <li>Consider using the beats-per-minute attribute</li>
     </ul>
     </p>
@@ -174,6 +178,24 @@ strong {
     <p><strong>Progress:</strong> I have the data for all of the samples but need to set up a consistent scheme so that these can be batch-generated in R.</p>
     
     <p><strong>Notes:</strong> I think I'm going to have an issue labeling the sampled tracks and artists. I haven't figured out a way to label those without overlapping the data itself. I hope to avoid requiring mouseover for labeling.</p>
+    
+    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">  
+    
+    <img src="samplesbyyear.svg">
+    
+    <p><strong>RUFF DRAFT visual 4:</strong> Simpler view of the samples' genre by year</p>
+    
+    <p><strong>Intention:</strong> This graph only focuses on the release year of the 63 known samples in Donuts.</p>
+    
+    <p><strong>Progress:</strong> I feel OK about the basics here! I plan on doing the labeling for plot title, units, and legend within HTML, not R. Will add some notation near the graph that helps connect the genre colors to the values here, especially the soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and early 2000s.</p>
+    
+    <p><strong>Notes:</strong> Still to-do: 
+    <ul>
+      <li>Add plot title and units in HTML</li>
+      <li>Add narrative text near figure</li>
+    </ul>
+    </p>
+    
     
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
