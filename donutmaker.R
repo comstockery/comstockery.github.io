@@ -121,9 +121,9 @@ donutrecord <- ggplot(df1) +
                 mapping = aes(x = x, y = y, label = label,
                               hjust = 0.5, vjust = 0.5,
                               angle = angle),
-                color = 'gray44', fill = NA, 
+                color = 'gray33', fill = NA, 
                 label.color = NA,
-                size = 4,
+                size = 5,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Remove any gaps around the plot edge 
@@ -201,6 +201,6 @@ samplesbytype <- ggplot(df3,
 print(samplesbytype)
 
 ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
-       width = 7, height = 2, dpi = 72) 
+       width = 7, height = 5, dpi = 72) 
   
   
