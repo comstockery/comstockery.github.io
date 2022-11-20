@@ -33,8 +33,8 @@ samplelist <- donutsmain[!duplicated(donutsmain[c('donutstrack','sampledtrack')]
 
 # Sample instances list
 instancelist <- donutsmain %>%
-  select(donutstrack, trackname, sampledtrack:duration) %>%
-  select(-c(sampledyear, sampledelement))
+  select(donutstrack, trackname, length, sampledtrack:duration) %>%
+  select(-sampledelement)
 
 } # End of the datamaker code chunk
 
@@ -46,10 +46,10 @@ if(donutmaker) {
 # Start making donuts!
 
 # Define dimensions of the album donut
-albumouter = 6       # Half of a 12" record
-albumleadin = 5.75   # Start of the recording groove =11.5"
-albumleadout = 1.88 # End of the recording groove 3.75
-albuminner = 1.69    # End of spiral 3.375
+aouter = 6       # Half of a 12" record
+aleadin = 5.75   # Start of the recording groove =11.5"
+aleadout = 1.88 # End of the recording groove 3.75
+ainner = 1.69    # End of spiral 3.375
 
 
 # Set up the whole album's donut chart
@@ -67,13 +67,13 @@ tracklist$ymin = c(0, head(tracklist$ymax, n=-1))
 latestyear = 2005
 earliestyear = 1955
 samplelist$radius = 1 - ((samplelist$sampledyear-earliestyear) / (latestyear-earliestyear))
-samplelist$groove = albumleadout + ((samplelist$radius) * (albumleadin - albumleadout))
+samplelist$groove = aleadout + ((samplelist$radius) * (aleadin - aleadout))
 # sprinklewidth = (1/10)
 
 # Create a function to translate years to groove positions (timeline)
 vlinecalc <- function(year) {
-  vlinegroove <- albumleadout + ((1 - ((year - earliestyear) / 
-                                         (latestyear-earliestyear))) * (albumleadin-albumleadout))
+  vlinegroove <- aleadout + ((1 - ((year - earliestyear) / 
+                              (latestyear-earliestyear))) * (aleadin-aleadout))
   return(vlinegroove)
 }
 
@@ -99,12 +99,12 @@ donutrecord <- ggplot(df1) +
   # Create two sets of rectangles that will be converted to 4-edged slices
   # First, the rectangles for the track slices
   geom_rect(aes(ymax = ymax, ymin = ymin, 
-                xmax = albumleadin, xmin = albumleadout), 
+                xmax = aleadin, xmin = aleadout), 
             fill = NA, color = 'gray77', 
             linewidth = 0.3) +
   # Overlay the rectangles for the total record (outer and inner edges) 
   geom_rect(aes(ymax = 0, ymin = 1,
-                xmax = albumouter, xmin = albuminner),
+                xmax = aouter, xmin = ainner),
             fill = NA, color = 'gray33', 
             linewidth = 0.6) +
   
@@ -139,7 +139,7 @@ donutrecord <- ggplot(df1) +
   
 # Converts rectangles to radial slices
   coord_polar(theta = 'y') +
-  # Remove other plot elements and legend
+# Remove other plot elements and legend
   theme_void() +
   theme(legend.position = 'none', 
         panel.border = element_blank(),
@@ -221,11 +221,96 @@ ggsave(file = "samplesbytype.svg", plot = samplesbytype,
 } # End of the 'barmaker' code chunk
 
 
-if(bytemaker) {
-  
-df4 <- instancelist %>%
-  filter(donutstrack %in% 7) # 7 = People, 6 = Stop, 2 = Workinonit
+if(bitemaker) {
 
+# Define dimensions of the track donut
+touter = 3.5        # Half of a 7" record
+tleadin = 3.31      # Start of the recording groove 6.625
+tleadout = 1.75     # End of the recording groove 3.5
+tinner = 0.75       # Inside hole 1.5  
+
+# Calculate the rectangle edges
+# This requires math!
+
+typegroove = tibble(type = c('structural', 'surface', 'lyric'),
+                    typerank = c(1:3))
+
+# Add an initial ranking of the sample types
+df4 <- left_join(instancelist, typegroove, by = "type")
+
+df4$ymin = df4$samplestart / df4$length
+df4$ymax = df4$sampleend / df4$length
+
+# Use a bunch of dplyr functions to determine unique sample/type combo
+# positions within each donut
+df5 <- df4 %>%
+  group_by(trackname, type) %>%
+  distinct(sampledtrack, .keep_all = TRUE) %>%
+  arrange(donutstrack, typerank) %>%
+  mutate(id = 1:n()) %>% # counting the sample/type combos with an index
+  mutate(tx = (typerank * 10) + id) %>% # aggregate index across types
+  ungroup() %>%
+  arrange(donutstrack, tx) %>%
+  group_by(donutstrack) %>%
+  mutate(groove = 1:n()) %>% # indexing across tracks
+  ungroup() %>%
+  select(donutstrack, sampledtrack, type, groove) %>%
+  group_by(donutstrack) %>%
+  mutate(maxgroove = max(groove))
+  
+df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack', 'type'))
+
+tgroovewidth = 0.90
+# df6$xmin = (((1 / (2*df6$maxgroove)) + ((df6$groove - 1) / df6$maxgroove)) - (tgroovewidth / (2*df6$maxgroove)))
+# df6$xmax = (df6$xmin + (tgroovewidth / df6$maxgroove))
+
+df6$gmin = (((1 / (2*df6$maxgroove)) + ((df6$groove - 1) / df6$maxgroove)) - (tgroovewidth / (2*df6$maxgroove)))
+df6$gmax = (df6$gmin + (tgroovewidth / df6$maxgroove))
+
+df6$xmin = tleadout + (df6$gmin * (tleadin-tleadout))
+df6$xmax = tleadout + (df6$gmax * (tleadin-tleadout))
+    
+# Write a loop that cycles through the whole album
+for(i in 1:max(df6$donutstrack/2)) {
+
+# Filter the dataframe for just one track (i)
+donutbite <- filter(df6, donutstrack ==  i) %>%
+# Then plot it!
+ggplot() +
+  # The main geoms are rectangles that represent when certain samples are playing
+  geom_rect(aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax)) + 
+  # Clip the graph to just the necessary limits, remove any gaps
+  scale_x_continuous(limits = c(0, 3.5), expand = expansion(0,0)) +
+  scale_y_continuous(limits = c(0, 1), expand = expansion(0,0),
+                     labels = NULL) +
+  # Add a 'label' for each track
+  geom_richtext(aes(x = 0, y = 0, label = trackname, 
+                    hjust = 0.5, vjust = 0.5),
+                color = 'gray33', fill = NA,
+                label.color = NA,
+                size = 4) +
+  # Make it a donut!
+  coord_polar(theta = 'y') +
+  # Remove other plot elements and legend
+  theme_void() +
+  theme(legend.position = 'none',
+        panel.border = element_blank(),
+        legend.key = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        panel.grid  = element_blank(),
+        plot.margin = unit(rep(-0.5,4), "inches"))
+
+# Viewing each plot as it's made
+print(donutbite)
+plotname = i
+
+# Save each plot as an svg
+ggsave(file = paste0(plotname, ".svg"), plot = donutbite, 
+       width = 3, height = 3, dpi = 72) 
+
+} # End of donutbite function
 
 } # End of the 'bitemaker' code chunk
 

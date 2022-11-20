@@ -13,9 +13,10 @@
 body {
         font-family: 'Open Sans', sans-serif;
         font-size: 16px;
+        background-color: #eee;
         }
         
-h2 {
+h1 {
         font-family: 'Raleway', sans-serif;
         }        
         
@@ -87,7 +88,7 @@ span {
 
 <body>
 
-    <h2>WORKINONIT! &#127849; &#127849; &#127849; </h2>
+    <h1>WORKINONIT! &#127849; &#127849; &#127849; </h1>
 
     <p>This is a work in progress... Below are rough drafts of data visualization based on J Dilla's <strong>Donuts</strong>.</p>
 
@@ -114,7 +115,7 @@ span {
     
     <p>Ideally this shows that Donuts uses plenty of soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and then-contemporary (early 2000s).</p>
     
-    <p><strong>Notes:</strong> Still to-do: 
+    <p><strong>Still to-do:</strong>  
     <ul>
       <li>Add labels for tracks (or track numbers?)</li>
       <li>Consider moving year labels out left?</li>
@@ -136,7 +137,7 @@ span {
     
     <p><strong>Progress:</strong> I feel OK about the basics here! I plan on adding the legend within HTML, not R (similar to the current chart title and units). Will add some notation near the graph that helps connect the genre colors to the values here, especially the soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and early 2000s.</p>
     
-    <p><strong>Notes:</strong> Still to-do: 
+    <p><strong>Still to-do:</strong>  
     <ul>
       <li>Add legend in HTML</li>
       <li>Add narrative text near figure</li>
@@ -157,7 +158,7 @@ span {
     
     <p><strong>Progress:</strong> The data is close but not quite correct. Need to revisit my piping that formed the dataframe.</p>
     
-    <p><strong>Notes:</strong> Still to-do: 
+    <p><strong>Still to-do:</strong>  
     <ul>
       <li>Add legend in HTML</li>
       <li>Add narrative text near figure</li>
@@ -165,36 +166,45 @@ span {
       <li>Fix data pipe</li>
     </ul>
     </p> 
+    
+    
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
 
 
+<img src="1.svg"><img src="2.svg"><img src="3.svg"> <br>
+<img src="4.svg"><img src="5.svg"><img src="6.svg"> <br>
+<img src="7.svg"><img src="8.svg"><img src="9.svg"> <br>
+<img src="10.svg"><img src="11.svg"><img src="12.svg"> 
+
+    <p><strong>RUFF DRAFT visual 4:</strong> THE DONUTS!</p>
+    
+    <p><strong>Intention:</strong> Display the timing of samples on each track. Think of each track 'starting' at the 12:00 position, then rotating clockwise you encounter each sample based on its timing. The positions within the 'record grooves' reflect how those samples are used on the Donuts track: structural, surface, and lyric. Each groove represents a unique sample type x sampled track combination. Donuts tracks with more unique type x track combos will have more grooves.</p>
+    
+    <p><strong>Progress:</strong> Got the geoms correctly placed! This required a lot of dplyr work and somehow much more math on top of that. AND I wrote a function to batch-generate and save each plot.</p>
+    
+    <p><strong>Notes:</strong> I've shown the first DOZEN DONUTS. There's no labeling other the track names but I intend to handle that either with geom_richtext or HTML if I have to. (I see geom_richtext struggles with apostrophes!) I will obviously need to add some color and labeling to make these coherent, but for now it's pretty exciting to get these rendered!</p>
+    
+    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+
+
 <img src="KINGOFTHEBEATS.svg">
 
-    <p><strong>RUFF DRAFT visual 4:</strong> Generations of samples</p>
+    <p><strong>RUFF DRAFT visual 5:</strong> Generations of samples</p>
     
     <p><strong>Intention:</strong> Display the multiple generations of music contained within certain Donuts samples.</p>
     
     <p><strong>Progress:</strong> Pulled the data for the samples within Mantronix's King of the Beats, the most-used sample on Donuts.</p>
     
-    <p><strong>Notes:</strong> I'm not sure if this counts as a "visualization" so I need to double-check on that. I want to make this an interactive element with <a href="https://www.w3schools.com/bootstrap/bootstrap_collapse.asp">Bootstrap collapse</a>. The interactive nature of this approach would be similar to the practice of reading albums' credits and liner notes to discover connections and influences. Other samples I'd explore are Run-DMC's Here We Go (Live at the Funhouse), the Beastie Boys' The New Style, and Jaylib's No Games.</p>
+    <p><strong>Notes:</strong> I'm not sure why, but the text isn't rendering well in SVG. May switch to PNG for these. Other samples I'd explore are Run-DMC's Here We Go (Live at the Funhouse), the Beastie Boys' The New Style, and Jaylib's No Games.</p>
     
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
+    
+<h1>What's next?</h1>
 
-<img src="LIGHTMYFIRE.svg">
+<p><strong>Data visualizations:</strong> Fix colors on the individual donut tracks. Add better labeling throughout. Finish up any other lingering 'to-do' items listed above.</p>
 
-    <p><strong>RUFF DRAFT visual 5:</strong> Track-by-track donut charts</p>
-    
-    <p><strong>Intention:</strong> Display the samples used within each track on Donuts. Think of each track 'starting' at the 12:00 position, then rotating clockwise you encounter each sample based on its timing. The positions within the 'record grooves' reflect how those samples are used on the Donuts track: structural, surface, and lyric. </p>
-    
-    <p><strong>Progress:</strong> I have the data for all of the samples but need to set up a consistent scheme so that these can be batch-generated in R.</p>
-    
-    <p><strong>Notes:</strong> I think I'm going to have an issue labeling the sampled tracks and artists. I haven't figured out a way to label those without overlapping the data itself. I hope to avoid requiring mouseover for labeling.</p>
-    
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">  
-    
-
-
+<p><strong>Prototype:</strong> Develop an approach for the HTML and CSS. Add narrative text. </p>
 
 
 </body>
