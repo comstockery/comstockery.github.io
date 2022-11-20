@@ -5,11 +5,12 @@ library(svglite)
 library(ggtext)
 library(googlesheets4)
 library(emojifont)
-library(cowplot)
 
 # Flags for code chunks
-datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
+datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
+donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 if(datamaker) {
@@ -37,14 +38,18 @@ instancelist <- donutsmain %>%
 
 } # End of the datamaker code chunk
 
+
+# Make the donut for entire album, but only if the donutmaker is TRUE!
+if(donutmaker) {
+
+
 # Start making donuts!
 
 # Define dimensions of the album donut
-outer = 6       # Half of a 12" record
-leadin = 5.75   # Start of the recording groove =11.5"
-leadout = 1.88 # End of the recording groove 3.75
-inner = 1.69    # End of spiral 3.375
-
+albumouter = 6       # Half of a 12" record
+albumleadin = 5.75   # Start of the recording groove =11.5"
+albumleadout = 1.88 # End of the recording groove 3.75
+albuminner = 1.69    # End of spiral 3.375
 
 
 # Set up the whole album's donut chart
@@ -62,12 +67,13 @@ tracklist$ymin = c(0, head(tracklist$ymax, n=-1))
 latestyear = 2005
 earliestyear = 1955
 samplelist$radius = 1 - ((samplelist$sampledyear-earliestyear) / (latestyear-earliestyear))
-samplelist$groove = leadout + ((samplelist$radius) * (leadin - leadout))
+samplelist$groove = albumleadout + ((samplelist$radius) * (albumleadin - albumleadout))
 # sprinklewidth = (1/10)
 
 # Create a function to translate years to groove positions (timeline)
 vlinecalc <- function(year) {
-  vlinegroove <- leadout + ((1 - ((year - earliestyear) / (latestyear-earliestyear))) * (leadin-leadout))
+  vlinegroove <- albumleadout + ((1 - ((year - earliestyear) / 
+                                         (latestyear-earliestyear))) * (albumleadin-albumleadout))
   return(vlinegroove)
 }
 
@@ -89,19 +95,16 @@ yearlabels <- data.frame(
 genres = count(df1, sampledgenre)
 
 
-# Make the donut for entire album, but only if the donutmaker is TRUE!
-if(donutmaker) {
-
 donutrecord <- ggplot(df1) + 
   # Create two sets of rectangles that will be converted to 4-edged slices
   # First, the rectangles for the track slices
   geom_rect(aes(ymax = ymax, ymin = ymin, 
-                xmax = leadin, xmin = leadout), 
+                xmax = albumleadin, xmin = albumleadout), 
             fill = NA, color = 'gray77', 
             linewidth = 0.3) +
   # Overlay the rectangles for the total record (outer and inner edges) 
   geom_rect(aes(ymax = 0, ymin = 1,
-                xmax = outer, xmin = inner),
+                xmax = albumouter, xmin = albuminner),
             fill = NA, color = 'gray33', 
             linewidth = 0.6) +
   
@@ -118,7 +121,10 @@ donutrecord <- ggplot(df1) +
 
   # Add labels for gridlines (grooves)
   geom_richtext(data = yearlabels,
-                mapping = aes(x = x, y = y, label = label,
+                mapping = aes(x = x, y = y, 
+                              # label = paste0(label,' ------------'),
+                              label = label,
+                              # hjust = 1, vjust = 0.5,
                               hjust = 0.5, vjust = 0.5,
                               angle = angle),
                 color = 'gray33', fill = NA, 
@@ -153,6 +159,8 @@ ggsave(file = "donutrecord.svg", plot = donutrecord,
 } # End of the 'donutmaker' code chunk
 
 
+if(barmaker) {
+
 # Make a timeline of the sampled songs' release years (count, stacked by genre)
 df2 <- samplelist %>%
   distinct(sampledtrack, .keep_all = TRUE) 
@@ -161,7 +169,7 @@ df2 <- samplelist %>%
 # Plot the values on an axis from 1955 through 2005. 
 samplesbyyear <- ggplot(df2,
        aes(sampledyear, fill = sampledgenre)) +
-  geom_bar(color = "gray88", size = 0.5, width = 1) +
+  geom_bar(color = "gray88", linewidth = 0.5, width = 1) +
   scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) +
 # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(1955, 2005), expand = expansion(0,0)) +
@@ -190,11 +198,18 @@ df3 <- instancelist %>%
   arrange(donutstrack) 
 
 
+# df3 <- instancelist %>%
+#   group_by(donutstrack, type) %>%
+#   mutate(count = n_distinct(sampledtrack)) %>%
+#   ungroup() %>%
+#   select(c(donutstrack, trackname, type, count))
+
+
 samplesbytype <- ggplot(df3,
                         aes(y = reorder(trackname, -donutstrack),
                             fill = sampledgenre)) +
-  geom_bar(color = "gray88", size = 0.5, width = 1) +
-  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6", "gray99")) +
+  geom_bar(color = "gray88", linewidth = 0.5, width = 1) +
+  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6", "black")) +
   facet_grid(cols = vars(type))
 
 
@@ -203,4 +218,14 @@ print(samplesbytype)
 ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
        width = 7, height = 5, dpi = 72) 
   
+} # End of the 'barmaker' code chunk
+
+
+if(bytemaker) {
   
+df4 <- instancelist %>%
+  filter(donutstrack %in% 7) # 7 = People, 6 = Stop, 2 = Workinonit
+
+
+} # End of the 'bitemaker' code chunk
+
