@@ -8,10 +8,18 @@ library(emojifont)
 
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
+
+# Define color palette (NA values are defined separately)
+colorvalues = c("electronic/dance" = "#E67343", 
+                "hip-hop/rap/r&b" = "#F72585", 
+                "other" = "#F8B219",
+                "rock/pop" = "#004AF7",
+                "soul/funk/disco" = "#9B53E6")
+navalue = "#BBBBBB"
 
 if(datamaker) {
 
@@ -27,9 +35,10 @@ tracklist <- donutsmain %>%
 
 # Unique sample list
 samplelist <- donutsmain[!duplicated(donutsmain[c('donutstrack','sampledtrack')]),] %>%
-  select(donutstrack, sampledtrack:sampledyear) %>%
-  na.exclude %>%
-  filter(!is.na(sampledyear))
+  select(donutstrack, sampledtrack:sampledyear) 
+# %>%
+#   na.exclude %>%
+#   filter(!is.na(sampledyear))
 
 # Sample instances list
 instancelist <- donutsmain %>%
@@ -117,7 +126,7 @@ donutrecord <- ggplot(df1) +
              shape = 21, color = 'gray88', size = 5, stroke = 0.5) +
   
   # Add colors for the sprinkles and remove plot buffers
-  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) + 
+  scale_fill_manual(values = colorvalues, na.value = navalue) + 
 
   # Add labels for gridlines (grooves)
   geom_richtext(data = yearlabels,
@@ -169,9 +178,9 @@ df2 <- samplelist %>%
 # Plot the values on an axis from 1955 through 2005. 
 samplesbyyear <- ggplot(df2,
        aes(sampledyear, fill = sampledgenre)) +
-  geom_bar(color = "gray88", linewidth = 0.5, width = 1) +
-  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6")) +
-# Remove any gaps around the plot edge 
+  geom_bar(color = "gray88", linewidth = 0.5) +
+  scale_fill_manual(values = colorvalues, na.value = navalue) + 
+  # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(1955, 2005), expand = expansion(0,0)) +
   scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
                      breaks = seq(0, 8, 2)) +
@@ -208,8 +217,8 @@ df3 <- instancelist %>%
 samplesbytype <- ggplot(df3,
                         aes(y = reorder(trackname, -donutstrack),
                             fill = sampledgenre)) +
-  geom_bar(color = "gray88", linewidth = 0.5, width = 1) +
-  scale_fill_manual(values = c("#E67343", "#F72585", "#F8B219", "#004AF7", "#9B53E6", "black")) +
+  geom_bar(color = "gray88", linewidth = 0.5) +
+  scale_fill_manual(values = colorvalues, na.value = navalue) + 
   facet_grid(cols = vars(type))
 
 
@@ -279,7 +288,10 @@ donutbite <- filter(df6, donutstrack ==  i) %>%
 ggplot() +
   # The main geoms are rectangles that represent when certain samples are playing
   geom_rect(aes(xmin = xmin, xmax = xmax,
-                ymin = ymin, ymax = ymax)) + 
+                ymin = ymin, ymax = ymax, fill = sampledgenre), 
+            color = "gray88", linewidth = 0.5) + 
+  # Add colors
+  scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Clip the graph to just the necessary limits, remove any gaps
   scale_x_continuous(limits = c(0, 3.5), expand = expansion(0,0)) +
   scale_y_continuous(limits = c(0, 1), expand = expansion(0,0),
