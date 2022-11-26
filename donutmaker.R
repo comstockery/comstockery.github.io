@@ -9,8 +9,8 @@ library(emojifont)
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -87,15 +87,27 @@ vlinecalc <- function(year) {
 }
 
 # Join datasets to map samples to the Donut tracklist
-df1 = inner_join(tracklist, samplelist, by='donutstrack')
+df1 <- inner_join(tracklist, samplelist, by='donutstrack')
 
 # Place sprinkles within their slice, adding randomness to avoid overplotting
-df1$sprinkle = df1$ymin + ((df1$ymax - df1$ymin)*(runif(nrow(df1), 0.10, 0.90)))
+df1$sprinkle <- df1$ymin + ((df1$ymax - df1$ymin)*(runif(nrow(df1), 0.10, 0.90)))
+
+
+# Calculate the angle and hjust of the track names
+df1$angle <-  90 - (360 * df1$ymin) 
+
+# Horizontal justification flips on the left side
+df1$hjust <- ifelse(df1$angle < -90, 0, 1)
+df1$vjust <- ifelse(df1$angle < -90, 0, 1)
+
+# The angle flips on the left side of the album
+df1$angle <- ifelse(df1$angle < -90, df1$angle+180, df1$angle)
 
 
 # Make a table for year labels
 yearlabels <- data.frame(
-  label = c(1955, 1970, 1990, 2005),
+  label = c('<strong>1955</strong>', '<strong>1970</strong>', 
+            '<strong>1990</strong>', '<strong>2005</strong>'),
   x = vlinecalc(c(1955, 1970, 1990, 2005)),
   y = 1,
   angle = 0)
@@ -106,19 +118,22 @@ genres = count(df1, sampledgenre)
 
 donutrecord <- ggplot(df1) + 
   # Create two sets of rectangles that will be converted to 4-edged slices
-  # First, the rectangles for the track slices
-  geom_rect(aes(ymax = ymax, ymin = ymin, 
-                xmax = aleadin, xmin = aleadout), 
-            fill = NA, color = 'gray77', 
-            linewidth = 0.3) +
-  # Overlay the rectangles for the total record (outer and inner edges) 
+  
+  # First, the rectangles for the  the total record (outer and inner edges) 
   geom_rect(aes(ymax = 0, ymin = 1,
                 xmax = aouter, xmin = ainner),
-            fill = NA, color = 'gray33', 
+            fill = 'gray11', color = 'gray11', 
             linewidth = 0.6) +
+
+# Overlay the rectangles for track slices 
+  geom_rect(aes(ymax = ymax, ymin = ymin, 
+                xmax = aleadin, xmin = aleadout), 
+            fill = 'gray22', color = 'gray99', 
+            linewidth = 0.4) +
   
   # Add gridlines for certain years (grooves)
-  geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray77') +
+  geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray88',
+             linewidth = 0.2, linetype = 'dashed') +
 
   # Add dots representing samples in each track (sprinkles)
   geom_point(aes(x = groove, y = sprinkle,
@@ -133,12 +148,25 @@ donutrecord <- ggplot(df1) +
                 mapping = aes(x = x, y = y, 
                               # label = paste0(label,' ------------'),
                               label = label,
-                              # hjust = 1, vjust = 0.5,
-                              hjust = 0.5, vjust = 0.5,
+                              # hjust = 0.5 means centered horizontally,
+                              # vjust = 0 means above the dashed line
+                              hjust = 0.5, vjust = 0,
                               angle = angle),
-                color = 'gray33', fill = NA, 
+                color = 'gray88', fill = NA, 
                 label.color = NA,
-                size = 5,
+                size = 3,
+                label.padding = unit(rep(0, 4), "pt")) +
+  
+  # Add labels for track names (slices)
+  geom_richtext(mapping = aes(x = (0.98*aleadin), y = ymin + 0.002,
+                          # label = paste0(label,' ------------'),
+                          label = trackname,
+                          # hjust = 0.5 means centered horizontally,
+                          # vjust = 0 means above the dashed line
+                          hjust = hjust, vjust = vjust, angle = angle),
+                color = 'gray66', fill = NA,
+                label.color = NA,
+                size = 1.5,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Remove any gaps around the plot edge 
