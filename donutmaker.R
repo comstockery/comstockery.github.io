@@ -244,9 +244,16 @@ ggsave(file = "samplesbyyear.svg", plot = samplesbyyear,
 
 
 df3 <- instancelist %>%
-  group_by(donutstrack, trackname, sampledgenre, type) %>%
-  summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
-  arrange(donutstrack) 
+  group_by(donutstrack, trackname, type) %>%
+  distinct(sampledtrack, .keep_all = TRUE) %>%
+  # summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
+  mutate(id = 1:n()) %>%
+  arrange(donutstrack, type, id) 
+
+# df3 <- instancelist %>%
+#   group_by(donutstrack, trackname, sampledgenre, type) %>%
+#   summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
+#   arrange(donutstrack) 
 
 
 # df3 <- instancelist %>%
@@ -256,18 +263,26 @@ df3 <- instancelist %>%
 #   select(c(donutstrack, trackname, type, count))
 
 
-samplesbytype <- ggplot(df3,
-                        aes(y = reorder(trackname, -donutstrack),
-                            fill = sampledgenre)) +
-  geom_bar(color = "gray88", linewidth = 0.5) +
-  scale_fill_manual(values = colorvalues, na.value = navalue) + 
-  facet_grid(cols = vars(type))
+samplesbytype <- ggplot(df3) +
+  geom_point(aes(x = id, y = reorder(trackname, -donutstrack),
+                 color = sampledgenre),
+             shape = 21, fill = NA, size = 2.5, stroke = 3) +
+  scale_color_manual(values = colorvalues, na.value = navalue) + 
+  scale_x_continuous(expand = expansion(add = c(0.5, 0.5))) +
+  facet_grid(~factor(type, levels = c('structural', 'surface', 'lyric')), 
+             scales = "free")
+
+
+# scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
+#   scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
+#                      breaks = seq(0, 8, 2)) +
+
 
 
 print(samplesbytype)
 
 ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
-       width = 7, height = 5, dpi = 72) 
+       width = 7, height = 7, dpi = 72) 
   
 } # End of the 'barmaker' code chunk
 
