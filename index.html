@@ -48,7 +48,6 @@ span {
       }    
     
 .genre {
-      display: inline;
       text-align: left;
       font-weight: 900;
       font-size: 1.5em;
@@ -83,8 +82,26 @@ span {
         
 .charttitle {
         font-family: 'Satoshi';
-        margin: 0px 10px;
-        }        
+        margin: 0px 5px;
+        } 
+        
+#sbyarea {
+        position: relative;
+        }  
+        
+#sbylegend {
+        position: absolute;
+        font-size: 0.6em;
+        left: 420px;
+        top: 30px;
+        background-color: #eee;
+        }
+        
+#sbychart {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        }
         
   </style>
 
@@ -108,7 +125,7 @@ span {
     </div>
 
   </div>
-  <div id = "albumgenres"></div>
+  <div>
         <span class="genre soul">soul / funk / disco</span>
         <span class="genre hiphop">hip-hop / rap / r & b</span>
         <span class="genre electronic">electronic / dance</span>
@@ -134,10 +151,19 @@ span {
 
 <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
-  <div>
+  <div id="sbyarea">
     <p class="charttitle"><strong>Release year of known samples on <em>Donuts</em></strong>
     <br>count</p>
-    <img src="samplesbyyear.svg">
+    <img id = "sbychart" src="samplesbyyear.svg">
+    
+    
+      <div id="sbylegend">
+        <span class="genre other">other</span><br>
+        <span class="genre rock">rock / pop</span><br>      
+        <span class="genre electronic">electronic / dance</span><br>
+        <span class="genre hiphop">hip-hop / rap / r & b</span><br>
+        <span class="genre soul">soul / funk / disco</span>
+        </div>
   </div>  
     
     <p><strong>RUFF DRAFT visual 2:</strong> Simpler view of the samples' genre by year</p>

@@ -7,9 +7,9 @@ library(googlesheets4)
 library(emojifont)
 
 # Flags for code chunks
-datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
+donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
@@ -128,12 +128,12 @@ donutrecord <- ggplot(df1) +
 # Overlay the rectangles for track slices 
   geom_rect(aes(ymax = ymax, ymin = ymin, 
                 xmax = aleadin, xmin = aleadout), 
-            fill = 'gray22', color = 'gray99', 
+            fill = 'gray22', color = 'gray88', 
             linewidth = 0.4) +
   
   # Add gridlines for certain years (grooves)
   geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray88',
-             linewidth = 0.2, linetype = 'dashed') +
+             linewidth = 0.1, linetype = 'dotted') +
 
   # Add dots representing samples in each track (sprinkles)
   geom_point(aes(x = groove, y = sprinkle,
@@ -152,19 +152,19 @@ donutrecord <- ggplot(df1) +
                               # vjust = 0 means above the dashed line
                               hjust = 0.5, vjust = 0,
                               angle = angle),
-                color = 'gray88', fill = NA, 
+                color = 'gray99', fill = NA, 
                 label.color = NA,
                 size = 3,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Add labels for track names (slices)
-  geom_richtext(mapping = aes(x = (0.98*aleadin), y = ymin + 0.002,
+  geom_richtext(mapping = aes(x = (0.99*aleadin), y = ymin + 0.0015,
                           # label = paste0(label,' ------------'),
                           label = trackname,
                           # hjust = 0.5 means centered horizontally,
                           # vjust = 0 means above the dashed line
                           hjust = hjust, vjust = vjust, angle = angle),
-                color = 'gray66', fill = NA,
+                color = 'gray77', fill = NA,
                 label.color = NA,
                 size = 1.5,
                 label.padding = unit(rep(0, 4), "pt")) +
@@ -207,16 +207,30 @@ df2 <- samplelist %>%
 samplesbyyear <- ggplot(df2,
        aes(sampledyear, fill = sampledgenre)) +
   geom_bar(color = "gray88", linewidth = 0.5) +
+  # Add vertical line for Donuts release
+  geom_segment(x = 2006, xend = 2006, 
+               y = 0, yend = 8,
+               color = "gray44", linewidth = 0.5, linetype = 'dotted') +
+  geom_richtext(data = data.frame(),
+                mapping = aes(x = 2006, y = 7.8, 
+                            label = 'Donuts released',
+                            angle = -90,
+                            hjust = 0, vjust = 0), 
+              color = 'gray44', fill = NA,
+              label.color = NA,
+              size = 3,
+              label.padding = unit(rep(0, 4), "pt")) +
+
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Remove any gaps around the plot edge 
-  scale_x_continuous(limits = c(1955, 2005), expand = expansion(0,0)) +
+  scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
   scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
                      breaks = seq(0, 8, 2)) +
   theme_minimal() +
   theme(legend.position = 'none',
         axis.line.x = element_line(color = "gray55"),
         axis.ticks = element_blank(),
-        axis.ticks.x = element_line(color = "gray77"),
+        axis.ticks.x = element_line(color = "gray55"),
         axis.title = element_blank(),
         panel.grid = element_blank(),
         panel.grid.major.y = element_line(color = "gray88"))
