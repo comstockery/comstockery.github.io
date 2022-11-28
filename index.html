@@ -12,7 +12,7 @@
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>  
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'> -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-  <link href="https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/css?f[]=satoshi@400,700,900&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -24,14 +24,26 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 16px;
 	background-color: #eee;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3em;
 }
 
 h1,
-h2,
+h2 {
+  text-align: center;
+	font-family: 'Satoshi', sans-serif;
+	font-weight: 900;
+}
+
 h3,
 h4,
 h5,
 h6 {
+  text-align: center;
 	font-family: 'Satoshi', sans-serif;
 	font-weight: 700;
 }
@@ -55,7 +67,7 @@ span {
 .soul {
 	color: #9B53E6;
 	/*purple*/
-	font-weight: 700;
+	font-weight: 900;
 }
 
 .hiphop {
@@ -82,26 +94,34 @@ span {
 	font-weight: 700;
 }
 
-
 .unknown {
-	color: #AAAAAA;
+	color: #aaa;
 	/*gray*/
 	font-weight: 700;
 }
 
 .genre {
-	text-align: left;
-	font-size: 1.5em;
-	margin: 0px 10px;
+	font-size: 1.3em;
+	margin: 0px 8px;
 }
 
 .quotation {
+	margin: auto;
 	width: 70%;
-	background-color: #FFFFFF;
-	color: #000000;
+	background-color: #ddd;
+	color: #555;
 	border: 1px solid black;
+	border-radius: 8px;
 	padding: 10px 20px;
 	font-size: 0.9em;
+}
+
+.container {
+  background-color: #ddd;
+	color: #555;
+	border: 1px solid black;
+	border-radius: 8px;
+  padding: 10px 20px;
 }
 
 /*        
@@ -127,7 +147,7 @@ span {
 #albumlegend {
 	text-align: center;
 	margin: 0;
-	font-size: 1.2em;
+	font-size: 1.1em;
 }
 
 .charttitle {
@@ -214,14 +234,9 @@ span {
 
 <body>
 
-    <h1>WORKINONIT! &#127849; &#127849; &#127849; </h1>
-
-    <p>This is a work in progress... Below are rough drafts of data visualization based on J Dilla's <strong>Donuts</strong>.</p>
+    <h1>SAMPLING DONUTS</h1>
+    <h4>visualizing the use of samples in J Dilla's hip-hop classic</h4>
     
-    <div class = "quotation"><p>"[<em>Donuts</em> is] just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br><br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
-    </div>
-
-
   <div id = "album">
     <img src="donutrecord.svg">
     <div id = "albumlabel">
@@ -239,16 +254,16 @@ span {
         <span class="genre other">other</span>
   </div>
 
-    <p><strong>RUFF DRAFT visual 1:</strong> Showing the entire album</p>
-    
-    <p><strong>Intention:</strong> Show the entire album at once. For the entire album, the main attribute is the number of tracks. For each track, data attributes include duration, beats per minute, number of samples. Then for each sample, attributes include genre and release year. </p>
-    
-    <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration. Each has some 'sprinkles' on it. The number of sprinkles per slice represents the number of unique samples per track. Sprinkles are colored based on their genre and placed radially based on their release year.</p>
-    
-    <p>Ideally this shows that Donuts uses plenty of soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and then-contemporary (early 2000s).</p>
 
-<hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-
+    <br>
+    
+    <div class = "quotation"><p>"[<em>Donuts</em> is] just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br><br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
+    </div>
+    
+    <br>
+    <p>WRITE TEXT ABOUT DONUTS. THE USE OF 64 DIFFERENT SAMPLES. SET UP DISCUSSION OF TIME, WHICH IS RADIAL IN THE GRAPH ABOVE AND LINEAR IN THE GRAPH BELOW.</p>
+    <br>
+    
   <div id="sbyarea">
     <p class="charttitle"><strong>Release year of known samples on <em>Donuts</em></strong>
     <br>count</p>
@@ -263,13 +278,11 @@ span {
         <span class="genre soul">soul / funk / disco</span>
       </div>
   </div>  
+  
+    <br>
+    <p>WRITE TEXT ABOUT THE SAMPLES, THEIR GENRE AND TYPE. GENRE IS REFERENCED IN THE GRAPH ABOVE. GENRE AND TYPE ARE USED IN THE GRAPH BELOW.</p>
+    <br>
     
-    <p><strong>RUFF DRAFT visual 2:</strong> Simpler view of the samples' genre by year</p>
-    
-    <p><strong>Intention:</strong> This graph only focuses on the release year of the 63 known samples in Donuts.</p>
-    
-<hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-
   <div id="sbtarea">
     <p class="charttitle"><strong>Type and genre of samples on <em>Donuts</em> by track</strong>
     <br>count</p>
@@ -286,31 +299,27 @@ span {
 
   </div>  
     
-    <p><strong>RUFF DRAFT visual 3:</strong> Type of samples and their genre by track</p>
-    
-    <p><strong>Intention:</strong> Introduce the type attribute and show how different genres are used.</p>
-    
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-
-
+    <br>
+    <p>WRITE TEXT ABOUT THE INSTANCES OF THESE SAMPLES, SET UP THE TIMING OF SAMPLES BY TRACK.</p>
+    <br>
 
 <img src="1.svg"><img src="2.svg"><img src="3.svg"> <br>
 <img src="4.svg"><img src="5.svg"><img src="6.svg"> <br>
 <img src="7.svg"><img src="8.svg"><img src="9.svg"> <br>
-<img src="10.svg"><img src="11.svg"><img src="12.svg"> 
+<img src="10.svg"><img src="11.svg"><img src="12.svg"> <br>
 
-    <p><strong>RUFF DRAFT visual 4:</strong> THE DONUTS!</p>
-    
+<img src="13.svg"><img src="14.svg"><img src="15.svg"> <br>
+<img src="16.svg"><img src="17.svg"><img src="18.svg"> <br>
+<img src="19.svg"><img src="20.svg"><img src="21.svg"> <br>
+<img src="22.svg"><img src="23.svg"><img src="24.svg"> <br>
+
+<img src="25.svg"><img src="26.svg"><img src="27.svg"> <br>
+<img src="28.svg"><img src="29.svg"><img src="30.svg"> <br>
+<img src="31.svg">
+
     <p><strong>Intention:</strong> Display the timing of samples on each track. Think of each track 'starting' at the 12:00 position, then rotating clockwise you encounter each sample based on its timing. The positions within the 'record grooves' reflect how those samples are used on the Donuts track: structural, surface, and lyric. Each groove represents a unique sample type x sampled track combination. Donuts tracks with more unique type x track combos will have more grooves.</p>
     
-    <p><strong>Progress:</strong> Got the geoms correctly placed! This required a lot of dplyr work and somehow much more math on top of that. AND I wrote a function to batch-generate and save each plot.</p>
-    
-    <p><strong>Notes:</strong> I've shown the first DOZEN DONUTS. There's no labeling other the track names but I intend to handle that either with geom_richtext or HTML if I have to. (I see geom_richtext struggles with apostrophes!) I will obviously need to add some labeling to make these coherent, but for now it's pretty exciting to get these rendered!</p>
-    
-    <p>(NB: It's very strange to have worked with this data for MONTHS and this is the first time I've "seen" it visualized!)</p>
-    
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-
+<br>
 
 <div class="container">
   <h2 class="hiphop explore">Mantronix - King of the Beats (1988)</h2>
@@ -323,10 +332,7 @@ span {
   
   <p>The Mantronix siren appears on 9 of the 31 tracks on <em>Donuts</em>. "King of the Beats" itself contains 12 known samples.</p>
   
-
-  
   <div id="gen3" class="collapse">
-    
     <span class = "rock">Josie and the Pussycats - Hand Clapping Song (1966)</span><br>
     <span class = "other">Mars Needs Women - Mars Needs Women (1967)</span><br>
     <span class = "soul">The Meters - Same Old Thing (1969)</span><br>
@@ -376,28 +382,8 @@ span {
                         <span class = "electronic gen5">The Buggers - The Bugger Groove (1984)</span>    
                     </div> 
         </div> 
-    
   </div>
-  
 </div>
-
-
-
-    <p><strong>RUFF DRAFT visual 5:</strong> Generations of samples</p>
-    
-    <p><strong>Intention:</strong> Display the multiple generations of music contained within certain Donuts samples.</p>
-    
-    <p><strong>Progress:</strong> Pulled the data for the samples within Mantronix's King of the Beats, the most-used sample on Donuts.</p>
-    
-    <p><strong>Notes:</strong> I'm not sure why, but the text isn't rendering well in SVG. May switch to PNG for these. Other samples I'd explore are Run-DMC's Here We Go (Live at the Funhouse), the Beastie Boys' The New Style, and Jaylib's No Games.</p>
-    
-    <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
-    
-<h1>What's next?</h1>
-
-<p><strong>Data visualizations:</strong> Add better labeling throughout. Finish up any other lingering 'to-do' items listed above. Revisit DONUTS to see if any more lyric samples can be split into multiple instances.</p>
-
-<p><strong>Prototype:</strong> Develop an approach for the HTML and CSS. Add narrative text. </p>
 
 
 </body>

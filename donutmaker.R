@@ -8,9 +8,9 @@ library(emojifont)
 
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -347,7 +347,7 @@ df6$xmin = tleadout + (df6$gmin * (tleadin-tleadout))
 df6$xmax = tleadout + (df6$gmax * (tleadin-tleadout))
     
 # Write a loop that cycles through the whole album
-for(i in 1:max(df6$donutstrack/2)) {
+for(i in 1:max(df6$donutstrack)) {
 
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df6, donutstrack ==  i) %>%
@@ -381,13 +381,13 @@ ggplot() +
         panel.grid  = element_blank(),
         plot.margin = unit(rep(-0.5,4), "inches"))
 
-# Viewing each plot as it's made
+# View each plot as it's made
 print(donutbite)
 plotname = i
 
 # Save each plot as an svg
 ggsave(file = paste0(plotname, ".svg"), plot = donutbite, 
-       width = 3, height = 3, dpi = 72) 
+       width = 2, height = 2, dpi = 72) 
 
 } # End of donutbite function
 
