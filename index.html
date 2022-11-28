@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  
   <title>SAMPLING DONUTS</title>
+  
+  <meta charset="utf-8">
+
   <link rel="icon" type="image/x-icon" href="donut.ico">
-  <link href="style.css" rel="stylesheet" />
-  <link href='https://fonts.googleapis.com/css?family=Inter Tight' rel='stylesheet'>
+  <link href="style.css" rel="stylesheet">
+<!--  <link href='https://fonts.googleapis.com/css?family=Inter Tight' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>  
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'> -->
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
   <link href="https://api.fontshare.com/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
   <style>
 
 body {
@@ -81,12 +89,14 @@ span {
         }
         
 .charttitle {
+        position: absolute;
         font-family: 'Satoshi';
         margin: 0px 5px;
         } 
         
 #sbyarea {
         position: relative;
+        height: 250px;
         }  
         
 #sbylegend {
@@ -99,7 +109,26 @@ span {
         
 #sbychart {
         position: relative;
-        top: 0px;
+        top: 50px;
+        left: 0px;
+        }
+        
+#sbtarea {
+        position: relative;
+        height: 700px;
+        }  
+        
+#sbtlegend {
+        position: absolute;
+        font-size: 0.8em;
+        left: 500px;
+        top: 300px;
+        background-color: #eee;
+        }
+        
+#sbtchart {
+        position: relative;
+        top: 20px;
         left: 0px;
         }
         
@@ -113,7 +142,7 @@ span {
 
     <p>This is a work in progress... Below are rough drafts of data visualization based on J Dilla's <strong>Donuts</strong>.</p>
     
-    <p>"It’s just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is, ya know me flipping records that people really don’t know how to rap on but they want to rap on."<br> --J Dilla, <em>Scratch Magazine</em> interview, February 2006</p>
+    <p>"It’s just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
 
 
   <div id = "album">
@@ -140,14 +169,6 @@ span {
     <p><strong>Progress:</strong> A donut chart with 31 slices (one for each track on the album), sized by their duration. Each has some 'sprinkles' on it. The number of sprinkles per slice represents the number of unique samples per track. Sprinkles are colored based on their genre and placed radially based on their release year.</p>
     
     <p>Ideally this shows that Donuts uses plenty of soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and then-contemporary (early 2000s).</p>
-    
-    <p><strong>Still to-do:</strong>  
-    <ul>
-      <li>Add labels for tracks (or track numbers?)</li>
-      <li>Consider moving year labels out left?</li>
-      <li>Consider using the beats-per-minute attribute</li>
-    </ul>
-    </p>
 
 <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
@@ -163,45 +184,33 @@ span {
         <span class="genre electronic">electronic / dance</span><br>
         <span class="genre hiphop">hip-hop / rap / r & b</span><br>
         <span class="genre soul">soul / funk / disco</span>
-        </div>
+      </div>
   </div>  
     
     <p><strong>RUFF DRAFT visual 2:</strong> Simpler view of the samples' genre by year</p>
     
     <p><strong>Intention:</strong> This graph only focuses on the release year of the 63 known samples in Donuts.</p>
     
-    <p><strong>Progress:</strong> I feel OK about the basics here! I plan on adding the legend within HTML, not R (similar to the current chart title and units). Will add some notation near the graph that helps connect the genre colors to the values here, especially the soul/funk/disco samples from the late 1960s and early 1970s and hip-hop samples, both from the golden era (late 1980s) and early 2000s.</p>
-    
-    <p><strong>Still to-do:</strong>  
-    <ul>
-      <li>Add legend in HTML</li>
-      <li>Add narrative text near figure</li>
-    </ul>
-    </p>
-    
 <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
-  <div>
-    <p class="charttitle"><strong>Type and genre of samples on <em>Donuts</em></strong> by track
+  <div id="sbtarea">
+    <p class="charttitle"><strong>Type and genre of samples on <em>Donuts</em> by track</strong>
     <br>count</p>
-    <img src="samplesbytype.svg">
+    <img id = "sbtchart" src="samplesbytype.svg">
+    
+      <div id="sbtlegend">
+        <span class="genre other">other</span><br>
+        <span class="genre rock">rock / pop</span><br>      
+        <span class="genre electronic">electronic / dance</span><br>
+        <span class="genre hiphop">hip-hop / rap / r & b</span><br>
+        <span class="genre soul">soul / funk / disco</span>
+      </div>
+
   </div>  
     
     <p><strong>RUFF DRAFT visual 3:</strong> Type of samples and their genre by track</p>
     
     <p><strong>Intention:</strong> Introduce the type attribute and show how different genres are used.</p>
-    
-    <p><strong>Progress:</strong> The data is close but not quite correct. Need to revisit my piping that formed the dataframe.</p>
-    
-    <p><strong>Still to-do:</strong>  
-    <ul>
-      <li>Add legend in HTML</li>
-      <li>Add narrative text near figure</li>
-      <li>Clean up theme</li>
-      <li>Fix data pipe</li>
-    </ul>
-    </p> 
-    
     
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
@@ -225,7 +234,9 @@ span {
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
 
-<img src="KINGOFTHEBEATS.svg">
+<p>BOOTSTRAP PLACE</p><br><br>
+
+
 
     <p><strong>RUFF DRAFT visual 5:</strong> Generations of samples</p>
     

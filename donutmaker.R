@@ -7,7 +7,7 @@ library(googlesheets4)
 library(emojifont)
 
 # Flags for code chunks
-datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
+datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
@@ -19,7 +19,7 @@ colorvalues = c("electronic/dance" = "#E67343",
                 "other" = "#F8B219",
                 "rock/pop" = "#004AF7",
                 "soul/funk/disco" = "#9B53E6")
-navalue = "#BBBBBB"
+navalue = "#AAAAAA"
 
 if(datamaker) {
 
@@ -264,32 +264,32 @@ df3 <- instancelist %>%
 
 
 samplesbytype <- ggplot(df3) +
+  # Plot circles that are actually lines around the individual donuts
+  geom_point(aes(x = id, y = reorder(trackname, -donutstrack)),
+             color = 'gray88', shape = 21, fill = 'white', size = 2.5, stroke = 4) +
+  # Overlay donuts colored by their genre
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack),
                  color = sampledgenre),
-             shape = 21, fill = "white", size = 2.5, stroke = 3) +
+             shape = 21, fill = NA, size = 2.5, stroke = 3) +
+  # Map the colors to the genres
   scale_color_manual(values = colorvalues, na.value = navalue) + 
+  # Add a slight margin in each donut box
   scale_x_continuous(expand = expansion(add = c(0.6, 0.6))) +
+  # Facet the plot by sample type and allow the axes to be sized by their max donut count
   facet_grid(~factor(type, levels = c('structural', 'surface', 'lyric')),
-             scales = "free", space = "free") +
-
-  theme_minimal() + # axis, legend, panel, plot, strip
+             scales = 'free', space = 'free') +
+  # Set up the theme for the plot
+  theme_minimal() + # order: axis, legend, panel, plot, strip
   theme(axis.text.x = element_blank(),
         axis.ticks = element_blank(),
         axis.title = element_blank(),
         legend.position = 'none',
         panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = "gray88"),
-        panel.border = element_rect(color = "gray55", fill = NA, size = 0.8),
-        panel.spacing.x = unit(1.5, "lines"),
-        strip.text.x = element_text(size=12, face="bold",),
-        strip.clip = "off")
-
-
-# scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
-#   scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
-#                      breaks = seq(0, 8, 2)) +
-
-
+        panel.grid.major.y = element_line(color = 'gray88'),
+        panel.border = element_rect(color = 'gray55', fill = NA, size = 0.8),
+        panel.spacing.x = unit(1.5, 'lines'),
+        strip.text.x = element_text(size=12, face='bold'),
+        strip.clip = 'off') 
 
 print(samplesbytype)
 
