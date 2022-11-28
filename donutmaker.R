@@ -266,11 +266,23 @@ df3 <- instancelist %>%
 samplesbytype <- ggplot(df3) +
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack),
                  color = sampledgenre),
-             shape = 21, fill = NA, size = 2.5, stroke = 3) +
+             shape = 21, fill = "white", size = 2.5, stroke = 3) +
   scale_color_manual(values = colorvalues, na.value = navalue) + 
-  scale_x_continuous(expand = expansion(add = c(0.5, 0.5))) +
-  facet_grid(~factor(type, levels = c('structural', 'surface', 'lyric')), 
-             scales = "free")
+  scale_x_continuous(expand = expansion(add = c(0.6, 0.6))) +
+  facet_grid(~factor(type, levels = c('structural', 'surface', 'lyric')),
+             scales = "free", space = "free") +
+
+  theme_minimal() + # axis, legend, panel, plot, strip
+  theme(axis.text.x = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title = element_blank(),
+        legend.position = 'none',
+        panel.grid = element_blank(),
+        panel.grid.major.y = element_line(color = "gray88"),
+        panel.border = element_rect(color = "gray55", fill = NA, size = 0.8),
+        panel.spacing.x = unit(1.5, "lines"),
+        strip.text.x = element_text(size=12, face="bold",),
+        strip.clip = "off")
 
 
 # scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
@@ -282,7 +294,7 @@ samplesbytype <- ggplot(df3) +
 print(samplesbytype)
 
 ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
-       width = 7, height = 7, dpi = 72) 
+       width = 5, height = 7, dpi = 72) 
   
 } # End of the 'barmaker' code chunk
 
