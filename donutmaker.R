@@ -133,7 +133,7 @@ donutrecord <- ggplot(df1) +
   
   # Add gridlines for certain years (grooves)
   geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray88',
-             linewidth = 0.1, linetype = 'dotted') +
+             linewidth = 0.2, linetype = 'dotted') +
 
   # Add dots representing samples in each track (sprinkles)
   geom_point(aes(x = groove, y = sprinkle,
@@ -146,7 +146,6 @@ donutrecord <- ggplot(df1) +
   # Add labels for gridlines (grooves)
   geom_richtext(data = yearlabels,
                 mapping = aes(x = x, y = y, 
-                              # label = paste0(label,' ------------'),
                               label = label,
                               # hjust = 0.5 means centered horizontally,
                               # vjust = 0 means above the dashed line
@@ -159,7 +158,6 @@ donutrecord <- ggplot(df1) +
   
   # Add labels for track names (slices)
   geom_richtext(mapping = aes(x = (0.99*aleadin), y = ymin + 0.0015,
-                          # label = paste0(label,' ------------'),
                           label = trackname,
                           # hjust = 0.5 means centered horizontally,
                           # vjust = 0 means above the dashed line

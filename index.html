@@ -21,116 +21,192 @@
   <style>
 
 body {
-        font-family: 'Quicksand', sans-serif;
-        font-size: 16px;
-        background-color: #eee;
-        }
-        
-h1 {
-        font-family: 'Satoshi', sans-serif;
-        }        
- /*       
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	background-color: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Satoshi', sans-serif;
+	font-weight: 700;
+}
+
+
+p {
+	margin: 0 0 5px;
+}
+
+a {
+	font-weight: 900;
+	color: #4F000B;
+}
+
 span {
-        font-weight: bold;
-        margin: 0;
-        }*/ 
+	margin: 10px;
+	vertical-align: middle;
+	display: inline;
+}
 
 .soul {
-      color: #9B53E6; /*purple*/ 
-      }   
+	color: #9B53E6;
+	/*purple*/
+	font-weight: 700;
+}
 
 .hiphop {
-      color: #F72585; /*pink*/        
-      } 
-      
+	color: #F72585;
+	/*pink*/
+	font-weight: 700;
+}
+
 .rock {
-      color: #004AF7; /*blue*/ 
-      } 
-        
+	color: #004AF7;
+	/*blue*/
+	font-weight: 700;
+}
+
 .electronic {
-      color: #E67343; /*orange*/ 
-      } 
+	color: #E67343;
+	/*orange*/
+	font-weight: 700;
+}
 
 .other {
-      color: #F8B219; /*yellow*/ 
-      }    
-    
+	color: #F8B219;
+	/*yellow*/
+	font-weight: 700;
+}
+
+
+.unknown {
+	color: #AAAAAA;
+	/*gray*/
+	font-weight: 700;
+}
+
 .genre {
-      text-align: left;
-      font-weight: 900;
-      font-size: 1.5em;
-      margin: 0px 10px;
-      }
+	text-align: left;
+	font-size: 1.5em;
+	margin: 0px 10px;
+}
+
+.quotation {
+	width: 70%;
+	background-color: #FFFFFF;
+	color: #000000;
+	border: 1px solid black;
+	padding: 10px 20px;
+	font-size: 0.9em;
+}
 
 /*        
 .mantronix {
       color: #F10433; imperial red 
       } */
-        
+
 #album {
-        position: relative;
-        text-align: center;
-        margin: 0;
-        }
-        
+	position: relative;
+	text-align: center;
+	margin: 0;
+}
+
 #albumlabel {
-        font-family: 'Satoshi';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 1.5em;
-        }
-        
+	font-family: 'Satoshi';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+}
+
 #albumlegend {
-        text-align: center;
-        margin: 0;
-        font-size: 1.2em;
-        }
-        
+	text-align: center;
+	margin: 0;
+	font-size: 1.2em;
+}
+
 .charttitle {
-        position: absolute;
-        font-family: 'Satoshi';
-        margin: 0px 5px;
-        } 
-        
+	position: absolute;
+	font-family: 'Satoshi';
+	margin: 0px 5px;
+}
+
 #sbyarea {
-        position: relative;
-        height: 250px;
-        }  
-        
+	position: relative;
+	height: 250px;
+}
+
 #sbylegend {
-        position: absolute;
-        font-size: 0.6em;
-        left: 420px;
-        top: 30px;
-        background-color: #eee;
-        }
-        
+	position: absolute;
+	font-size: 0.6em;
+	left: 420px;
+	top: 30px;
+	background-color: #eee;
+}
+
 #sbychart {
-        position: relative;
-        top: 50px;
-        left: 0px;
-        }
-        
+	position: relative;
+	top: 50px;
+	left: 0px;
+}
+
 #sbtarea {
-        position: relative;
-        height: 700px;
-        }  
-        
+	position: relative;
+	height: 700px;
+}
+
 #sbtlegend {
-        position: absolute;
-        font-size: 0.8em;
-        left: 500px;
-        top: 300px;
-        background-color: #eee;
-        }
-        
+	position: absolute;
+	font-size: 0.8em;
+	left: 500px;
+	top: 300px;
+	background-color: #eee;
+}
+
 #sbtchart {
-        position: relative;
-        top: 20px;
-        left: 0px;
-        }
+	position: relative;
+	top: 20px;
+	left: 0px;
+}
+
+
+.btn {
+	font-family: 'Satoshi';
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	padding: 0px 4px;
+	text-align: center;
+	font-size: 0.8em;
+	border-radius: 8px;
+	vertical-align: middle;
+	display: inline;
+}
+
+.explore {
+	display: inline;
+	vertical-align: middle;
+}
+
+#gen3 {
+	margin-left: 20px;
+}
+
+.gen4 {
+	margin-left: 50px;
+}
+
+.gen5 {
+	margin-left: 80px;
+}
+
+.gen6 {
+	margin-left: 110px;
+}
         
   </style>
 
@@ -142,7 +218,8 @@ span {
 
     <p>This is a work in progress... Below are rough drafts of data visualization based on J Dilla's <strong>Donuts</strong>.</p>
     
-    <p>"It’s just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
+    <div class = "quotation"><p>"[<em>Donuts</em> is] just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br><br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
+    </div>
 
 
   <div id = "album">
@@ -199,6 +276,7 @@ span {
     <img id = "sbtchart" src="samplesbytype.svg">
     
       <div id="sbtlegend">
+        <span class="genre unknown">unknown</span><br>
         <span class="genre other">other</span><br>
         <span class="genre rock">rock / pop</span><br>      
         <span class="genre electronic">electronic / dance</span><br>
@@ -234,7 +312,74 @@ span {
     <hr style="height:0.5px;border-width:0;color:gray;background-color:gray">
 
 
-<p>BOOTSTRAP PLACE</p><br><br>
+<div class="container">
+  <h2 class="hiphop explore">Mantronix - King of the Beats (1988)</h2>
+      <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen3">
+      EXPLORE SAMPLES
+      </button>
+  <p>The siren heard throughout <em>Donuts</em> comes from Mantronix's King of the Beats. <em>Stereogum</em> published a <a href="https://www.stereogum.com/2031736/breaks-with-tradition-king-of-the-beats/columns/breaks-with-tradition/">longer history</a> of "King of the Beats" in 2019.</p>
+  
+  <p>J Dilla used the Mantronix siren as his <a href="https://en.wikipedia.org/wiki/Producer_tag">producer's tag</a>&mdash;a short sound used as a producer's signature. J Dilla first used the Mantronix siren on <a href="https://www.whosampled.com/sample/613046/Jay-Dee-Let%27s-Take-It-Back-Mantronix-King-of-the-Beats/">"Let's Take it Back"</a>, a track on his 2003 EP <em>Ruff Draft</em>.</p>
+  
+  <p>The Mantronix siren appears on 9 of the 31 tracks on <em>Donuts</em>. "King of the Beats" itself contains 12 known samples.</p>
+  
+
+  
+  <div id="gen3" class="collapse">
+    
+    <span class = "rock">Josie and the Pussycats - Hand Clapping Song (1966)</span><br>
+    <span class = "other">Mars Needs Women - Mars Needs Women (1967)</span><br>
+    <span class = "soul">The Meters - Same Old Thing (1969)</span><br>
+    <span class = "soul">The Winstons - Amen, Brother (1969)</span><br>
+    <span class = "soul">Rufus Thomas - Do the Funky Penguin (1971)</span><br>
+    <span class = "soul">The Magic Disco Machine - Scratchin' (1975)</span><br>
+    <span class = "soul">Kool & the Gang - Jungle Jazz (1975)</span><br>
+    <span class = "soul">Bob James - Take Me to the Mardi Gras (1975)</span>
+      <button type="button" class="btn soul" data-toggle="collapse" data-target="#gen4-bobjames">
+      EXPLORE SAMPLES
+      </button><br>
+        <div id="gen4-bobjames" class="collapse">
+            <span class = "other gen4">Tommy Cash - Rise and Shine (1970)</span><br>
+        </div>
+    <span class = "soul">Pleasure - Celebrate the Good Things (1978)</span><br>
+    <span class = "other">Adams & Fleisner - Pulsar City Alarm (1984)</span><br>
+    <span class = "hiphop">Mantronix - Electronic Energy of... (1986)</span><br>
+    <span class = "hiphop">Original Concept - Pump That Bass (1986)</span>
+          <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen4-OC">
+          EXPLORE SAMPLES
+          </button><br>
+        <div id="gen4-OC" class="collapse">
+            <span class = "soul gen4">Hermand Kelly & Life - Dance to the Drummer's Beat (1978)</span><br>
+            <span class = "rock gen4">Art of Noise - Close (To the Edit) (1984)</span>      
+                  <button type="button" class="btn rock" data-toggle="collapse" data-target="#gen5-artofnoise">
+                  EXPLORE SAMPLES
+                  </button><br>
+                    <div id="gen5-artofnoise" class="collapse">
+                        <span class = "rock gen5">Yes - Leave It (1983)</span><br>
+                        <span class = "rock gen5">Yes - Owner of a Lonely Heart (1983)</span>
+                              <button type="button" class="btn rock" data-toggle="collapse" data-target="#gen6-yes">
+                              EXPLORE SAMPLES
+                              </button><br>
+                              <div id="gen6-yes" class="collapse">
+                                  <span class = "soul gen6">Funk, Inc. - Kool is Back (1971)</span><br>
+                              </div>
+                    </div>
+            <span class = "hiphop gen4">Whistle - (Nothing Serious) Just Buggin' (1986)</span>
+                  <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen5-whistle">
+                  EXPLORE SAMPLES
+                  </button><br>
+                    <div id="gen5-whistle" class="collapse">
+                        <span class = "soul gen5">Pleasure - Celebrate the Good Things (1978)</span><br>
+                        <span class = "hiphop gen5">Beside - Change the Beat (Female Version) (1982)</span><br>
+                        <span class = "electronic gen5">Hashim - Al-Naafiysh (The Soul) (A-Side) (1983)</span><br>                 
+                        <span class = "hiphop gen5">UTFO - Beats and Rhymes (1984)</span><br>                        
+                        <span class = "electronic gen5">The Buggers - The Bugger Groove (1984)</span>    
+                    </div> 
+        </div> 
+    
+  </div>
+  
+</div>
 
 
 
