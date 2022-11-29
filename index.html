@@ -37,14 +37,26 @@
     </div>
 
   </div>
-  <div>
+  
+  <div id = "stickylegend">
+        <span class="legend" id = "legendlabel">genres:</span>
+        <span class="legend soul">soul / funk / disco</span>
+        <span class="legend hiphop">hip-hop / rap / r & b</span>
+        <span class="legend electronic">electronic / dance</span>
+        <span class="legend rock">rock / pop</span>
+        <span class="legend other">other</span>
+        <span class="legend unknown">unknown</span>
+  </div>
+
+<!-- Old version of the main album legend
+  <div class = "stickylegend">
         <span class="genre soul">soul / funk / disco</span>
         <span class="genre hiphop">hip-hop / rap / r & b</span>
         <span class="genre electronic">electronic / dance</span>
         <span class="genre rock">rock / pop</span>
         <span class="genre other">other</span>
-  </div>
-
+  </div> 
+  -->
 
     <br>
     
@@ -64,14 +76,14 @@
     <br>count</p>
     <img id = "sbychart" src="samplesbyyear.svg">
     
-    
+    <!-- drop the legend
       <div id="sbylegend">
         <span class="genre other">other</span><br>
         <span class="genre rock">rock / pop</span><br>      
         <span class="genre electronic">electronic / dance</span><br>
         <span class="genre hiphop">hip-hop / rap / r & b</span><br>
         <span class="genre soul">soul / funk / disco</span>
-      </div>
+      </div> -->
   </div> 
   </div>
   
@@ -84,7 +96,7 @@
     <p class = "charttitle"><strong>Type and genre of samples on <em>Donuts</em> by track</strong>
     <br>count</p>
     <img id = "sbtchart" src="samplesbytype.svg">
-    
+        <!-- drop the legend
       <div id="sbtlegend">
         <span class="genre unknown">unknown</span><br>
         <span class="genre other">other</span><br>
@@ -92,7 +104,7 @@
         <span class="genre electronic">electronic / dance</span><br>
         <span class="genre hiphop">hip-hop / rap / r & b</span><br>
         <span class="genre soul">soul / funk / disco</span>
-      </div>
+      </div> -->
 
   </div> 
   </div> 
@@ -120,35 +132,40 @@
 <br>
 
 <div class="container">
-  <h2 class="hiphop explore">Mantronix - King of the Beats (1988)</h2>
-      <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen3">
-      EXPLORE SAMPLES
-      </button>
-  <p>The siren heard throughout <em>Donuts</em> comes from Mantronix's "King of the Beats."" <em>Stereogum</em> published a <a href="https://www.stereogum.com/2031736/breaks-with-tradition-king-of-the-beats/columns/breaks-with-tradition/">longer history</a> of "King of the Beats" in 2019.</p>
+  <h3>Sample highlight: Mantronix "King of the Beats"" (1988)</h3>
+
+  <p>The siren heard throughout <em>Donuts</em> comes from hip-hop and electro-funk group Mantronix's "King of the Beats."" <em>Stereogum</em> published a <a href="https://www.stereogum.com/2031736/breaks-with-tradition-king-of-the-beats/columns/breaks-with-tradition/">longer history</a> of "King of the Beats" in 2019.</p>
   
   <p>J Dilla used the Mantronix siren as his <a href="https://en.wikipedia.org/wiki/Producer_tag">producer's tag</a>&mdash;a short sound used as a producer's signature. J Dilla first used the Mantronix siren on <a href="https://www.whosampled.com/sample/613046/Jay-Dee-Let%27s-Take-It-Back-Mantronix-King-of-the-Beats/">"Let's Take it Back"</a>, a track on his 2003 EP <em>Ruff Draft</em>.</p>
   
-  <p>The Mantronix siren appears on 9 of the 31 tracks on <em>Donuts</em>. "King of the Beats" itself contains 12 known samples.</p>
+        <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen3-mantronix">
+      DIG DEEPER
+      </button>
   
-  <div id="gen3" class="collapse">
-    <span class = "rock">Josie and the Pussycats - Hand Clapping Song (1966)</span><br>
-    <span class = "other">Mars Needs Women - Mars Needs Women (1967)</span><br>
-    <span class = "soul">The Meters - Same Old Thing (1969)</span><br>
-    <span class = "soul">The Winstons - Amen, Brother (1969)</span><br>
-    <span class = "soul">Rufus Thomas - Do the Funky Penguin (1971)</span><br>
-    <span class = "soul">The Magic Disco Machine - Scratchin' (1975)</span><br>
-    <span class = "soul">Kool & the Gang - Jungle Jazz (1975)</span><br>
-    <span class = "soul">Bob James - Take Me to the Mardi Gras (1975)</span>
+
+  
+  <div id="gen3-mantronix" class="collapse">
+    
+      <p>"King of the Beats" contains 12 known samples. The siren we hear in <em>Donuts</em> is from Adams & Fleisner, an alias of a Dutch production team known as Cat Music, who released an <a href="https://www.discogs.com/release/162743-Adams-Fleisner-Digital-Space-Effects-Fix-Your-Own-Mix">album of digital effects</a> in 1984. The same siren has been <a href="https://www.whosampled.com/Adams-%26-Fleisner/Pulsar-City-Alarm/">recently used</a> in songs by Kendrick Lamar, Tyler the Creator, and The Weeknd.</p>
+    
+    <span class = "rock gen3">Josie and the Pussycats - Hand Clapping Song (1966)</span><br>
+    <span class = "other gen3">Mars Needs Women - Mars Needs Women (1967)</span><br>
+    <span class = "soul gen3">The Meters - Same Old Thing (1969)</span><br>
+    <span class = "soul gen3">The Winstons - Amen, Brother (1969)</span><br>
+    <span class = "soul gen3">Rufus Thomas - Do the Funky Penguin (1971)</span><br>
+    <span class = "soul gen3">The Magic Disco Machine - Scratchin' (1975)</span><br>
+    <span class = "soul gen3">Kool & the Gang - Jungle Jazz (1975)</span><br>
+    <span class = "soul gen3">Bob James - Take Me to the Mardi Gras (1975)</span>
       <button type="button" class="btn soul" data-toggle="collapse" data-target="#gen4-bobjames">
       EXPLORE SAMPLES
       </button><br>
         <div id="gen4-bobjames" class="collapse">
             <span class = "other gen4">Tommy Cash - Rise and Shine (1970)</span><br>
         </div>
-    <span class = "soul">Pleasure - Celebrate the Good Things (1978)</span><br>
-    <span class = "other">Adams & Fleisner - Pulsar City Alarm (1984)</span><br>
-    <span class = "hiphop">Mantronix - Electronic Energy of... (1986)</span><br>
-    <span class = "hiphop">Original Concept - Pump That Bass (1986)</span>
+    <span class = "soul gen3">Pleasure - Celebrate the Good Things (1978)</span><br>
+    <span class = "other gen3">Adams & Fleisner - Pulsar City Alarm (1984)</span><br>
+    <span class = "hiphop gen3">Mantronix - Electronic Energy of... (1986)</span><br>
+    <span class = "hiphop gen3">Original Concept - Pump That Bass (1986)</span>
           <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen4-OC">
           EXPLORE SAMPLES
           </button><br>

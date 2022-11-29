@@ -2,13 +2,14 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	font-size: 16px; 
 	background-color: #eee;
-  max-width: 800px;
   margin: auto;
   width: 90vw;
+  max-width: 1920px;
+  color: #333;
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
 }
 
 h1,
@@ -16,7 +17,7 @@ h2 {
   text-align: center;
 	font-family: 'Satoshi', sans-serif;
 	font-weight: 900;
-	margin-bottom: 5px;
+	margin: 5px;
 }
 
 h3,
@@ -26,6 +27,7 @@ h6 {
   text-align: center;
 	font-family: 'Satoshi', sans-serif;
 	font-weight: 700;
+	margin: 5px;
 }
 
 
@@ -39,7 +41,7 @@ a {
 }
 
 span {
-	margin: 10px;
+	margin: 5px;
 	vertical-align: middle;
 	display: inline;
 }
@@ -52,40 +54,54 @@ span {
   font-size: 1.2em;
 }
 
-.soul {
-	color: #9B53E6;
-	/*purple*/
-	font-weight: 700;
+#stickylegend {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border: 1px 0px 1px 0px solid #333;
+  background-color: #eee;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1px 2px;
 }
 
-.hiphop {
-	color: #F72585;
-	/*pink*/
-	font-weight: 700;
+.legend {
+  color: #fff;
+	font-weight: 900;
+	display: inline;
+	padding: 8px;
+	border-radius: 10px;
 }
 
-.rock {
-	color: #004AF7;
-	/*blue*/
-	font-weight: 700;
+.soul {	/*purple*/
+	background-color: #9B53E6;
 }
 
-.electronic {
-	color: #E67343;
-	/*orange*/
-	font-weight: 700;
+.hiphop {	/*pink*/
+	background-color: #F72585;
 }
 
-.other {
-	color: #F8B219;
-	/*yellow*/
-	font-weight: 700;
+.rock {	/*blue*/
+	background-color: #004AF7;
 }
 
-.unknown {
-	color: #aaa;
-	/*gray*/
-	font-weight: 700;
+.electronic {	/*orange*/
+	background-color: #E67343;
+}
+
+.other {	/*yellow*/
+	background-color: #F8B219;
+}
+
+.unknown {	/*gray*/
+	background-color: #aaa;
+}
+
+#legendlabel {	/*dark gray*/
+	color: #333;
 }
 
 .genre {
@@ -100,7 +116,7 @@ span {
 	background-color: #ddd;
 	color: #555;
 	border: 1px solid black;
-	border-radius: 8px;
+	border-radius: 10px;
 	padding: 10px 20px;
 	font-size: 0.9em;
 	position: relative;
@@ -120,7 +136,7 @@ span {
   background-color: #ddd;
 	color: #555;
 	border: 1px solid black;
-	border-radius: 8px;
+	border-radius: 10px;
   padding: 10px 20px;
   margin: auto;
   width: 90%;
@@ -210,17 +226,10 @@ span {
 	padding: 0px 4px;
 	text-align: center;
 	font-size: 0.8em;
-	border-radius: 8px;
-	vertical-align: middle;
-	display: inline;
+	border-radius: 10px;
 }
 
-.explore {
-	display: inline;
-	vertical-align: middle;
-}
-
-#gen3 {
+.gen3 {
 	margin-left: 20px;
 }
 
