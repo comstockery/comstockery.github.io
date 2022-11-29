@@ -1,0 +1,237 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px; 
+	background-color: #eee;
+  max-width: 800px;
+  margin: auto;
+  width: 90vw;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h1,
+h2 {
+  text-align: center;
+	font-family: 'Satoshi', sans-serif;
+	font-weight: 900;
+	margin-bottom: 5px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+	font-family: 'Satoshi', sans-serif;
+	font-weight: 700;
+}
+
+
+p {
+	margin: 0 0 5px;
+}
+
+a {
+	font-weight: 900;
+	color: #4F000B;
+}
+
+span {
+	margin: 10px;
+	vertical-align: middle;
+	display: inline;
+}
+
+#subtitle {
+	font-family: 'Satoshi', sans-serif;  
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.soul {
+	color: #9B53E6;
+	/*purple*/
+	font-weight: 700;
+}
+
+.hiphop {
+	color: #F72585;
+	/*pink*/
+	font-weight: 700;
+}
+
+.rock {
+	color: #004AF7;
+	/*blue*/
+	font-weight: 700;
+}
+
+.electronic {
+	color: #E67343;
+	/*orange*/
+	font-weight: 700;
+}
+
+.other {
+	color: #F8B219;
+	/*yellow*/
+	font-weight: 700;
+}
+
+.unknown {
+	color: #aaa;
+	/*gray*/
+	font-weight: 700;
+}
+
+.genre {
+	font-size: 1.3em;
+	margin: 0px 8px;
+}
+
+.quotationbox {
+	margin: auto;
+	height: 120px;
+	width: 70%;
+	background-color: #ddd;
+	color: #555;
+	border: 1px solid black;
+	border-radius: 8px;
+	padding: 10px 20px;
+	font-size: 0.9em;
+	position: relative;
+}
+
+.quotation {
+	text-align: left;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.container {
+  background-color: #ddd;
+	color: #555;
+	border: 1px solid black;
+	border-radius: 8px;
+  padding: 10px 20px;
+  margin: auto;
+  width: 90%;
+}
+
+/*        
+.mantronix {
+      color: #F10433; imperial red 
+      } */
+
+#album {
+	position: relative;
+	text-align: center;
+	margin: 0;
+}
+
+#albumlabel {
+	font-family: 'Satoshi';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.5em;
+}
+
+#albumlegend {
+	text-align: center;
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.charttitle {
+	position: absolute;
+	font-family: 'Satoshi';
+	margin: 0px 5px;
+}
+
+.wrapper {
+  margin: auto;
+  width: 80%;
+}
+
+#sbyarea {
+	position: relative;
+	height: 250px;
+}
+
+#sbylegend {
+	position: absolute;
+	font-size: 0.6em;
+	left: 420px;
+	top: 30px;
+	background-color: #eee;
+}
+
+#sbychart {
+	position: relative;
+	top: 50px;
+	left: 0px;
+}
+
+
+#sbtarea {
+	position: relative;
+	height: 700px;
+}
+
+#sbtlegend {
+	position: absolute;
+	font-size: 0.8em;
+	left: 500px;
+	top: 300px;
+	background-color: #eee;
+}
+
+#sbtchart {
+	position: relative;
+	top: 20px;
+	left: 0px;
+}
+
+
+.btn {
+	font-family: 'Satoshi';
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	padding: 0px 4px;
+	text-align: center;
+	font-size: 0.8em;
+	border-radius: 8px;
+	vertical-align: middle;
+	display: inline;
+}
+
+.explore {
+	display: inline;
+	vertical-align: middle;
+}
+
+#gen3 {
+	margin-left: 20px;
+}
+
+.gen4 {
+	margin-left: 50px;
+}
+
+.gen5 {
+	margin-left: 80px;
+}
+
+.gen6 {
+	margin-left: 110px;
+}

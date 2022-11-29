@@ -4,7 +4,7 @@ library(tidyverse)
 library(svglite)
 library(ggtext)
 library(googlesheets4)
-library(emojifont)
+
 
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
@@ -36,9 +36,6 @@ tracklist <- donutsmain %>%
 # Unique sample list
 samplelist <- donutsmain[!duplicated(donutsmain[c('donutstrack','sampledtrack')]),] %>%
   select(donutstrack, sampledtrack:sampledyear) 
-# %>%
-#   na.exclude %>%
-#   filter(!is.na(sampledyear))
 
 # Sample instances list
 instancelist <- donutsmain %>%
@@ -50,7 +47,6 @@ instancelist <- donutsmain %>%
 
 # Make the donut for entire album, but only if the donutmaker is TRUE!
 if(donutmaker) {
-
 
 # Start making donuts!
 
@@ -77,12 +73,12 @@ latestyear = 2005
 earliestyear = 1955
 samplelist$radius = 1 - ((samplelist$sampledyear-earliestyear) / (latestyear-earliestyear))
 samplelist$groove = aleadout + ((samplelist$radius) * (aleadin - aleadout))
-# sprinklewidth = (1/10)
+
 
 # Create a function to translate years to groove positions (timeline)
 vlinecalc <- function(year) {
   vlinegroove <- aleadout + ((1 - ((year - earliestyear) / 
-                              (latestyear-earliestyear))) * (aleadin-aleadout))
+                 (latestyear-earliestyear))) * (aleadin-aleadout))
   return(vlinegroove)
 }
 
@@ -115,17 +111,16 @@ yearlabels <- data.frame(
 # Count the genres in dataset
 genres = count(df1, sampledgenre)
 
-
 donutrecord <- ggplot(df1) + 
   # Create two sets of rectangles that will be converted to 4-edged slices
-  
+
   # First, the rectangles for the  the total record (outer and inner edges) 
   geom_rect(aes(ymax = 0, ymin = 1,
                 xmax = aouter, xmin = ainner),
             fill = 'gray11', color = 'gray11', 
             linewidth = 0.6) +
 
-# Overlay the rectangles for track slices 
+  # Overlay the rectangles for track slices 
   geom_rect(aes(ymax = ymax, ymin = ymin, 
                 xmax = aleadin, xmin = aleadout), 
             fill = 'gray22', color = 'gray88', 
@@ -172,9 +167,9 @@ donutrecord <- ggplot(df1) +
   scale_y_continuous(limits = c(0, 1), expand = expansion(0,0),
                      labels = NULL) +
   
-# Converts rectangles to radial slices
+  # Convert rectangles to radial slices
   coord_polar(theta = 'y') +
-# Remove other plot elements and legend
+  # Remove other plot elements and legend
   theme_void() +
   theme(legend.position = 'none', 
         panel.border = element_blank(),
@@ -186,7 +181,6 @@ donutrecord <- ggplot(df1) +
 
 print(donutrecord)
 
-
 # Save the plot as an SVG
 ggsave(file = "donutrecord.svg", plot = donutrecord, 
        width = 7, height = 7, dpi = 72)
@@ -197,6 +191,8 @@ ggsave(file = "donutrecord.svg", plot = donutrecord,
 if(barmaker) {
 
 # Make a timeline of the sampled songs' release years (count, stacked by genre)
+  
+# Data frame of unique sampled tracks  
 df2 <- samplelist %>%
   distinct(sampledtrack, .keep_all = TRUE) 
 
@@ -209,6 +205,7 @@ samplesbyyear <- ggplot(df2,
   geom_segment(x = 2006, xend = 2006, 
                y = 0, yend = 8,
                color = "gray44", linewidth = 0.5, linetype = 'dotted') +
+  # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
                 mapping = aes(x = 2006, y = 7.8, 
                             label = 'Donuts released',
@@ -218,12 +215,13 @@ samplesbyyear <- ggplot(df2,
               label.color = NA,
               size = 3,
               label.padding = unit(rep(0, 4), "pt")) +
-
+  # Add color mapping
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
   scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
                      breaks = seq(0, 8, 2)) +
+  # Set up theme
   theme_minimal() +
   theme(legend.position = 'none',
         axis.line.x = element_line(color = "gray55"),
@@ -240,25 +238,12 @@ print(samplesbyyear)
 ggsave(file = "samplesbyyear.svg", plot = samplesbyyear, 
        width = 7, height = 2, dpi = 72) 
 
-
+# Data frame that makes an index for each instance of a sample by type
 df3 <- instancelist %>%
   group_by(donutstrack, trackname, type) %>%
   distinct(sampledtrack, .keep_all = TRUE) %>%
-  # summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
   mutate(id = 1:n()) %>%
   arrange(donutstrack, type, id) 
-
-# df3 <- instancelist %>%
-#   group_by(donutstrack, trackname, sampledgenre, type) %>%
-#   summarize(typecount = n_distinct(sampledtrack), .groups = 'drop') %>%
-#   arrange(donutstrack) 
-
-
-# df3 <- instancelist %>%
-#   group_by(donutstrack, type) %>%
-#   mutate(count = n_distinct(sampledtrack)) %>%
-#   ungroup() %>%
-#   select(c(donutstrack, trackname, type, count))
 
 
 samplesbytype <- ggplot(df3) +
@@ -296,7 +281,7 @@ ggsave(file = "samplesbytype.svg", plot = samplesbytype,
   
 } # End of the 'barmaker' code chunk
 
-
+# Make donut bites, or track-by-track visualizations of samples' genre, timing, and type
 if(bitemaker) {
 
 # Define dimensions of the track donut
@@ -314,6 +299,7 @@ typegroove = tibble(type = c('structural', 'surface', 'lyric'),
 # Add an initial ranking of the sample types
 df4 <- left_join(instancelist, typegroove, by = "type")
 
+# The y dimension is along the circumference
 df4$ymin = df4$samplestart / df4$length
 df4$ymax = df4$sampleend / df4$length
 
@@ -336,18 +322,21 @@ df5 <- df4 %>%
   
 df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack', 'type'))
 
+# Let the track grooves take up 90% of the width
 tgroovewidth = 0.90
-# df6$xmin = (((1 / (2*df6$maxgroove)) + ((df6$groove - 1) / df6$maxgroove)) - (tgroovewidth / (2*df6$maxgroove)))
-# df6$xmax = (df6$xmin + (tgroovewidth / df6$maxgroove))
 
 df6$gmin = (((1 / (2*df6$maxgroove)) + ((df6$groove - 1) / df6$maxgroove)) - (tgroovewidth / (2*df6$maxgroove)))
 df6$gmax = (df6$gmin + (tgroovewidth / df6$maxgroove))
 
+# The x dimension is outward from the center
 df6$xmin = tleadout + (df6$gmin * (tleadin-tleadout))
 df6$xmax = tleadout + (df6$gmax * (tleadin-tleadout))
     
 # Write a loop that cycles through the whole album
-for(i in 1:max(df6$donutstrack)) {
+# for(i in 1:max(df6$donutstrack)) {
+
+for(i in 1:6) {
+    
 
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df6, donutstrack ==  i) %>%
@@ -379,14 +368,13 @@ ggplot() +
         axis.ticks = element_blank(),
         axis.text.y = element_blank(),
         panel.grid  = element_blank(),
-        plot.margin = unit(rep(-0.5,4), "inches"))
+        plot.margin = unit(rep(-0.3,4), "inches"))
 
 # View each plot as it's made
 print(donutbite)
-plotname = i
 
 # Save each plot as an svg
-ggsave(file = paste0(plotname, ".svg"), plot = donutbite, 
+ggsave(file = paste0(i, ".svg"), plot = donutbite, 
        width = 2, height = 2, dpi = 72) 
 
 } # End of donutbite function

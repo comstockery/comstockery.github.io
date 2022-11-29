@@ -18,224 +18,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   
-  <style>
-
-body {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 16px;
-	background-color: #eee;
-  max-width: 800px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h1,
-h2 {
-  text-align: center;
-	font-family: 'Satoshi', sans-serif;
-	font-weight: 900;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  text-align: center;
-	font-family: 'Satoshi', sans-serif;
-	font-weight: 700;
-}
-
-
-p {
-	margin: 0 0 5px;
-}
-
-a {
-	font-weight: 900;
-	color: #4F000B;
-}
-
-span {
-	margin: 10px;
-	vertical-align: middle;
-	display: inline;
-}
-
-.soul {
-	color: #9B53E6;
-	/*purple*/
-	font-weight: 900;
-}
-
-.hiphop {
-	color: #F72585;
-	/*pink*/
-	font-weight: 700;
-}
-
-.rock {
-	color: #004AF7;
-	/*blue*/
-	font-weight: 700;
-}
-
-.electronic {
-	color: #E67343;
-	/*orange*/
-	font-weight: 700;
-}
-
-.other {
-	color: #F8B219;
-	/*yellow*/
-	font-weight: 700;
-}
-
-.unknown {
-	color: #aaa;
-	/*gray*/
-	font-weight: 700;
-}
-
-.genre {
-	font-size: 1.3em;
-	margin: 0px 8px;
-}
-
-.quotation {
-	margin: auto;
-	width: 70%;
-	background-color: #ddd;
-	color: #555;
-	border: 1px solid black;
-	border-radius: 8px;
-	padding: 10px 20px;
-	font-size: 0.9em;
-}
-
-.container {
-  background-color: #ddd;
-	color: #555;
-	border: 1px solid black;
-	border-radius: 8px;
-  padding: 10px 20px;
-}
-
-/*        
-.mantronix {
-      color: #F10433; imperial red 
-      } */
-
-#album {
-	position: relative;
-	text-align: center;
-	margin: 0;
-}
-
-#albumlabel {
-	font-family: 'Satoshi';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 1.5em;
-}
-
-#albumlegend {
-	text-align: center;
-	margin: 0;
-	font-size: 1.1em;
-}
-
-.charttitle {
-	position: absolute;
-	font-family: 'Satoshi';
-	margin: 0px 5px;
-}
-
-#sbyarea {
-	position: relative;
-	height: 250px;
-}
-
-#sbylegend {
-	position: absolute;
-	font-size: 0.6em;
-	left: 420px;
-	top: 30px;
-	background-color: #eee;
-}
-
-#sbychart {
-	position: relative;
-	top: 50px;
-	left: 0px;
-}
-
-#sbtarea {
-	position: relative;
-	height: 700px;
-}
-
-#sbtlegend {
-	position: absolute;
-	font-size: 0.8em;
-	left: 500px;
-	top: 300px;
-	background-color: #eee;
-}
-
-#sbtchart {
-	position: relative;
-	top: 20px;
-	left: 0px;
-}
-
-
-.btn {
-	font-family: 'Satoshi';
-	background-color: #DDDDDD;
-	border: 1px solid #BBBBBB;
-	padding: 0px 4px;
-	text-align: center;
-	font-size: 0.8em;
-	border-radius: 8px;
-	vertical-align: middle;
-	display: inline;
-}
-
-.explore {
-	display: inline;
-	vertical-align: middle;
-}
-
-#gen3 {
-	margin-left: 20px;
-}
-
-.gen4 {
-	margin-left: 50px;
-}
-
-.gen5 {
-	margin-left: 80px;
-}
-
-.gen6 {
-	margin-left: 110px;
-}
-        
-  </style>
+  <link rel="stylesheet" type="text/css" href="donutstyle.css">
+  
 
 </head>
 
 <body>
 
     <h1>SAMPLING DONUTS</h1>
-    <h4>visualizing the use of samples in J Dilla's hip-hop classic</h4>
+    <p id = "subtitle">visualizing the use of samples in J Dilla's hip-hop classic</p>
     
   <div id = "album">
     <img src="donutrecord.svg">
@@ -257,14 +48,18 @@ span {
 
     <br>
     
-    <div class = "quotation"><p>"[<em>Donuts</em> is] just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."<br><br> --J Dilla, <em>Scratch Magazine</em> interview, published February 2006</p>
+    <div class = "quotationbox">
+      <div class = "quotation">"[<em>Donuts</em> is] just a compilation of the stuff I thought was a little too much for the MCs. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."</div>
+      
+    <span class = "attribution">&mdash;J Dilla, <em>Scratch Magazine</em> interview, published February 2006</span>
     </div>
     
     <br>
     <p>WRITE TEXT ABOUT DONUTS. THE USE OF 64 DIFFERENT SAMPLES. SET UP DISCUSSION OF TIME, WHICH IS RADIAL IN THE GRAPH ABOVE AND LINEAR IN THE GRAPH BELOW.</p>
     <br>
-    
-  <div id="sbyarea">
+  
+  <div class = "wrapper">     
+  <div id = "sbyarea">
     <p class="charttitle"><strong>Release year of known samples on <em>Donuts</em></strong>
     <br>count</p>
     <img id = "sbychart" src="samplesbyyear.svg">
@@ -277,14 +72,16 @@ span {
         <span class="genre hiphop">hip-hop / rap / r & b</span><br>
         <span class="genre soul">soul / funk / disco</span>
       </div>
-  </div>  
+  </div> 
+  </div>
   
     <br>
     <p>WRITE TEXT ABOUT THE SAMPLES, THEIR GENRE AND TYPE. GENRE IS REFERENCED IN THE GRAPH ABOVE. GENRE AND TYPE ARE USED IN THE GRAPH BELOW.</p>
     <br>
-    
-  <div id="sbtarea">
-    <p class="charttitle"><strong>Type and genre of samples on <em>Donuts</em> by track</strong>
+  
+  <div class = "wrapper"> 
+  <div id = "sbtarea">
+    <p class = "charttitle"><strong>Type and genre of samples on <em>Donuts</em> by track</strong>
     <br>count</p>
     <img id = "sbtchart" src="samplesbytype.svg">
     
@@ -297,7 +94,8 @@ span {
         <span class="genre soul">soul / funk / disco</span>
       </div>
 
-  </div>  
+  </div> 
+  </div> 
     
     <br>
     <p>WRITE TEXT ABOUT THE INSTANCES OF THESE SAMPLES, SET UP THE TIMING OF SAMPLES BY TRACK.</p>
@@ -326,7 +124,7 @@ span {
       <button type="button" class="btn hiphop" data-toggle="collapse" data-target="#gen3">
       EXPLORE SAMPLES
       </button>
-  <p>The siren heard throughout <em>Donuts</em> comes from Mantronix's King of the Beats. <em>Stereogum</em> published a <a href="https://www.stereogum.com/2031736/breaks-with-tradition-king-of-the-beats/columns/breaks-with-tradition/">longer history</a> of "King of the Beats" in 2019.</p>
+  <p>The siren heard throughout <em>Donuts</em> comes from Mantronix's "King of the Beats."" <em>Stereogum</em> published a <a href="https://www.stereogum.com/2031736/breaks-with-tradition-king-of-the-beats/columns/breaks-with-tradition/">longer history</a> of "King of the Beats" in 2019.</p>
   
   <p>J Dilla used the Mantronix siren as his <a href="https://en.wikipedia.org/wiki/Producer_tag">producer's tag</a>&mdash;a short sound used as a producer's signature. J Dilla first used the Mantronix siren on <a href="https://www.whosampled.com/sample/613046/Jay-Dee-Let%27s-Take-It-Back-Mantronix-King-of-the-Beats/">"Let's Take it Back"</a>, a track on his 2003 EP <em>Ruff Draft</em>.</p>
   
@@ -385,6 +183,15 @@ span {
   </div>
 </div>
 
-
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
+<br><br><br>
 </body>
 </html>
