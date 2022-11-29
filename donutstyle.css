@@ -1,10 +1,10 @@
 body {
 	font-family: 'Quicksand', sans-serif;
-	font-size: 16px; 
+	font-size: 18px; 
 	background-color: #eee;
   margin: auto;
   width: 90vw;
-  max-width: 1920px;
+  max-width: 1280px;
   color: #333;
 }
 
@@ -184,7 +184,7 @@ span {
 	height: 250px;
 }
 
-#sbylegend {
+#sbylegend { /*no longer used*/
 	position: absolute;
 	font-size: 0.6em;
 	left: 420px;
@@ -204,7 +204,7 @@ span {
 	height: 700px;
 }
 
-#sbtlegend {
+#sbtlegend { /*no longer used*/
 	position: absolute;
 	font-size: 0.8em;
 	left: 500px;

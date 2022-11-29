@@ -8,8 +8,8 @@ library(googlesheets4)
 
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
@@ -102,9 +102,9 @@ df1$angle <- ifelse(df1$angle < -90, df1$angle+180, df1$angle)
 
 # Make a table for year labels
 yearlabels <- data.frame(
-  label = c('<strong>1955</strong>', '<strong>1970</strong>', 
+  label = c('<strong>1955</strong>', '<strong>1970</strong>', '<strong>1980</strong>', 
             '<strong>1990</strong>', '<strong>2005</strong>'),
-  x = vlinecalc(c(1955, 1970, 1990, 2005)),
+  x = vlinecalc(c(1955, 1970, 1980, 1990, 2005)),
   y = 1,
   angle = 0)
 
@@ -127,7 +127,7 @@ donutrecord <- ggplot(df1) +
             linewidth = 0.4) +
   
   # Add gridlines for certain years (grooves)
-  geom_vline(xintercept = vlinecalc(c(1970,1990)), color = 'gray88',
+  geom_vline(xintercept = vlinecalc(c(1970,1980,1990)), color = 'gray88',
              linewidth = 0.2, linetype = 'dotted') +
 
   # Add dots representing samples in each track (sprinkles)
@@ -293,7 +293,7 @@ tinner = 0.75       # Inside hole 1.5
 # Calculate the rectangle edges
 # This requires math!
 
-typegroove = tibble(type = c('structural', 'surface', 'lyric'),
+typegroove = tibble(type = c('structural', 'lyric', 'surface'),
                     typerank = c(1:3))
 
 # Add an initial ranking of the sample types
@@ -333,11 +333,10 @@ df6$xmin = tleadout + (df6$gmin * (tleadin-tleadout))
 df6$xmax = tleadout + (df6$gmax * (tleadin-tleadout))
     
 # Write a loop that cycles through the whole album
-# for(i in 1:max(df6$donutstrack)) {
+for(i in 1:max(df6$donutstrack)) {
 
-for(i in 1:6) {
+# for(i in 1:6) {
     
-
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df6, donutstrack ==  i) %>%
 # Then plot it!
@@ -374,7 +373,7 @@ ggplot() +
 print(donutbite)
 
 # Save each plot as an svg
-ggsave(file = paste0(i, ".svg"), plot = donutbite, 
+ggsave(file = paste0(i, "TLU.svg"), plot = donutbite, 
        width = 2, height = 2, dpi = 72) 
 
 } # End of donutbite function
