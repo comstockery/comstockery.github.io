@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='144.00pt' height='144.00pt' viewBox='0 0 144.00 144.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA='>
+    <rect x='0.00' y='0.00' width='144.00' height='144.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA=)'>
+<polygon points='72.00,34.23 72.00,31.22 72.00,28.22 69.45,28.29 66.92,28.51 64.40,28.88 61.90,29.40 59.44,30.06 57.03,30.86 54.66,31.80 52.35,32.88 50.11,34.08 47.94,35.42 45.86,36.88 43.86,38.46 41.96,40.15 40.15,41.96 38.46,43.86 36.88,45.86 35.42,47.94 34.08,50.11 32.88,52.35 31.80,54.66 30.86,57.03 30.06,59.44 29.40,61.90 28.88,64.40 28.51,66.92 28.29,69.45 28.22,72.00 28.29,74.55 28.51,77.08 28.88,79.60 29.40,82.10 30.06,84.56 30.86,86.97 31.80,89.34 32.88,91.65 34.08,93.89 35.42,96.06 36.88,98.14 38.46,100.14 40.15,102.04 41.96,103.85 43.86,105.54 45.86,107.12 47.94,108.58 50.11,109.92 52.35,111.12 54.66,112.20 57.03,113.14 59.44,113.94 61.90,114.60 64.40,115.12 66.92,115.49 69.45,115.71 72.00,115.78 74.55,115.71 77.08,115.49 79.60,115.12 82.10,114.60 84.56,113.94 86.97,113.14 89.34,112.20 91.65,111.12 93.89,109.92 96.06,108.58 98.14,107.12 100.14,105.54 102.04,103.85 103.85,102.04 105.54,100.14 107.12,98.14 108.58,96.06 109.92,93.89 111.12,91.65 112.20,89.34 113.14,86.97 113.94,84.56 114.60,82.10 115.12,79.60 115.49,77.08 115.71,74.55 115.78,72.00 115.71,69.45 115.49,66.92 115.12,64.40 114.60,61.90 113.94,59.44 113.14,57.03 112.20,54.66 111.12,52.35 109.92,50.11 108.58,47.94 107.12,45.86 105.54,43.86 103.85,41.96 102.04,40.15 100.14,38.46 98.14,36.88 96.06,35.42 93.89,34.08 91.65,32.88 89.34,31.80 86.97,30.86 84.56,30.06 82.10,29.40 79.60,28.88 77.08,28.51 74.55,28.29 72.00,28.22 72.00,31.22 72.00,34.23 74.55,34.31 77.09,34.57 79.60,35.00 82.08,35.60 84.52,36.36 86.90,37.29 89.21,38.37 91.44,39.61 93.58,41.00 95.62,42.52 97.56,44.19 99.38,45.98 101.07,47.88 102.63,49.90 104.06,52.02 105.33,54.23 106.46,56.52 107.42,58.88 108.23,61.30 108.87,63.77 109.34,66.28 109.64,68.81 109.77,71.36 109.73,73.91 109.51,76.46 109.12,78.98 108.57,81.47 107.85,83.92 106.96,86.31 105.91,88.64 104.71,90.89 103.36,93.05 101.87,95.12 100.24,97.09 98.48,98.93 96.60,100.66 94.61,102.26 92.52,103.71 90.33,105.03 88.06,106.19 85.72,107.20 83.31,108.04 80.85,108.72 78.35,109.24 75.82,109.58 73.28,109.75 70.72,109.75 68.18,109.58 65.65,109.24 63.15,108.72 60.69,108.04 58.28,107.20 55.94,106.19 53.67,105.03 51.48,103.71 49.39,102.26 47.40,100.66 45.52,98.93 43.76,97.09 42.13,95.12 40.64,93.05 39.29,90.89 38.09,88.64 37.04,86.31 36.15,83.92 35.43,81.47 34.88,78.98 34.49,76.46 34.27,73.91 34.23,71.36 34.36,68.81 34.66,66.28 35.13,63.77 35.77,61.30 36.58,58.88 37.54,56.52 38.67,54.23 39.94,52.02 41.37,49.90 42.93,47.88 44.62,45.98 46.44,44.19 48.38,42.52 50.42,41.00 52.56,39.61 54.79,38.37 57.10,37.29 59.48,36.36 61.92,35.60 64.40,35.00 66.91,34.57 69.45,34.31 72.00,34.23 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='81.77,21.82 82.35,18.87 82.92,15.92 79.31,15.34 78.92,18.32 78.54,21.30 81.77,21.82 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='97.08,19.93 98.38,17.22 99.68,14.51 97.20,13.38 94.68,12.36 92.11,11.44 89.50,10.64 86.86,9.95 84.20,9.37 83.62,12.32 83.05,15.27 85.94,15.91 88.80,16.70 91.61,17.63 94.38,18.71 97.08,19.93 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='97.09,27.45 98.56,24.84 100.04,22.22 96.79,20.53 95.49,23.23 94.18,25.94 97.09,27.45 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='122.89,67.09 125.88,66.80 128.87,66.51 128.56,63.92 128.13,61.34 127.58,58.78 126.92,56.25 126.14,53.75 125.25,51.29 124.24,48.87 121.49,50.09 118.75,51.31 119.79,53.83 120.69,56.41 121.45,59.03 122.07,61.69 122.55,64.38 122.89,67.09 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='115.88,79.09 118.84,79.57 121.81,80.05 122.16,77.49 122.37,74.91 122.46,72.32 122.41,69.74 122.22,67.16 121.91,64.59 121.46,62.04 120.89,59.51 120.18,57.02 119.35,54.57 116.53,55.61 113.71,56.65 114.61,59.35 115.33,62.11 115.88,64.91 116.24,67.73 116.43,70.58 116.43,73.42 116.24,76.27 115.88,79.09 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='115.72,98.50 118.29,100.06 120.86,101.62 122.22,99.23 123.47,96.79 124.61,94.29 125.62,91.73 122.80,90.69 119.98,89.66 118.75,92.69 117.33,95.65 115.72,98.50 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='98.59,107.62 100.38,110.03 102.18,112.44 104.71,110.42 107.10,108.25 109.35,105.92 107.13,103.90 104.90,101.88 102.92,103.93 100.81,105.85 98.59,107.62 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='102.58,112.97 104.37,115.38 106.17,117.79 109.03,115.50 107.09,113.22 105.14,110.93 102.58,112.97 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='88.11,120.52 89.06,123.37 90.00,126.22 93.44,124.96 92.31,122.17 91.19,119.39 88.11,120.52 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='75.28,123.02 75.47,126.02 75.66,129.01 79.31,128.66 78.92,125.68 78.54,122.70 75.28,123.02 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='27.76,67.73 24.77,67.44 21.78,67.16 21.59,69.81 21.55,72.48 21.64,75.14 21.88,77.79 22.25,80.43 22.77,83.04 23.42,85.62 24.20,88.17 25.12,90.67 26.18,93.12 27.35,95.51 28.66,97.83 30.08,100.08 31.62,102.25 33.27,104.34 35.03,106.34 36.90,108.25 38.99,106.09 41.08,103.93 39.22,102.02 37.49,100.01 35.87,97.90 34.39,95.69 33.04,93.40 31.83,91.03 30.76,88.59 29.85,86.10 29.08,83.55 28.46,80.96 28.01,78.34 27.71,75.70 27.56,73.04 27.58,70.39 27.76,67.73 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='10.19,90.34 7.31,91.20 4.43,92.05 5.86,96.34 8.67,95.30 11.49,94.27 10.19,90.34 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #AAAAAA;' />
+<polygon points='25.25,51.31 22.51,50.09 19.76,48.87 18.64,51.58 17.66,54.35 16.83,57.15 16.14,60.00 15.60,62.88 18.57,63.36 21.53,63.84 22.02,61.26 22.63,58.72 23.38,56.20 24.25,53.73 25.25,51.31 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='46.91,27.45 45.44,24.84 43.96,22.22 41.60,23.63 39.31,25.14 37.10,26.77 34.97,28.50 32.92,30.33 30.96,32.25 29.10,34.27 27.33,36.38 29.68,38.25 32.03,40.12 33.84,37.98 35.77,35.93 37.80,34.00 39.94,32.18 42.18,30.48 44.50,28.90 46.91,27.45 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='72.00,27.55 72.00,24.55 72.00,21.54 69.41,21.61 66.83,21.81 64.27,22.14 61.72,22.60 59.20,23.19 56.72,23.91 54.27,24.76 51.87,25.73 49.53,26.82 47.24,28.04 45.02,29.36 42.87,30.80 40.79,32.35 38.80,34.00 36.90,35.75 38.99,37.91 41.08,40.07 43.02,38.30 45.06,36.64 47.20,35.11 49.43,33.71 51.73,32.44 54.11,31.31 56.55,30.32 59.04,29.48 61.58,28.79 64.15,28.25 66.75,27.86 69.37,27.63 72.00,27.55 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+<text x='-1.46' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='28.02px' lengthAdjust='spacingAndGlyphs'>Time:</text>
+<text x='29.72' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='52.48' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.36px' lengthAdjust='spacingAndGlyphs'>Donut</text>
+<text x='86.01' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='9.49px' lengthAdjust='spacingAndGlyphs'>of</text>
+<text x='98.66' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.82px' lengthAdjust='spacingAndGlyphs'>the</text>
+<text x='117.64' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>Heart</text>
+</g>
+</svg>

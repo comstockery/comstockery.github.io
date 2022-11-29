@@ -42,7 +42,6 @@ a {
 
 span {
 	margin: 5px;
-	vertical-align: middle;
 	display: inline;
 }
 
@@ -109,7 +108,7 @@ span {
 	margin: 0px 8px;
 }
 
-.quotationbox {
+div.quotationbox {
 	margin: auto;
 	height: 120px;
 	width: 70%;
@@ -122,11 +121,11 @@ span {
 	position: relative;
 }
 
-.quotation {
+span.quotation {
 	text-align: left;
 }
 
-.attribution {
+span.attribution {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -176,7 +175,9 @@ span {
 
 .wrapper {
   margin: auto;
-  width: 80%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 #sbyarea {

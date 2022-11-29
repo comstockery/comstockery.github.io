@@ -8,8 +8,8 @@ library(googlesheets4)
 
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
@@ -39,7 +39,7 @@ samplelist <- donutsmain[!duplicated(donutsmain[c('donutstrack','sampledtrack')]
 
 # Sample instances list
 instancelist <- donutsmain %>%
-  select(donutstrack, trackname, length, sampledtrack:duration) %>%
+  select(donutstrack, trackname, boxsetside, length, sampledtrack:duration) %>%
   select(-sampledelement)
 
 } # End of the datamaker code chunk
@@ -249,7 +249,7 @@ df3 <- instancelist %>%
 samplesbytype <- ggplot(df3) +
   # Plot circles that are actually lines around the individual donuts
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack)),
-             color = 'gray88', shape = 21, fill = 'white', size = 2.5, stroke = 4) +
+             color = 'gray77', shape = 21, fill = 'white', size = 2.5, stroke = 4) +
   # Overlay donuts colored by their genre
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack),
                  color = sampledgenre),
@@ -268,9 +268,9 @@ samplesbytype <- ggplot(df3) +
         axis.title = element_blank(),
         legend.position = 'none',
         panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = 'gray88'),
-        panel.border = element_rect(color = 'gray55', fill = NA, size = 0.8),
-        panel.spacing.x = unit(1.5, 'lines'),
+        panel.grid.major.y = element_line(color = 'gray77', linewidth = 0.5),
+        # panel.border = element_rect(color = 'gray55', fill = NA, linewidth = 0.8),
+        panel.spacing.x = unit(1.3, 'lines'),
         strip.text.x = element_text(size=12, face='bold'),
         strip.clip = 'off') 
 
@@ -290,10 +290,12 @@ tleadin = 3.31      # Start of the recording groove 6.625
 tleadout = 1.75     # End of the recording groove 3.5
 tinner = 0.75       # Inside hole 1.5  
 
+square = 2          # Base size of the output SVG
+
 # Calculate the rectangle edges
 # This requires math!
 
-typegroove = tibble(type = c('structural', 'lyric', 'surface'),
+typegroove = tibble(type = c('structural', 'surface', 'lyric'),
                     typerank = c(1:3))
 
 # Add an initial ranking of the sample types
@@ -321,6 +323,7 @@ df5 <- df4 %>%
   mutate(maxgroove = max(groove))
   
 df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack', 'type'))
+
 
 # Let the track grooves take up 90% of the width
 tgroovewidth = 0.90
@@ -367,16 +370,17 @@ ggplot() +
         axis.ticks = element_blank(),
         axis.text.y = element_blank(),
         panel.grid  = element_blank(),
-        plot.margin = unit(rep(-0.3,4), "inches"))
+        plot.margin = unit(rep((-0.15*square),4), "inches"))
 
 # View each plot as it's made
 print(donutbite)
 
 # Save each plot as an svg
-ggsave(file = paste0(i, "TLU.svg"), plot = donutbite, 
-       width = 2, height = 2, dpi = 72) 
+ggsave(file = paste0(i, ".svg"), plot = donutbite, 
+       width = square, height = square, dpi = 72) 
 
 } # End of donutbite function
 
 } # End of the 'bitemaker' code chunk
+
 

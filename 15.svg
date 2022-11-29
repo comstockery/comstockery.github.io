@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='144.00pt' height='144.00pt' viewBox='0 0 144.00 144.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA='>
+    <rect x='0.00' y='0.00' width='144.00' height='144.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA=)'>
+<polygon points='108.78,24.75 110.83,22.12 108.73,20.55 106.57,19.08 104.36,17.70 102.09,16.41 99.76,15.21 97.39,14.11 94.98,13.11 92.53,12.21 90.04,11.41 87.52,10.72 84.97,10.13 82.40,9.65 79.82,9.27 77.22,9.00 74.61,8.84 72.00,8.79 72.00,12.12 74.64,12.18 77.27,12.36 79.90,12.65 82.51,13.05 85.09,13.57 87.66,14.21 90.19,14.95 92.69,15.81 95.14,16.78 97.55,17.85 99.92,19.03 102.22,20.31 104.47,21.69 106.66,23.17 108.78,24.75 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='99.67,36.46 101.72,33.82 99.57,32.24 97.34,30.78 95.03,29.45 92.65,28.25 90.21,27.18 87.71,26.24 85.16,25.45 82.58,24.79 79.96,24.28 77.32,23.91 74.67,23.69 72.00,23.62 72.00,26.96 74.71,27.04 77.40,27.28 80.08,27.69 82.73,28.25 85.34,28.98 87.90,29.86 90.40,30.89 92.84,32.07 95.20,33.39 97.48,34.86 99.67,36.46 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='120.58,67.97 123.91,67.70 123.62,65.02 123.19,62.37 122.62,59.74 121.92,57.14 121.09,54.58 120.12,52.07 119.03,49.61 117.81,47.21 116.47,44.88 115.01,42.62 113.43,40.43 111.75,38.34 109.96,36.33 108.06,34.41 106.07,32.60 103.99,30.90 101.94,33.53 104.02,35.24 105.99,37.06 107.87,38.98 109.63,41.01 111.28,43.13 112.81,45.34 114.22,47.62 115.50,49.99 116.64,52.42 117.66,54.91 118.53,57.45 119.26,60.03 119.85,62.65 120.29,65.30 120.58,67.97 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='135.37,66.75 138.69,66.47 138.42,63.85 138.05,61.25 137.58,58.65 137.00,56.08 136.32,53.54 135.55,51.02 134.67,48.53 133.70,46.09 132.63,43.68 131.47,41.31 130.22,39.00 128.87,36.73 127.44,34.52 125.92,32.37 124.32,30.28 122.64,28.25 120.88,26.29 119.04,24.40 117.13,22.59 115.15,20.85 113.10,19.19 111.05,21.82 113.09,23.48 115.06,25.22 116.96,27.04 118.78,28.94 120.52,30.91 122.18,32.95 123.75,35.05 125.23,37.22 126.62,39.45 127.92,41.74 129.12,44.07 130.23,46.46 131.23,48.89 132.14,51.35 132.94,53.86 133.64,56.39 134.23,58.95 134.72,61.53 135.10,64.14 135.37,66.75 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='72.00,34.37 72.00,31.04 69.45,31.12 66.91,31.35 64.39,31.75 61.90,32.30 59.45,33.01 57.05,33.86 54.70,34.87 52.43,36.02 50.23,37.30 48.11,38.73 46.08,40.28 44.16,41.95 42.34,43.74 40.64,45.64 39.06,47.65 37.61,49.74 36.29,51.93 35.11,54.19 34.08,56.52 33.19,58.91 32.45,61.35 31.86,63.83 31.43,66.34 31.16,68.88 31.04,71.43 31.08,73.98 31.29,76.52 31.65,79.05 32.16,81.54 32.84,84.00 33.66,86.42 34.63,88.78 35.75,91.07 37.00,93.29 38.40,95.43 39.92,97.47 41.57,99.42 43.33,101.26 45.21,102.99 47.19,104.59 49.27,106.07 51.43,107.42 53.67,108.64 55.99,109.70 58.37,110.63 60.80,111.40 63.27,112.02 65.78,112.49 68.31,112.80 70.86,112.95 73.41,112.94 75.95,112.77 78.48,112.45 80.99,111.97 83.46,111.33 85.88,110.54 88.25,109.60 90.56,108.52 92.80,107.29 94.95,105.93 97.02,104.43 98.99,102.81 100.86,101.07 102.61,99.22 104.24,97.26 105.75,95.21 107.13,93.06 108.38,90.84 109.48,88.54 110.43,86.17 111.24,83.75 111.90,81.29 112.40,78.79 112.74,76.26 112.93,73.71 112.95,71.16 112.82,68.62 109.50,68.89 109.62,71.43 109.57,73.97 109.36,76.50 108.97,79.01 108.41,81.49 107.69,83.93 106.80,86.31 105.75,88.62 104.56,90.86 103.21,93.02 101.72,95.08 100.09,97.03 98.34,98.87 96.47,100.58 94.48,102.17 92.40,103.62 90.22,104.92 87.95,106.08 85.62,107.08 83.22,107.91 80.77,108.59 78.28,109.10 75.76,109.44 73.23,109.61 70.69,109.60 68.15,109.43 65.63,109.08 63.15,108.57 60.70,107.89 58.30,107.04 55.97,106.04 53.71,104.88 51.53,103.57 49.45,102.12 47.47,100.53 45.60,98.81 43.85,96.96 42.23,95.01 40.74,92.94 39.40,90.79 38.21,88.54 37.17,86.23 36.29,83.84 35.57,81.41 35.02,78.93 34.63,76.41 34.42,73.88 34.38,71.34 34.51,68.81 34.81,66.28 35.28,63.79 35.92,61.33 36.72,58.92 37.69,56.57 38.81,54.29 40.08,52.09 41.49,49.98 43.05,47.97 44.74,46.07 46.55,44.29 48.48,42.63 50.51,41.11 52.65,39.73 54.87,38.50 57.17,37.42 59.53,36.50 61.96,35.74 64.43,35.14 66.93,34.72 69.46,34.46 72.00,34.37 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='72.00,30.67 72.00,27.33 69.45,27.40 66.91,27.62 64.39,27.98 61.89,28.49 59.42,29.14 57.00,29.92 54.62,30.85 52.30,31.91 50.05,33.10 47.86,34.41 45.76,35.85 43.74,37.41 41.81,39.07 39.98,40.85 38.26,42.73 36.64,44.70 35.14,46.76 33.76,48.91 32.51,51.13 31.38,53.41 30.38,55.76 29.53,58.16 28.81,60.61 28.23,63.09 27.79,65.60 27.50,68.14 27.35,70.68 27.35,73.23 27.49,75.78 27.78,78.31 28.21,80.82 28.78,83.31 29.50,85.75 30.35,88.16 31.34,90.51 32.46,92.80 33.72,95.02 35.09,97.16 36.59,99.23 38.20,101.21 39.92,103.09 41.74,104.87 43.67,106.54 45.69,108.10 47.79,109.54 49.97,110.86 52.22,112.05 54.54,113.12 56.91,114.05 59.34,114.84 61.80,115.49 64.30,116.00 66.82,116.37 69.36,116.59 71.91,116.67 74.46,116.60 77.00,116.39 79.53,116.03 82.03,115.53 84.49,114.89 86.92,114.11 89.30,113.19 91.62,112.13 93.88,110.95 96.06,109.64 98.17,108.20 100.19,106.65 102.13,104.98 103.96,103.21 105.69,101.34 107.31,99.37 108.81,97.31 110.19,95.17 111.45,92.95 112.58,90.67 113.58,88.32 114.45,85.92 115.17,83.48 115.76,81.00 116.20,78.48 116.50,75.95 116.65,73.41 116.66,70.86 116.52,68.31 113.19,68.59 113.32,71.12 113.30,73.66 113.12,76.20 112.78,78.72 112.29,81.21 111.65,83.67 110.86,86.08 109.92,88.44 108.84,90.74 107.62,92.97 106.26,95.12 104.78,97.18 103.17,99.15 101.44,101.01 99.61,102.76 97.66,104.40 95.62,105.92 93.50,107.30 91.29,108.56 89.00,109.67 86.66,110.65 84.26,111.48 81.81,112.15 79.32,112.68 76.81,113.05 74.28,113.27 71.74,113.33 69.20,113.24 66.67,112.99 64.16,112.58 61.68,112.03 59.24,111.32 56.85,110.46 54.52,109.45 52.25,108.31 50.06,107.03 47.95,105.61 45.93,104.07 44.01,102.41 42.19,100.63 40.49,98.75 38.90,96.76 37.44,94.68 36.12,92.51 34.92,90.27 33.87,87.96 32.96,85.59 32.20,83.16 31.59,80.70 31.13,78.20 30.83,75.68 30.68,73.14 30.69,70.60 30.85,68.06 31.17,65.54 31.65,63.05 32.27,60.58 33.05,58.17 33.97,55.80 35.04,53.49 36.25,51.26 37.59,49.10 39.06,47.03 40.66,45.05 42.37,43.18 44.20,41.41 46.13,39.76 48.16,38.23 50.28,36.83 52.48,35.56 54.76,34.43 57.10,33.45 59.49,32.60 61.94,31.91 64.42,31.37 66.93,30.98 69.46,30.74 72.00,30.67 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #004AF7;' />
+<polygon points='124.28,76.33 127.61,76.61 127.80,72.00 124.46,72.00 124.28,76.33 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='135.65,93.85 138.80,94.93 139.69,92.15 140.47,89.34 141.13,86.49 141.67,83.63 138.37,83.08 137.86,85.81 137.23,88.52 136.49,91.20 135.65,93.85 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='22.60,98.73 19.67,100.32 21.06,102.76 22.57,105.13 24.19,107.43 25.92,109.65 27.75,111.78 29.68,113.83 31.70,115.78 33.96,113.32 32.05,111.48 30.23,109.55 28.50,107.54 26.87,105.44 25.34,103.27 23.92,101.04 22.60,98.73 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='6.77,55.48 3.53,54.66 2.87,57.51 2.33,60.37 1.91,63.26 1.61,66.17 4.94,66.44 5.22,63.68 5.63,60.92 6.14,58.19 6.77,55.48 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+<text x='10.36' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='19.61px' lengthAdjust='spacingAndGlyphs'>The</text>
+<text x='33.13' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='36.03px' lengthAdjust='spacingAndGlyphs'>Twister</text>
+<text x='72.32' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='27.82px' lengthAdjust='spacingAndGlyphs'>(Huh,</text>
+<text x='103.30' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='30.34px' lengthAdjust='spacingAndGlyphs'>What)</text>
+</g>
+</svg>

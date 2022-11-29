@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='144.00pt' height='144.00pt' viewBox='0 0 144.00 144.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<defs>
+  <clipPath id='cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA='>
+    <rect x='0.00' y='0.00' width='144.00' height='144.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwxNDQuMDB8MC4wMHwxNDQuMDA=)'>
+<polygon points='93.16,32.91 94.58,30.27 96.01,27.63 93.53,26.37 90.99,25.25 88.38,24.28 85.73,23.45 83.03,22.76 80.30,22.23 77.55,21.85 74.78,21.62 72.00,21.54 72.00,24.55 72.00,27.55 74.75,27.64 77.50,27.89 80.22,28.32 82.91,28.91 85.56,29.67 88.16,30.59 90.69,31.67 93.16,32.91 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='72.00,34.23 72.00,31.22 72.00,28.22 69.45,28.29 66.92,28.51 64.40,28.88 61.90,29.40 59.44,30.06 57.03,30.86 54.66,31.80 52.35,32.88 50.11,34.08 47.94,35.42 45.86,36.88 43.86,38.46 41.96,40.15 40.15,41.96 38.46,43.86 36.88,45.86 35.42,47.94 34.08,50.11 32.88,52.35 31.80,54.66 30.86,57.03 30.06,59.44 29.40,61.90 28.88,64.40 28.51,66.92 28.29,69.45 28.22,72.00 28.29,74.55 28.51,77.08 28.88,79.60 29.40,82.10 30.06,84.56 30.86,86.97 31.80,89.34 32.88,91.65 34.08,93.89 35.42,96.06 36.88,98.14 38.46,100.14 40.15,102.04 41.96,103.85 43.86,105.54 45.86,107.12 47.94,108.58 50.11,109.92 52.35,111.12 54.66,112.20 57.03,113.14 59.44,113.94 61.90,114.60 64.40,115.12 66.92,115.49 69.45,115.71 72.00,115.78 74.55,115.71 77.08,115.49 79.60,115.12 82.10,114.60 84.56,113.94 86.97,113.14 89.34,112.20 91.65,111.12 93.89,109.92 96.06,108.58 98.14,107.12 100.14,105.54 102.04,103.85 103.85,102.04 105.54,100.14 107.12,98.14 108.58,96.06 109.92,93.89 111.12,91.65 112.20,89.34 113.14,86.97 113.94,84.56 114.60,82.10 115.12,79.60 115.49,77.08 115.71,74.55 115.78,72.00 115.71,69.45 115.49,66.92 115.12,64.40 114.60,61.90 113.94,59.44 113.14,57.03 112.20,54.66 111.12,52.35 109.92,50.11 108.58,47.94 107.12,45.86 105.54,43.86 103.85,41.96 102.04,40.15 100.14,38.46 98.14,36.88 96.06,35.42 93.89,34.08 91.65,32.88 89.34,31.80 86.97,30.86 84.56,30.06 82.10,29.40 79.60,28.88 77.08,28.51 74.55,28.29 72.00,28.22 72.00,31.22 72.00,34.23 74.55,34.31 77.09,34.57 79.60,35.00 82.08,35.60 84.52,36.36 86.90,37.29 89.21,38.37 91.44,39.61 93.58,41.00 95.62,42.52 97.56,44.19 99.38,45.98 101.07,47.88 102.63,49.90 104.06,52.02 105.33,54.23 106.46,56.52 107.42,58.88 108.23,61.30 108.87,63.77 109.34,66.28 109.64,68.81 109.77,71.36 109.73,73.91 109.51,76.46 109.12,78.98 108.57,81.47 107.85,83.92 106.96,86.31 105.91,88.64 104.71,90.89 103.36,93.05 101.87,95.12 100.24,97.09 98.48,98.93 96.60,100.66 94.61,102.26 92.52,103.71 90.33,105.03 88.06,106.19 85.72,107.20 83.31,108.04 80.85,108.72 78.35,109.24 75.82,109.58 73.28,109.75 70.72,109.75 68.18,109.58 65.65,109.24 63.15,108.72 60.69,108.04 58.28,107.20 55.94,106.19 53.67,105.03 51.48,103.71 49.39,102.26 47.40,100.66 45.52,98.93 43.76,97.09 42.13,95.12 40.64,93.05 39.29,90.89 38.09,88.64 37.04,86.31 36.15,83.92 35.43,81.47 34.88,78.98 34.49,76.46 34.27,73.91 34.23,71.36 34.36,68.81 34.66,66.28 35.13,63.77 35.77,61.30 36.58,58.88 37.54,56.52 38.67,54.23 39.94,52.02 41.37,49.90 42.93,47.88 44.62,45.98 46.44,44.19 48.38,42.52 50.42,41.00 52.56,39.61 54.79,38.37 57.10,37.29 59.48,36.36 61.92,35.60 64.40,35.00 66.91,34.57 69.45,34.31 72.00,34.23 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='92.54,25.18 93.74,22.43 94.95,19.68 92.45,18.66 89.91,17.75 87.33,16.96 84.71,16.30 82.07,15.76 79.40,15.35 76.72,15.06 76.47,18.06 76.22,21.05 79.02,21.36 81.80,21.82 84.55,22.44 87.26,23.21 89.93,24.12 92.54,25.18 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='111.15,29.48 113.18,27.27 115.21,25.06 113.24,23.31 111.19,21.65 109.35,24.02 107.50,26.39 111.15,29.48 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='104.70,41.90 106.91,39.86 109.12,37.83 106.17,34.88 104.14,37.09 102.10,39.30 104.70,41.90 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='135.59,82.61 138.56,83.11 141.52,83.60 141.94,80.72 142.24,77.82 139.25,77.57 136.25,77.32 135.98,79.97 135.59,82.61 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='82.91,115.09 83.65,118.00 84.39,120.91 88.38,119.72 87.41,116.88 86.43,114.04 82.91,115.09 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<polygon points='47.67,27.04 46.24,24.40 44.81,21.75 42.57,23.03 40.39,24.41 38.28,25.88 36.24,27.45 34.26,29.11 32.37,30.85 30.55,32.68 28.82,34.59 27.18,36.57 25.63,38.63 24.17,40.75 26.69,42.40 29.20,44.04 30.64,41.95 32.18,39.94 33.82,38.00 35.55,36.15 37.37,34.39 39.28,32.72 41.27,31.14 43.33,29.67 45.47,28.30 47.67,27.04 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #9B53E6;' />
+<polygon points='72.00,7.53 72.00,4.52 72.00,1.52 69.09,1.58 66.18,1.76 63.28,2.06 60.40,2.48 60.89,5.44 61.39,8.41 64.03,8.02 66.68,7.75 69.34,7.58 72.00,7.53 ' style='stroke-width: 1.07; stroke: #E0E0E0; stroke-linecap: butt; stroke-linejoin: miter; fill: #F72585;' />
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+<text x='37.54' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='22.13px' lengthAdjust='spacingAndGlyphs'>Dilla</text>
+<text x='62.83' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='25.29px' lengthAdjust='spacingAndGlyphs'>Says</text>
+<text x='91.28' y='74.88' style='font-size: 11.38px;fill: #545454; font-family: "Arial";' textLength='15.18px' lengthAdjust='spacingAndGlyphs'>Go</text>
+</g>
+</svg>
