@@ -9,8 +9,8 @@ library(googlesheets4)
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -111,6 +111,8 @@ yearlabels <- data.frame(
 # Count the genres in dataset
 genres = count(df1, sampledgenre)
 
+df1outro <- df1 %>% filter(donutstrack != 1)
+
 donutrecord <- ggplot(df1) + 
   # Create two sets of rectangles that will be converted to 4-edged slices
 
@@ -152,14 +154,15 @@ donutrecord <- ggplot(df1) +
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Add labels for track names (slices)
-  geom_richtext(mapping = aes(x = (0.99*aleadin), y = ymin + 0.0015,
+  geom_richtext(data = df1outro, 
+                mapping = aes(x = (0.99*aleadin), y = ymin + 0.0015,
                           label = trackname,
                           # hjust = 0.5 means centered horizontally,
                           # vjust = 0 means above the dashed line
                           hjust = hjust, vjust = vjust, angle = angle),
                 color = 'gray77', fill = NA,
                 label.color = NA,
-                size = 1.5,
+                size = 2.4,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Remove any gaps around the plot edge 
