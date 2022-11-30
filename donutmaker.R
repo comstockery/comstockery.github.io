@@ -249,7 +249,7 @@ df3 <- instancelist %>%
 samplesbytype <- ggplot(df3) +
   # Plot circles that are actually lines around the individual donuts
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack)),
-             color = 'gray77', shape = 21, fill = 'white', size = 2.5, stroke = 4) +
+             color = 'gray88', shape = 21, fill = 'white', size = 2.5, stroke = 4) +
   # Overlay donuts colored by their genre
   geom_point(aes(x = id, y = reorder(trackname, -donutstrack),
                  color = sampledgenre),
@@ -268,7 +268,7 @@ samplesbytype <- ggplot(df3) +
         axis.title = element_blank(),
         legend.position = 'none',
         panel.grid = element_blank(),
-        panel.grid.major.y = element_line(color = 'gray77', linewidth = 0.5),
+        panel.grid.major.y = element_line(color = 'gray77', linewidth = 0.4),
         # panel.border = element_rect(color = 'gray55', fill = NA, linewidth = 0.8),
         panel.spacing.x = unit(1.3, 'lines'),
         strip.text.x = element_text(size=12, face='bold'),
