@@ -159,12 +159,20 @@ span.attribution {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 1.5em;
+	line-height: 1.2;
 }
 
 #albumlegend {
 	text-align: center;
 	margin: 0;
 	font-size: 1.1em;
+}
+
+#albumyear {
+	text-align: center;
+	margin: 0;
+	font-size: 0.7em;
+	vertical-align: text-top;
 }
 
 .charttitle {
