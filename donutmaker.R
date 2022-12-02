@@ -9,17 +9,17 @@ library(googlesheets4)
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
-colorvalues = c("electronic/dance" = "#E67343", 
-                "hip-hop/rap/r&b" = "#F72585", 
-                "other" = "#F8B219",
-                "rock/pop" = "#004AF7",
-                "soul/funk/disco" = "#9B53E6")
-navalue = "#AAAAAA"
+colorvalues = c("electronic/dance" = "#E67343DD", 
+                "hip-hop/rap/r&b" = "#F72585DD", 
+                "other" = "#F8B219DD",
+                "rock/pop" = "#004AF7DD",
+                "soul/funk/disco" = "#9B53E6DD")
+navalue = "#AAAAAADD"
 
 if(datamaker) {
 
@@ -83,7 +83,8 @@ vlinecalc <- function(year) {
 }
 
 # Join datasets to map samples to the Donut tracklist
-df1 <- inner_join(tracklist, samplelist, by='donutstrack')
+df1 <- inner_join(tracklist, samplelist, by='donutstrack') %>%
+  drop_na()
 
 # Place sprinkles within their slice, adding randomness to avoid overplotting
 df1$sprinkle <- df1$ymin + ((df1$ymax - df1$ymin)*(runif(nrow(df1), 0.10, 0.90)))
@@ -186,7 +187,7 @@ print(donutrecord)
 
 # Save the plot as an SVG
 ggsave(file = "donutrecord.svg", plot = donutrecord, 
-       width = 7, height = 7, dpi = 72)
+       width = 7, height = 7)
 
 } # End of the 'donutmaker' code chunk
 
@@ -239,7 +240,7 @@ print(samplesbyyear)
 
 # Save the plot as an SVG
 ggsave(file = "samplesbyyear.svg", plot = samplesbyyear, 
-       width = 7, height = 2, dpi = 72) 
+       width = 7, height = 2) 
 
 # Data frame that makes an index for each instance of a sample by type
 df3 <- instancelist %>%
@@ -280,7 +281,7 @@ samplesbytype <- ggplot(df3) +
 print(samplesbytype)
 
 ggsave(file = "samplesbytype.svg", plot = samplesbytype, 
-       width = 5, height = 7, dpi = 72) 
+       width = 5, height = 7) 
   
 } # End of the 'barmaker' code chunk
 
@@ -293,7 +294,7 @@ tleadin = 3.31      # Start of the recording groove 6.625
 tleadout = 1.75     # End of the recording groove 3.5
 tinner = 0.75       # Inside hole 1.5  
 
-square = 2          # Base size of the output SVG
+square = 1.5          # Base size of the output SVG
 
 # Calculate the rectangle edges
 # This requires math!
@@ -324,6 +325,7 @@ df5 <- df4 %>%
   select(donutstrack, sampledtrack, type, groove) %>%
   group_by(donutstrack) %>%
   mutate(maxgroove = max(groove))
+
   
 df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack', 'type'))
 
@@ -379,8 +381,8 @@ ggplot() +
 print(donutbite)
 
 # Save each plot as an svg
-ggsave(file = paste0(i, ".svg"), plot = donutbite, 
-       width = square, height = square, dpi = 72) 
+ggsave(file = paste0(i, "a.svg"), plot = donutbite, 
+       width = square, height = square) 
 
 } # End of donutbite function
 
