@@ -1,9 +1,11 @@
 
 # Load libraries
-library(tidyverse)
-library(svglite)
-library(ggtext)
-library(googlesheets4)
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(svglite)
+  library(ggtext)
+  library(googlesheets4)
+  })
 
 
 # Flags for code chunks
@@ -297,47 +299,53 @@ tinner = 0.75       # Inside hole 1.5
 
 square = 1.5          # Base size of the output SVG
 
-# Calculate the rectangle edges
 
-# The y dimension is along the circumference
-df4 <- instancelist
+
+# Establish a ranking for the samples based on their type
+typegroove = tibble(type = c('lyric', 'surface', 'structural'),
+                    typerank = c(1:3))
+
+# Add an initial ranking of the sample types
+df4 <- left_join(instancelist, typegroove, by = "type")
+
+# Calculate the rectangle edges
+# The y dimension is along the circumference (duration)
 df4$ymin = df4$samplestart / df4$length
 df4$ymax = df4$sampleend / df4$length
 
 # Arrange the samples by how common they are in a track
 df5 <- df4 %>%
-  group_by(donutstrack, sampledtrack) %>%
-  summarize(use = sum(duration)) %>%
-  arrange(donutstrack, use) %>%
-  mutate(groove = 1:n()) %>%
-  mutate(maxgroove = max(groove))
-  
-df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack'))
-
+  group_by(donutstrack, type, sampledtrack) %>%
+  mutate(use = sum(duration)) %>%
+  ungroup() %>%
+  group_by(donutstrack) %>%
+  arrange(donutstrack, -use)
 
 # Let the track grooves take up 90% of the width
 tgroovewidth = 0.90
 
-df6$gmin = (((1 / (2*df6$maxgroove)) + ((df6$groove - 1) / df6$maxgroove)) - (tgroovewidth / (2*df6$maxgroove)))
-df6$gmax = (df6$gmin + (tgroovewidth / df6$maxgroove))
+df5$groove = df5$typerank
+
+df5$gmin = (((1 / (2*3)) + ((df5$groove - 1) / 3)) - (tgroovewidth / (2*3)))
+df5$gmax = (df5$gmin + (tgroovewidth / 3))
 
 # The x dimension is outward from the center
-df6$xmin = tleadout + (df6$gmin * (tleadin-tleadout))
-df6$xmax = tleadout + (df6$gmax * (tleadin-tleadout))
-    
+df5$xmin = tleadout + (df5$gmin * (tleadin-tleadout))
+df5$xmax = tleadout + (df5$gmax * (tleadin-tleadout))
+
 # Write a loop that cycles through the whole album
-for(i in 1:max(df6$donutstrack)) {
+for(i in 1:max(df5$donutstrack)) {
 
 # for(i in 1:6) {
     
 # Filter the dataframe for just one track (i)
-donutbite <- filter(df6, donutstrack ==  i) %>%
+donutbite <- filter(df5, donutstrack ==  i) %>%
 # Then plot it!
 ggplot() +
-  # The main geoms are rectangles that represent when certain samples are playing
+  # The rectangles represent when certain samples are playing
   geom_rect(aes(xmin = xmin, xmax = xmax,
-                ymin = ymin, ymax = ymax, fill = sampledgenre), 
-            color = "gray88", linewidth = 0.5, alpha = 0.80) + 
+                ymin = ymin, ymax = ymax, fill = sampledgenre),
+            color = "gray88", linewidth = 0.3, alpha = 1) +
   # Add colors
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Clip the graph to just the necessary limits, remove any gaps
@@ -366,7 +374,7 @@ ggplot() +
 print(donutbite)
 
 # Save each plot as an svg
-ggsave(file = paste0(i, "b.svg"), plot = donutbite, 
+ggsave(file = paste0(i, ".svg"), plot = donutbite, 
        width = square, height = square) 
 
 } # End of donutbite function
