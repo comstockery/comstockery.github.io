@@ -14,12 +14,12 @@ bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
-colorvalues = c("electronic/dance" = "#E67343DD", 
-                "hip-hop/rap/r&b" = "#F72585DD", 
-                "other" = "#F8B219DD",
-                "rock/pop" = "#004AF7DD",
-                "soul/funk/disco" = "#9B53E6DD")
-navalue = "#AAAAAADD"
+colorvalues = c("electronic/dance" = "#E67343", 
+                "hip-hop/rap/r&b" = "#F72585", 
+                "other" = "#F8B219",
+                "rock/pop" = "#004AF7",
+                "soul/funk/disco" = "#9B53E6")
+navalue = "#AAAAAA"
 
 if(datamaker) {
 
@@ -136,7 +136,8 @@ donutrecord <- ggplot(df1) +
   # Add dots representing samples in each track (sprinkles)
   geom_point(aes(x = groove, y = sprinkle,
                  fill = sampledgenre), 
-             shape = 21, color = 'gray88', size = 5, stroke = 0.5) +
+             shape = 21, color = 'gray88', 
+             alpha = 0.8, size = 5, stroke = 0.5) +
   
   # Add colors for the sprinkles and remove plot buffers
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
@@ -297,37 +298,21 @@ tinner = 0.75       # Inside hole 1.5
 square = 1.5          # Base size of the output SVG
 
 # Calculate the rectangle edges
-# This requires math!
-
-typegroove = tibble(type = c('structural', 'surface', 'lyric'),
-                    typerank = c(1:3))
-
-# Add an initial ranking of the sample types
-df4 <- left_join(instancelist, typegroove, by = "type")
 
 # The y dimension is along the circumference
+df4 <- instancelist
 df4$ymin = df4$samplestart / df4$length
 df4$ymax = df4$sampleend / df4$length
 
-# Use a bunch of dplyr functions to determine unique sample/type combo
-# positions within each donut
+# Arrange the samples by how common they are in a track
 df5 <- df4 %>%
-  group_by(trackname, type) %>%
-  distinct(sampledtrack, .keep_all = TRUE) %>%
-  arrange(donutstrack, typerank) %>%
-  mutate(id = 1:n()) %>% # counting the sample/type combos with an index
-  mutate(tx = (typerank * 10) + id) %>% # aggregate index across types
-  ungroup() %>%
-  arrange(donutstrack, tx) %>%
-  group_by(donutstrack) %>%
-  mutate(groove = 1:n()) %>% # indexing across tracks
-  ungroup() %>%
-  select(donutstrack, sampledtrack, type, groove) %>%
-  group_by(donutstrack) %>%
+  group_by(donutstrack, sampledtrack) %>%
+  summarize(use = sum(duration)) %>%
+  arrange(donutstrack, use) %>%
+  mutate(groove = 1:n()) %>%
   mutate(maxgroove = max(groove))
-
   
-df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack', 'type'))
+df6 <- left_join(df4, df5, by = c('donutstrack', 'sampledtrack'))
 
 
 # Let the track grooves take up 90% of the width
@@ -352,7 +337,7 @@ ggplot() +
   # The main geoms are rectangles that represent when certain samples are playing
   geom_rect(aes(xmin = xmin, xmax = xmax,
                 ymin = ymin, ymax = ymax, fill = sampledgenre), 
-            color = "gray88", linewidth = 0.5) + 
+            color = "gray88", linewidth = 0.5, alpha = 0.80) + 
   # Add colors
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Clip the graph to just the necessary limits, remove any gaps
@@ -381,7 +366,7 @@ ggplot() +
 print(donutbite)
 
 # Save each plot as an svg
-ggsave(file = paste0(i, "a.svg"), plot = donutbite, 
+ggsave(file = paste0(i, "b.svg"), plot = donutbite, 
        width = square, height = square) 
 
 } # End of donutbite function
