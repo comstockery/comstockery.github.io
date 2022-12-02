@@ -228,6 +228,39 @@ span.attribution {
 }
 
 
+#allbites {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-direction: column;
+}
+
+.eightbites{
+  flex-basis: auto;
+}
+
+.bite {
+	position: relative;
+	text-align: center;
+	margin: 0;
+	display: inline;
+}
+
+.bitelabel {
+	font-family: 'Satoshi';
+	color: #555;
+	font-weight: 700;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.7em;
+	line-height: 0.7;
+}
+
+
 .btn {
 	font-family: 'Satoshi';
 	background-color: #DDDDDD;

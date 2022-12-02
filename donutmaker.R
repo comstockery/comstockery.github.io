@@ -215,7 +215,7 @@ samplesbyyear <- ggplot(df2,
   # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
                 mapping = aes(x = 2006, y = 7.8, 
-                            label = 'Donuts released',
+                            label = 'Donuts released: 2006',
                             angle = -90,
                             hjust = 0, vjust = 0), 
               color = 'gray44', fill = NA,
@@ -353,11 +353,11 @@ ggplot() +
   scale_y_continuous(limits = c(0, 1), expand = expansion(0,0),
                      labels = NULL) +
   # Add a 'label' for each track
-  geom_richtext(aes(x = 0, y = 0, label = trackname, 
-                    hjust = 0.5, vjust = 0.5),
-                color = 'gray33', fill = NA,
-                label.color = NA,
-                size = 4) +
+  # geom_richtext(aes(x = 0, y = 0, label = trackname, 
+  #                   hjust = 0.5, vjust = 0.5),
+  #               color = 'gray33', fill = NA,
+  #               label.color = NA,
+  #               size = 4) +
   # Make it a donut!
   coord_polar(theta = 'y') +
   # Remove other plot elements and legend

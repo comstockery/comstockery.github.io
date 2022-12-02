@@ -130,7 +130,8 @@
 <line x1='489.40' y1='125.44' x2='489.40' y2='12.54' style='stroke-width: 1.07; stroke: #707070; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' />
 <line x1='489.40' y1='125.44' x2='489.40' y2='12.54' style='stroke-width: 1.07; stroke: #707070; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' />
 <text transform='translate(491.20,15.36) rotate(90)' style='font-size: 8.54px;fill: #707070; font-family: "Arial";' textLength='27.04px' lengthAdjust='spacingAndGlyphs'>Donuts</text>
-<text transform='translate(491.20,44.76) rotate(90)' style='font-size: 8.54px;fill: #707070; font-family: "Arial";' textLength='32.73px' lengthAdjust='spacingAndGlyphs'>released</text>
+<text transform='translate(491.20,44.76) rotate(90)' style='font-size: 8.54px;fill: #707070; font-family: "Arial";' textLength='35.10px' lengthAdjust='spacingAndGlyphs'>released:</text>
+<text transform='translate(491.20,82.23) rotate(90)' style='font-size: 8.54px;fill: #707070; font-family: "Arial";' textLength='18.98px' lengthAdjust='spacingAndGlyphs'>2006</text>
 </g>
 <g clip-path='url(#cpMC4wMHw1MDQuMDB8MC4wMHwxNDQuMDA=)'>
 <text x='10.38' y='128.59' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='4.90px' lengthAdjust='spacingAndGlyphs'>0</text>
