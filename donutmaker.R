@@ -2,31 +2,19 @@
 # Load libraries
 suppressPackageStartupMessages({
   library(tidyverse)
+  library(googlesheets4)
   library(svglite)
   library(ggtext)
-  library(googlesheets4)
+  library(geomtextpath)
   })
 
 
 # Flags for code chunks
 datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
-
-
-
-
-
-
-
-# # Define color palette (NA values are defined separately)
-# colorvalues = c("electronic/dance" = "#E67343", 
-#                 "hip-hop/rap/r&b" = "#F72585", 
-#                 "other" = "#F8B219",
-#                 "rock/pop" = "#004AF7",
-#                 "soul/funk/disco" = "#9B53E6")
 
 # Define color palette (NA values are defined separately)
 colorvalues = c("electronic/dance" = "#E79556", 
@@ -350,9 +338,9 @@ df5$xmin = tleadout + (df5$gmin * (tleadin-tleadout))
 df5$xmax = tleadout + (df5$gmax * (tleadin-tleadout))
 
 # Write a loop that cycles through the whole album
-for(i in 1:max(df5$donutstrack)) {
+# for(i in 1:max(df5$donutstrack)) {
 
-# for(i in 1:6) {
+for(i in 1:3) {
     
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df5, donutstrack ==  i) %>%
@@ -395,6 +383,46 @@ ggsave(file = paste0(i, ".svg"), plot = donutbite,
 
 } # End of donutbite function
 
+
+
+# Make the 32nd donut: a legend that explains the grooves
+# Track 5, "The New" is good for this
+df6 <- data.frame(filter(df5, donutstrack == 5)) %>%
+  select(donutstrack, type, xmin, xmax) %>%
+  mutate(ymin = 0, ymax = 1, label = paste(type, "samples"))
+
+donutlegend <- ggplot(df6) +
+  geom_rect(aes(xmin = xmin, xmax = xmax,
+                ymin = ymin, ymax = ymax),
+            fill = 'gray77', color = 'gray88', 
+            linewidth = 0.3, alpha = 1) +
+  geom_textvline(data = df6, aes(xintercept = (xmin+xmax)/2, 
+                                 label = label), 
+                 hjust = 0.02, vjust = 0.5, linetype = 0,
+                 size = 2.4, color = 'gray33') +
+  geom_textvline(aes(xintercept = tleadout, 
+                                 label = "timing within track"), 
+                 hjust = 0.5, vjust = 1, linetype = 0,
+                 size = 2.6, color = 'gray33') +
+  
+  # Clip the graph to just the necessary limits, remove any gaps
+  scale_x_continuous(limits = c(0, 3.5), expand = expansion(0,0)) +
+  scale_y_continuous(limits = c(0, 1), expand = expansion(0,0),
+                     labels = NULL) +
+  # Make it a donut!
+  coord_polar(theta = 'y') +
+  # Remove other plot elements and legend
+  theme_void() +
+  theme(legend.position = 'none',
+        panel.border = element_blank(),
+        legend.key = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text.y = element_blank(),
+        panel.grid  = element_blank(),
+        plot.margin = unit(rep((-0.15*square),4), "inches"))
+
+# Save the legend as an svg
+ggsave(file = "0.svg", plot = donutlegend, 
+       width = square, height = square) 
+
 } # End of the 'bitemaker' code chunk
-
-
