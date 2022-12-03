@@ -381,6 +381,29 @@ print(donutbite)
 ggsave(file = paste0(i, ".svg"), plot = donutbite, 
        width = square, height = square) 
 
+# Select a few tracks to dig into for liner notes
+linernotes = c(2, 6, 7, 13, 21, 31)
+
+if (i %in% linernotes) {
+  
+  # linerlabel <- data.frame(filter(df5, donutstrack == i)) %>%
+  # select(donutstrack, type, xmin, xmax) %>%
+  # mutate(label = paste(type, "samples"))
+  # 
+  # donutbite + 
+  # geom_textvline(data = linerlabel, aes(xintercept = (xmin+xmax)/2, 
+  #                                label = label), 
+  #                hjust = 0.5, vjust = 0.5, linetype = 0,
+  #                size = 2.4, color = 'gray33') +
+  # geom_textvline(aes(xintercept = tleadin, 
+  #                      label = "start of track"), 
+  #                  hjust = 0.02, vjust = 1, linetype = 0,
+  #                  size = 2.6, color = 'gray33') 
+  
+  ggsave(file = paste0(i, "X.svg"), plot = donutbite, 
+         width = 3.6*square, height = 3.6*square) 
+  }
+
 } # End of donutbite function
 
 
