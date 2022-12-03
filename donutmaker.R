@@ -398,11 +398,11 @@ donutlegend <- ggplot(df6) +
             linewidth = 0.3, alpha = 1) +
   geom_textvline(data = df6, aes(xintercept = (xmin+xmax)/2, 
                                  label = label), 
-                 hjust = 0.02, vjust = 0.5, linetype = 0,
+                 hjust = 0.5, vjust = 0.5, linetype = 0,
                  size = 2.4, color = 'gray33') +
-  geom_textvline(aes(xintercept = tleadout, 
-                                 label = "timing within track"), 
-                 hjust = 0.5, vjust = 1, linetype = 0,
+  geom_textvline(aes(xintercept = tleadin, 
+                                 label = "start of track"), 
+                 hjust = 0.02, vjust = 1, linetype = 0,
                  size = 2.6, color = 'gray33') +
   
   # Clip the graph to just the necessary limits, remove any gaps

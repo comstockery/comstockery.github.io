@@ -111,15 +111,17 @@ span {
 
 div.quotationbox {
 	margin: auto;
-	height: 120px;
-	width: 70%;
+	width: 60%;
 	background-color: #ddd;
 	color: #555;
 	border: 1px solid black;
 	border-radius: 10px;
-	padding: 10px 20px;
-	font-size: 0.9em;
+	padding: 8px 10px;
+	font-size: 0.8em;
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 span.quotation {
@@ -127,9 +129,7 @@ span.quotation {
 }
 
 span.attribution {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  align-self: flex-end;
 }
 
 .writing {
@@ -141,15 +141,7 @@ span.attribution {
 
 
 
-.container {
-  background-color: #ddd;
-	color: #555;
-	border: 1px solid black;
-	border-radius: 10px;
-  padding: 10px 20px;
-  margin: auto;
-  width: 90%;
-}
+
 
 /*        
 .mantronix {
@@ -213,7 +205,7 @@ span.attribution {
 
 #sbychart {
 	position: relative;
-	top: 50px;
+	top: 30px;
 	left: 0px;
 }
 
@@ -273,29 +265,3 @@ span.attribution {
 	line-height: 1;
 }
 
-
-.btn {
-	font-family: 'Satoshi';
-	background-color: #DDDDDD;
-	border: 1px solid #BBBBBB;
-	padding: 0px 4px;
-	text-align: center;
-	font-size: 0.8em;
-	border-radius: 10px;
-}
-
-.gen3 {
-	margin-left: 20px;
-}
-
-.gen4 {
-	margin-left: 50px;
-}
-
-.gen5 {
-	margin-left: 80px;
-}
-
-.gen6 {
-	margin-left: 110px;
-}
