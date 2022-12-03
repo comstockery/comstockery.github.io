@@ -9,19 +9,35 @@ suppressPackageStartupMessages({
 
 
 # Flags for code chunks
-datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
+datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
+
+
+
+
+
+
+# # Define color palette (NA values are defined separately)
+# colorvalues = c("electronic/dance" = "#E67343", 
+#                 "hip-hop/rap/r&b" = "#F72585", 
+#                 "other" = "#F8B219",
+#                 "rock/pop" = "#004AF7",
+#                 "soul/funk/disco" = "#9B53E6")
+
 # Define color palette (NA values are defined separately)
-colorvalues = c("electronic/dance" = "#E67343", 
-                "hip-hop/rap/r&b" = "#F72585", 
-                "other" = "#F8B219",
-                "rock/pop" = "#004AF7",
-                "soul/funk/disco" = "#9B53E6")
+colorvalues = c("electronic/dance" = "#E79556", 
+                "hip-hop/rap/r&b" = "#EC4176", 
+                "other" = "#A13670",
+                "rock/pop" = "#12348D",
+                "soul/funk/disco" = "#9043C3")
+
+
 navalue = "#AAAAAA"
+
 
 if(datamaker) {
 
@@ -139,7 +155,7 @@ donutrecord <- ggplot(df1) +
   geom_point(aes(x = groove, y = sprinkle,
                  fill = sampledgenre), 
              shape = 21, color = 'gray88', 
-             alpha = 0.8, size = 5, stroke = 0.5) +
+             alpha = 0.9, size = 5, stroke = 0.5) +
   
   # Add colors for the sprinkles and remove plot buffers
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
