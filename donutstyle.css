@@ -37,7 +37,7 @@ p {
 
 a {
 	font-weight: 900;
-	color: #111;
+	color: #262254;
 }
 
 span {
@@ -131,6 +131,15 @@ span.attribution {
   bottom: 0;
   right: 0;
 }
+
+.writing {
+  margin: auto;
+  width: 80%;
+  min-width: 700px;
+  padding: 30px;
+}
+
+
 
 .container {
   background-color: #ddd;

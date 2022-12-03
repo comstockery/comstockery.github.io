@@ -231,7 +231,7 @@ samplesbyyear <- ggplot(df2,
   # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
                 mapping = aes(x = 2006, y = 7.8, 
-                            label = 'Donuts released: 2006',
+                            label = 'Donuts released (2006)',
                             angle = -90,
                             hjust = 0, vjust = 0), 
               color = 'gray44', fill = NA,
