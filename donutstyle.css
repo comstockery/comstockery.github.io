@@ -110,8 +110,8 @@ span {
 }
 
 div.quotationbox {
-	margin: auto;
-	width: 60%;
+	margin: 20px auto;
+	width: 50%;
 	background-color: #ddd;
 	color: #555;
 	border: 1px solid black;
@@ -133,8 +133,8 @@ span.attribution {
 }
 
 .writing {
-  margin: auto;
-  width: 80%;
+	margin: 20px auto;
+  width: 70%;
   min-width: 700px;
   padding: 30px;
 }
@@ -180,7 +180,7 @@ span.attribution {
 }
 
 .wrapper {
-  margin: auto;
+	margin: 20px auto;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -188,7 +188,7 @@ span.attribution {
 
 #sbyarea {
 	position: relative;
-	height: 250px;
+	height: 220px;
 }
 
 #sbylegend { /*no longer used*/
