@@ -32,7 +32,7 @@ h6 {
 
 
 p {
-	margin: 0 0 5px;
+	margin: 10px;
 }
 
 a {
@@ -105,8 +105,8 @@ span {
 
 
 div.quotationbox {
-	margin: 20px auto;
-	width: 50%;
+	margin: 30px auto;
+	width: 45%;
 	background-color: #ddd;
 	color: #555;
 	border-radius: 10px;
@@ -127,10 +127,9 @@ span.attribution {
 }
 
 .writing {
-	margin: 20px auto;
-  width: 70%;
+	margin: 50px auto;
+  width: 65%;
   min-width: 700px;
-  padding: 30px;
 }
 
 /*        
@@ -175,6 +174,7 @@ span.attribution {
 
 .wrapper {
 	margin: 20px auto;
+	padding: 30px;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -256,13 +256,13 @@ span.attribution {
 }
 
 .gatefold {
-	margin: 10px auto;
+	margin: 30px auto;
   width: 720px;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-	border: 1px solid gray;  
+	border: 1px solid gray; 
 }
 
 .gatefoldbite {
