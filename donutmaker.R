@@ -10,9 +10,9 @@ suppressPackageStartupMessages({
 
 
 # Flags for code chunks
-datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
@@ -338,9 +338,9 @@ df5$xmin = tleadout + (df5$gmin * (tleadin-tleadout))
 df5$xmax = tleadout + (df5$gmax * (tleadin-tleadout))
 
 # Write a loop that cycles through the whole album
-# for(i in 1:max(df5$donutstrack)) {
+for(i in 1:max(df5$donutstrack)) {
 
-for(i in 1:3) {
+# for(i in 1:3) {
     
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df5, donutstrack ==  i) %>%
@@ -386,22 +386,11 @@ linernotes = c(2, 6, 7, 13, 21, 31)
 
 if (i %in% linernotes) {
   
-  # linerlabel <- data.frame(filter(df5, donutstrack == i)) %>%
-  # select(donutstrack, type, xmin, xmax) %>%
-  # mutate(label = paste(type, "samples"))
-  # 
-  # donutbite + 
-  # geom_textvline(data = linerlabel, aes(xintercept = (xmin+xmax)/2, 
-  #                                label = label), 
-  #                hjust = 0.5, vjust = 0.5, linetype = 0,
-  #                size = 2.4, color = 'gray33') +
-  # geom_textvline(aes(xintercept = tleadin, 
-  #                      label = "start of track"), 
-  #                  hjust = 0.02, vjust = 1, linetype = 0,
-  #                  size = 2.6, color = 'gray33') 
+donutbite <- donutbite + 
+  theme(plot.margin = unit(rep((-0.36*square),4), "inches"))
   
   ggsave(file = paste0(i, "X.svg"), plot = donutbite, 
-         width = 3.6*square, height = 3.6*square) 
+         width = 2.5*square, height = 2.5*square) 
   }
 
 } # End of donutbite function

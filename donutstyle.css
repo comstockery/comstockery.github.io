@@ -75,6 +75,9 @@ span {
 	border-radius: 10px;
 }
 
+#legendlabel {
+    color: #333;
+}
 
 .electronic {	/*orange*/
 	background-color: #E79556;
@@ -88,7 +91,7 @@ span {
 	background-color: #A13670;
 }
 
-.rock {	/*light purple*/
+.rock {	/*blue*/
 	background-color: #12348D;
 }
 
@@ -100,21 +103,12 @@ span {
 	background-color: #aaa;
 }
 
-#legendlabel {	/*dark gray*/
-	color: #333;
-}
-
-.genre {
-	font-size: 1.3em;
-	margin: 0px 8px;
-}
 
 div.quotationbox {
 	margin: 20px auto;
 	width: 50%;
 	background-color: #ddd;
 	color: #555;
-	border: 1px solid black;
 	border-radius: 10px;
 	padding: 8px 10px;
 	font-size: 0.8em;
@@ -151,7 +145,7 @@ span.attribution {
 }
 
 #albumlabel {
-	font-family: 'Satoshi';
+	font-family: 'Satoshi', sans-serif;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -175,7 +169,7 @@ span.attribution {
 
 .charttitle {
 	position: absolute;
-	font-family: 'Satoshi';
+	font-family: 'Satoshi', sans-serif;
 	margin: 0px 5px;
 }
 
@@ -250,7 +244,7 @@ span.attribution {
 }
 
 .bitelabel {
-	font-family: 'Satoshi';
+	font-family: 'Satoshi', sans-serif;
 	color: #555;
 	font-weight: 400;
 	position: absolute;
@@ -261,3 +255,43 @@ span.attribution {
 	line-height: 1;
 }
 
+.gatefold {
+	margin: 10px auto;
+  width: 720px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+	border: 1px solid gray;  
+}
+
+.gatefoldbite {
+	position: relative;
+	text-align: center;
+	margin: 0;
+	width: 50%;
+}
+
+.gatefoldbitelabel {
+	font-family: 'Satoshi', sans-serif;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1.2em;
+	line-height: 1.1;
+}
+
+.gatefoldnote {
+  font-family: 'Satoshi', sans-serif;
+  width: 350px;
+  padding: 10px;
+  font-size: 0.7em;
+}
+
+.note {
+  color: #fff;
+  padding: 2px;
+  display: block;
+  margin: 1px;
+}
