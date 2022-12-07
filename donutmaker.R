@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -121,10 +121,15 @@ genres = count(df1, sampledgenre)
 df1outro <- df1 %>% filter(donutstrack != 1)
 
 donutrecord <- ggplot(df1) + 
-  # Create two sets of rectangles that will be converted to 4-edged slices
 
+  # Start with a white circle for the background of the album label
+  geom_rect(aes(xmin = 0, xmax = ainner,
+                ymax = 1, ymin = 0),
+            fill = 'white') +  
+  
+  # Create two sets of rectangles that will be converted to 4-edged slices
   # First, the rectangles for the  the total record (outer and inner edges) 
-  geom_rect(aes(ymax = 0, ymin = 1,
+  geom_rect(aes(ymax = 1, ymin = 0,
                 xmax = aouter, xmin = ainner),
             fill = 'gray11', color = 'gray11', 
             linewidth = 0.6) +
@@ -132,7 +137,7 @@ donutrecord <- ggplot(df1) +
   # Overlay the rectangles for track slices 
   geom_rect(aes(ymax = ymax, ymin = ymin, 
                 xmax = aleadin, xmin = aleadout), 
-            fill = 'gray22', color = 'gray88', 
+            fill = 'gray22', color = 'gray77', 
             linewidth = 0.4) +
   
   # Add gridlines for certain years (grooves)
@@ -154,9 +159,9 @@ donutrecord <- ggplot(df1) +
                               label = label,
                               # hjust = 0.5 means centered horizontally,
                               # vjust = 0 means above the dashed line
-                              hjust = 0.5, vjust = 0,
+                              hjust = 0.5, vjust = 1.2,
                               angle = angle),
-                color = 'gray99', fill = NA, 
+                color = 'gray88', fill = NA, 
                 label.color = NA,
                 size = 3,
                 label.padding = unit(rep(0, 4), "pt")) +
@@ -170,8 +175,18 @@ donutrecord <- ggplot(df1) +
                           hjust = hjust, vjust = vjust, angle = angle),
                 color = 'gray77', fill = NA,
                 label.color = NA,
-                size = 2.4,
+                size = 2.6,
                 label.padding = unit(rep(0, 4), "pt")) +
+  
+  geom_textvline(aes(xintercept = aouter,
+                     label = "start of album"), 
+                 hjust = 0.01, vjust = 1, linetype = 0,
+                 size = 2.8, color = 'gray44') +
+  
+  geom_textvline(aes(xintercept = aouter,
+                     label = "end of album"), 
+                 hjust = 0.99, vjust = 1, linetype = 0,
+                 size = 2.8, color = 'gray44') +
   
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(0, 6), expand = expansion(0,0)) +
@@ -193,7 +208,7 @@ donutrecord <- ggplot(df1) +
 print(donutrecord)
 
 # Save the plot as an SVG
-ggsave(file = "donutrecord.svg", plot = donutrecord, 
+ggsave(file = "donutrecord.svg", plot = donutrecord,
        width = 7, height = 7)
 
 } # End of the 'donutmaker' code chunk
@@ -247,7 +262,7 @@ print(samplesbyyear)
 
 # Save the plot as an SVG
 ggsave(file = "samplesbyyear.svg", plot = samplesbyyear, 
-       width = 7, height = 2) 
+       width = 7, height = 3) 
 
 # Data frame that makes an index for each instance of a sample by type
 df3 <- instancelist %>%

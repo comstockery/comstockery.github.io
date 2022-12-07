@@ -57,21 +57,21 @@ span {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  border: 1px 0px 1px 0px solid #333;
   background-color: #eee;
   z-index: 100;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 1px 2px;
+  gap: 0px;
 }
 
 .legend {
+	font-family: 'Satoshi', sans-serif;  
   color: #fff;
-	font-weight: 900;
+	font-weight: 700;
 	display: inline;
-	padding: 8px;
+	padding: 1px 6px 2px 6px;
 	border-radius: 10px;
 }
 
@@ -173,8 +173,7 @@ span.attribution {
 }
 
 .wrapper {
-	margin: 20px auto;
-	padding: 30px;
+	margin: 30px auto;
   width: 50%;
   display: flex;
   justify-content: center;
@@ -182,15 +181,7 @@ span.attribution {
 
 #sbyarea {
 	position: relative;
-	height: 220px;
-}
-
-#sbylegend { /*no longer used*/
-	position: absolute;
-	font-size: 0.6em;
-	left: 420px;
-	top: 30px;
-	background-color: #eee;
+	height: 315px;
 }
 
 #sbychart {
@@ -198,7 +189,6 @@ span.attribution {
 	top: 30px;
 	left: 0px;
 }
-
 
 #sbtarea {
 	position: relative;
@@ -221,7 +211,7 @@ span.attribution {
 
 
 #allbites {
-  margin: auto;
+	margin: 30px auto;
   width: 80%;
   display: flex;
   justify-content: center;
