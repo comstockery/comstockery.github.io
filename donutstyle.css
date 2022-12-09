@@ -103,6 +103,29 @@ span {
 	background-color: #aaa;
 }
 
+.electronictext {	/*orange*/
+	color: #E79556;
+}
+
+.hiphoptext {	/*pink*/
+	color: #EC4176;
+}
+
+.othertext {	/*dark red*/
+	color: #A13670;
+}
+
+.rocktext {	/*blue*/
+	color: #12348D;
+}
+
+.soultext {	/*dark purple*/
+	color: #9043C3;
+}
+
+.unknowntext {	/*gray*/
+	color: #999;
+}
 
 div.quotationbox {
 	margin: 30px auto;
@@ -246,6 +269,8 @@ span.attribution {
 }
 
 .gatefold {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
 	margin: 30px auto;
   width: 720px;
   display: flex;
@@ -263,7 +288,6 @@ span.attribution {
 }
 
 .gatefoldbitelabel {
-	font-family: 'Satoshi', sans-serif;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -272,16 +296,21 @@ span.attribution {
 	line-height: 1.1;
 }
 
-.gatefoldnote {
-  font-family: 'Satoshi', sans-serif;
+.gatefoldcredit {
   width: 350px;
-  padding: 10px;
+  padding: 15px 30px;
   font-size: 0.7em;
 }
 
-.note {
-  color: #fff;
-  padding: 2px;
+.credit {
+  font-weight: 900;
+  padding: 1px;
   display: block;
   margin: 1px;
+}
+
+.gatefoldnotes {
+  font-weight: 400;
+  padding: 15px 30px;
+  font-size: 1em;
 }
