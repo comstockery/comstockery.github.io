@@ -215,20 +215,12 @@ span.attribution {
 
 #sbtarea {
 	position: relative;
-	height: 700px;
-}
-
-#sbtlegend { /*no longer used*/
-	position: absolute;
-	font-size: 0.8em;
-	left: 500px;
-	top: 300px;
-	background-color: #eee;
+	height: 720px;
 }
 
 #sbtchart {
 	position: relative;
-	top: 20px;
+	top: 50px;
 	left: 0px;
 }
 

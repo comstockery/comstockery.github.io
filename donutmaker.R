@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
