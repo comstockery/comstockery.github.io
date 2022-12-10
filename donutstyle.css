@@ -137,7 +137,7 @@ div.quotationbox {
 	width: 45%;
 	min-width: 500px;
 	background-color: #ddd;
-	color: #555;
+	color: #444;
 	border-radius: 10px;
 	padding: 8px 10px;
 	font-size: 0.8em;
@@ -252,7 +252,7 @@ span.attribution {
 
 .bitelabel {
 	font-family: 'Satoshi', sans-serif;
-	color: #555;
+	color: #444;
 	font-weight: 400;
 	position: absolute;
 	top: 50%;
