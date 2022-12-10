@@ -5,6 +5,7 @@ body {
   margin: auto;
   width: 90vw;
   max-width: 1280px;
+  min-width: 640px;
   color: #333;
 }
 
@@ -310,7 +311,6 @@ span.attribution {
   padding: 15px 30px;
   font-size: 1em;
 }
-
 
 .btn, 
 .btn:hover, .btn:active, .btn:focus, .btn:visited, .btn:focus-visible,
