@@ -1,336 +1,355 @@
 body {
-	font-family: 'Quicksand', sans-serif;
-	font-size: 18px; 
-	background-color: #eee;
-  margin: auto;
-  max-width: 1280px;
-  min-width: 720px;
-  color: #333;
+   font-family: 'Quicksand', sans-serif;
+   font-size: 18px;
+   background-color: #eee;
+   margin: auto;
+   max-width: 1280px;
+   min-width: 720px;
+   color: #333;
 }
 
 h1 {
-  font-size: 4em;
+   font-size: 4em;
 }
 
 h1,
 h2 {
-  text-align: center;
-	font-family: 'Satoshi', sans-serif;
-	font-weight: 900;
-	margin: 5px;
+   text-align: center;
+   font-family: 'Satoshi', sans-serif;
+   font-weight: 900;
+   margin: 5px;
 }
 
 h3,
 h4,
 h5,
 h6 {
-  text-align: center;
-	font-family: 'Satoshi', sans-serif;
-	font-weight: 700;
-	margin: 5px;
+   text-align: center;
+   font-family: 'Satoshi', sans-serif;
+   font-weight: 700;
+   margin: 5px;
 }
 
 
 p {
-	margin: 10px;
+   margin: 10px;
 }
 
 a {
-	font-weight: 900;
-	color: #262254;
+   font-weight: 900;
+   color: #262254;
 }
 
 span {
-	margin: 5px;
-	display: inline;
+   margin: 5px;
+   display: inline;
 }
 
 * {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 #subtitle {
-	font-family: 'Satoshi', sans-serif;  
-  margin: auto;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.2em;
+   font-family: 'Satoshi', sans-serif;
+   margin: auto;
+   text-align: center;
+   font-style: italic;
+   font-size: 1.2em;
 }
 
 #stickylegend {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  background-color: #eee;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-start;
-  gap: 0px;
+   position: -webkit-sticky;
+   /* Safari */
+   position: sticky;
+   top: 0;
+   background-color: #eee;
+   z-index: 100;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-content: flex-start;
+   gap: 0px;
 }
 
 .legend {
-	font-family: 'Satoshi', sans-serif;  
-  color: #fff;
-	font-weight: 700;
-	display: inline;
-	padding: 1px 6px 2px 6px;
-	border-radius: 10px;
+   font-family: 'Satoshi', sans-serif;
+   color: #fff;
+   font-weight: 700;
+   display: inline;
+   padding: 1px 6px 2px 6px;
+   border-radius: 10px;
 }
 
 #legendlabel {
-    color: #333;
+   color: #333;
 }
 
-.electronic {	/*orange*/
-	background-color: #E79556;
+.electronic {
+   /*orange*/
+   background-color: #E79556;
 }
 
-.hiphop {	/*pink*/
-	background-color: #EC4176;
+.hiphop {
+   /*pink*/
+   background-color: #EC4176;
 }
 
-.other {	/*dark red*/
-	background-color: #A13670;
+.other {
+   /*dark red*/
+   background-color: #A13670;
 }
 
-.rock {	/*blue*/
-	background-color: #12348D;
+.rock {
+   /*blue*/
+   background-color: #12348D;
 }
 
-.soul {	/*dark purple*/
-	background-color: #9043C3;
+.soul {
+   /*dark purple*/
+   background-color: #9043C3;
 }
 
-.unknown {	/*gray*/
-	background-color: #aaa;
+.unknown {
+   /*gray*/
+   background-color: #aaa;
 }
 
-.electronictext {	/*orange*/
-	color: #E79556;
+.electronictext {
+   /*orange*/
+   color: #E79556;
 }
 
-.hiphoptext {	/*pink*/
-	color: #EC4176;
+.hiphoptext {
+   /*pink*/
+   color: #EC4176;
 }
 
-.othertext {	/*dark red*/
-	color: #A13670;
+.othertext {
+   /*dark red*/
+   color: #A13670;
 }
 
-.rocktext {	/*blue*/
-	color: #12348D;
+.rocktext {
+   /*blue*/
+   color: #12348D;
 }
 
-.soultext {	/*dark purple*/
-	color: #9043C3;
+.soultext {
+   /*dark purple*/
+   color: #9043C3;
 }
 
-.unknowntext {	/*gray*/
-	color: #999;
+.unknowntext {
+   /*gray*/
+   color: #999;
 }
 
 div.quotationbox {
-	margin: 30px auto;
-	width: 45%;
-	min-width: 500px;
-	background-color: #ddd;
-	color: #444;
-	border-radius: 10px;
-	padding: 8px 10px;
-	font-size: 0.8em;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+   margin: 30px auto;
+   width: 45%;
+   min-width: 500px;
+   background-color: #ddd;
+   color: #444;
+   border-radius: 10px;
+   padding: 8px 10px;
+   font-size: 0.8em;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
 
 span.quotation {
-	text-align: left;
+   text-align: left;
 }
 
 span.attribution {
-  align-self: flex-end;
+   align-self: flex-end;
 }
 
 .writing {
-	margin: 50px auto;
-  width: 65%;
-  min-width: 700px;
+   margin: 50px auto;
+   width: 65%;
+   min-width: 700px;
 }
 
 #album {
-	position: relative;
-	text-align: center;
-	margin: 0;
+   position: relative;
+   text-align: center;
+   margin: 0;
 }
 
 #albumlabel {
-	font-family: 'Satoshi', sans-serif;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 1.7em;
-	line-height: 1.2;
+   font-family: 'Satoshi', sans-serif;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 1.7em;
+   line-height: 1.2;
 }
 
 #albumlegend {
-	text-align: center;
-	margin: 0;
-	font-size: 1.1em;
+   text-align: center;
+   margin: 0;
+   font-size: 1.1em;
 }
 
 #albumyear {
-	text-align: center;
-	margin: 0;
-	font-size: 0.7em;
-	vertical-align: text-top;
+   text-align: center;
+   margin: 0;
+   font-size: 0.7em;
+   vertical-align: text-top;
 }
 
 .charttitle {
-	position: absolute;
-	font-family: 'Satoshi', sans-serif;
-	margin: 0px 5px;
+   position: absolute;
+   font-family: 'Satoshi', sans-serif;
+   margin: 0px 5px;
 }
 
 .wrapper {
-	margin: 30px auto;
-  width: 50%;
-  display: flex;
-  justify-content: center;
+   margin: 30px auto;
+   width: 50%;
+   display: flex;
+   justify-content: center;
 }
 
 #sbyarea {
-	position: relative;
-	height: 315px;
+   position: relative;
+   height: 315px;
 }
 
 #sbychart {
-	position: relative;
-	top: 30px;
-	left: 0px;
+   position: relative;
+   top: 30px;
+   left: 0px;
 }
 
 #sbtarea {
-	position: relative;
-	height: 720px;
+   position: relative;
+   height: 720px;
 }
 
 #sbtchart {
-	position: relative;
-	top: 50px;
-	left: 0px;
+   position: relative;
+   top: 50px;
+   left: 0px;
 }
 
 
 #allbites {
-	margin: 30px auto;
-  width: 80%;
-  min-width: 720px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+   margin: 30px auto;
+   width: 80%;
+   min-width: 720px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-direction: column;
 }
 
-.fourbites{
-  flex-basis: auto;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+.fourbites {
+   flex-basis: auto;
+   display: flex;
+   justify-content: center;
+   align-content: center;
 }
 
 .bite {
-	position: relative;
-	text-align: center;
-	margin: 0;
-	display: inline;
+   position: relative;
+   text-align: center;
+   margin: 0;
+   display: inline;
 }
 
 .bitelabel {
-	font-family: 'Satoshi', sans-serif;
-	color: #444;
-	font-weight: 400;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 0.7em;
-	line-height: 1;
+   font-family: 'Satoshi', sans-serif;
+   color: #444;
+   font-weight: 400;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 0.7em;
+   line-height: 1;
 }
 
 .gatefold {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 700;
-	margin: 30px auto;
-  width: 720px;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-	border: 0px solid gray; 
+   font-family: 'Satoshi', sans-serif;
+   font-weight: 700;
+   margin: 30px auto;
+   width: 720px;
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   border: 0px solid gray;
 }
 
 .gatefoldbite {
-	position: relative;
-	text-align: center;
-	margin: 0;
-	width: 50%;
+   position: relative;
+   text-align: center;
+   margin: 0;
+   width: 50%;
 }
 
 .gatefoldbitelabel {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 1.2em;
-	line-height: 1.1;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 1.2em;
+   line-height: 1.1;
 }
 
 .gatefoldcredit {
-  padding: 15px 30px;
-  font-size: 0.7em;
+   padding: 15px 30px;
+   font-size: 0.7em;
 }
 
 .credit {
-  font-weight: 900;
-  padding: 1px 0px;
-  display: block;
-  margin: 1px;
+   font-weight: 900;
+   padding: 1px 0px;
+   display: block;
+   margin: 1px;
 }
 
 .gatefoldnotes {
-  font-weight: 400;
-  padding: 15px 30px;
-  font-size: 0.9em;
+   font-weight: 400;
+   padding: 15px 30px;
+   font-size: 0.9em;
 }
 
-.btn, 
-.btn:hover, .btn:active, .btn:focus, .btn:visited, .btn:focus-visible,
-.collapsed, .collapsing , .collapsing:active {
-  padding: 0px; 
-  background-color: transparent;
-  border: 0px solid transparent;
-  font-size: inherit;
-  line-height: inherit;
-  outline: 0px solid transparent;
-  box-shadow: none;
-	border-radius: 0px;
+.btn,
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:visited,
+.btn:focus-visible,
+.collapsed,
+.collapsing,
+.collapsing:active {
+   padding: 0px;
+   background-color: transparent;
+   border: 0px solid transparent;
+   font-size: inherit;
+   line-height: inherit;
+   outline: 0px solid transparent;
+   box-shadow: none;
+   border-radius: 0px;
 }
 
 footer {
-  font-family: 'Satoshi', sans-serif; 
-	margin: 10px auto;
-  width: 30%;
-	min-width: 400px;
-  text-align: left;
-  border: 1px solid #EC4176;
-  border-radius: 10px;
-  padding: 5px 10px;
-  color: #262254;
-  font-size: 0.7em;
-  line-height: 1.1;
-  background-color: #EC417622;
+   font-family: 'Satoshi', sans-serif;
+   margin: 10px auto;
+   width: 30%;
+   min-width: 400px;
+   text-align: left;
+   border: 1px solid #EC4176;
+   border-radius: 10px;
+   padding: 5px 10px;
+   color: #262254;
+   font-size: 0.7em;
+   line-height: 1.1;
+   background-color: #EC417622;
 }
