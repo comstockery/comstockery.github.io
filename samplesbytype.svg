@@ -188,6 +188,7 @@
 <circle cx='185.56' cy='185.18' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='200.89' cy='185.18' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='200.26' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
+<circle cx='200.89' cy='200.26' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='215.34' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='200.89' cy='215.34' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='216.22' cy='215.34' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
@@ -196,7 +197,6 @@
 <circle cx='185.56' cy='245.49' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='200.89' cy='245.49' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='216.22' cy='245.49' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
-<circle cx='231.55' cy='245.49' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='305.80' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='335.96' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='200.89' cy='335.96' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
@@ -230,16 +230,16 @@
 <circle cx='185.56' cy='170.11' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
 <circle cx='185.56' cy='185.18' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
 <circle cx='200.89' cy='185.18' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
-<circle cx='185.56' cy='200.26' r='4.79' style='stroke-width: 4.25; stroke: #E79556;' />
+<circle cx='185.56' cy='200.26' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
+<circle cx='200.89' cy='200.26' r='4.79' style='stroke-width: 4.25; stroke: #E79556;' />
 <circle cx='185.56' cy='215.34' r='4.79' style='stroke-width: 4.25; stroke: #E79556;' />
 <circle cx='200.89' cy='215.34' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
 <circle cx='216.22' cy='215.34' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
 <circle cx='231.55' cy='215.34' r='4.79' style='stroke-width: 4.25; stroke: #E79556;' />
 <circle cx='185.56' cy='230.42' r='4.79' style='stroke-width: 4.25; stroke: #12348D;' />
 <circle cx='185.56' cy='245.49' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
-<circle cx='200.89' cy='245.49' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
+<circle cx='200.89' cy='245.49' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
 <circle cx='216.22' cy='245.49' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
-<circle cx='231.55' cy='245.49' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
 <circle cx='185.56' cy='305.80' r='4.79' style='stroke-width: 4.25; stroke: #12348D;' />
 <circle cx='185.56' cy='335.96' r='4.79' style='stroke-width: 4.25; stroke: #9043C3;' />
 <circle cx='200.89' cy='335.96' r='4.79' style='stroke-width: 4.25; stroke: #EC4176;' />
@@ -490,7 +490,7 @@
 <text x='118.99' y='158.18' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='21.52px' lengthAdjust='spacingAndGlyphs'>Mash</text>
 <text x='118.99' y='143.10' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='52.67px' lengthAdjust='spacingAndGlyphs'>The Diffrence</text>
 <text x='118.99' y='128.02' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='27.40px' lengthAdjust='spacingAndGlyphs'>People</text>
-<text x='118.99' y='112.95' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='18.11px' lengthAdjust='spacingAndGlyphs'>Stop</text>
+<text x='118.99' y='112.95' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='20.56px' lengthAdjust='spacingAndGlyphs'>Stop!</text>
 <text x='118.99' y='97.87' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='35.21px' lengthAdjust='spacingAndGlyphs'>The New</text>
 <text x='118.99' y='82.79' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='50.86px' lengthAdjust='spacingAndGlyphs'>Light My Fire</text>
 <text x='118.99' y='67.71' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Arial";' textLength='26.57px' lengthAdjust='spacingAndGlyphs'>Waves</text>

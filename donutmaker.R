@@ -355,8 +355,6 @@ df5$xmax = tleadout + (df5$gmax * (tleadin-tleadout))
 # Write a loop that cycles through the whole album
 for(i in 1:max(df5$donutstrack)) {
 
-# for(i in 1:3) {
-    
 # Filter the dataframe for just one track (i)
 donutbite <- filter(df5, donutstrack ==  i) %>%
 # Then plot it!

@@ -4,7 +4,6 @@ body {
 	background-color: #eee;
   margin: auto;
   max-width: 1280px;
-  min-width: 720px;
   color: #333;
 }
 
@@ -328,7 +327,7 @@ footer {
   text-align: left;
   border: 1px solid #EC4176;
   border-radius: 10px;
-  padding: 8px 10px;
+  padding: 5px 10px;
   color: #262254;
   font-size: 0.7em;
   line-height: 1.1;
