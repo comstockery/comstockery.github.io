@@ -30,7 +30,7 @@ navalue = "#AAAAAA"
 if(datamaker) {
 
 # Read data into R from Google Sheets
-donutsmain <- read_sheet('https://docs.google.com/spreadsheets/d/1hv66GrSazsAs6QvlvOZpnHyJc4u6_tbLDQ5m3wMPwWw/edit#gid=1315766256') %>%
+donutsmain <- read_sheet('https://docs.google.com/spreadsheets/d/14y4hoZEaIZVR0N2K-vOASqkKbftjNUWV3ijvIi0TSXE/edit#gid=1315766256') %>%
   select(1:15) # Drop the last three rows
 
 # Form three tidy data frames
