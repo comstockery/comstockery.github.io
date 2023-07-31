@@ -395,7 +395,7 @@ ggsave(file = paste0(i, ".svg"), plot = donutbite,
        width = square, height = square) 
 
 # Select a few tracks to dig into for liner notes
-linernotes = c(2, 6, 7, 13, 21, 31)
+linernotes = c(2, 3, 6, 7, 13, 21, 31)
 
 if (i %in% linernotes) {
   
