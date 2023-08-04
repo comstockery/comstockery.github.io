@@ -12,8 +12,8 @@ suppressPackageStartupMessages({
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -97,7 +97,7 @@ df1$sprinkle <- df1$ymin + ((df1$ymax - df1$ymin)*(runif(nrow(df1), 0.10, 0.90))
 
 
 # Calculate the angle and hjust of the track names
-df1$angle <-  90 - (360 * df1$ymin) 
+df1$angle <-  90 - (360 * (df1$ymax + df1$ymin)/2) 
 
 # Horizontal justification flips on the left side
 df1$hjust <- ifelse(df1$angle < -90, 0, 1)
@@ -119,6 +119,7 @@ yearlabels <- data.frame(
 genres = count(df1, sampledgenre)
 
 df1outro <- df1 %>% filter(donutstrack != 1)
+tracklistoutro <- df1outro %>% distinct(trackname, .keep_all = TRUE) 
 
 donutrecord <- ggplot(df1) + 
 
@@ -137,18 +138,18 @@ donutrecord <- ggplot(df1) +
   # Overlay the rectangles for track slices 
   geom_rect(aes(ymax = ymax, ymin = ymin, 
                 xmax = aleadin, xmin = aleadout), 
-            fill = 'gray22', color = 'gray77', 
+            fill = 'gray22', color = 'gray44', 
             linewidth = 0.4) +
   
   # Add gridlines for certain years (grooves)
-  geom_vline(xintercept = vlinecalc(c(1970,1980,1990)), color = 'gray88',
-             linewidth = 0.2, linetype = 'dotted') +
+  geom_vline(xintercept = vlinecalc(c(1970,1980,1990)), color = 'gray11',
+             linewidth = 0.4, linetype = 'solid') +
 
   # Add dots representing samples in each track (sprinkles)
   geom_point(aes(x = groove, y = sprinkle,
                  fill = sampledgenre), 
              shape = 21, color = 'gray88', 
-             alpha = 0.9, size = 5, stroke = 0.5) +
+             alpha = 0.9, size = 4.5, stroke = 0.7) +
   
   # Add colors for the sprinkles and remove plot buffers
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
@@ -159,34 +160,35 @@ donutrecord <- ggplot(df1) +
                               label = label,
                               # hjust = 0.5 means centered horizontally,
                               # vjust = 0 means above the dashed line
-                              hjust = 0.5, vjust = 1.2,
+                              hjust = 0.5, vjust = 0.5,
                               angle = angle),
-                color = 'gray88', fill = NA, 
+                color = 'gray99', fill = NA, 
                 label.color = NA,
-                size = 3,
+                size = 4.5,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   # Add labels for track names (slices)
-  geom_richtext(data = df1outro, 
-                mapping = aes(x = (0.99*aleadin), y = ymin + 0.0015,
+  geom_richtext(data = tracklistoutro, 
+                mapping = aes(x = (0.99*aleadin), y = (ymin + ymax)/2,
                           label = trackname,
                           # hjust = 0.5 means centered horizontally,
                           # vjust = 0 means above the dashed line
-                          hjust = hjust, vjust = vjust, angle = angle),
-                color = 'gray77', fill = NA,
+                          hjust = hjust, vjust = 0.5, 
+                          angle = angle),
+                color = 'gray77', fill = NA, alpha = 0.7,
                 label.color = NA,
-                size = 2.6,
+                size = 3.9,
                 label.padding = unit(rep(0, 4), "pt")) +
   
   geom_textvline(aes(xintercept = aouter,
-                     label = "start of album"), 
-                 hjust = 0.01, vjust = 1, linetype = 0,
-                 size = 2.8, color = 'gray44') +
+                     label = "start of album >>"), 
+                 hjust = 0.02, vjust = 1, linetype = 0,
+                 size = 3.2, color = 'gray77') +
   
   geom_textvline(aes(xintercept = aouter,
-                     label = "end of album"), 
-                 hjust = 0.99, vjust = 1, linetype = 0,
-                 size = 2.8, color = 'gray44') +
+                     label = "<< end of album"), 
+                 hjust = 0.98, vjust = 1, linetype = 0,
+                 size = 3.2, color = 'gray77') +
   
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(0, 6), expand = expansion(0,0)) +
