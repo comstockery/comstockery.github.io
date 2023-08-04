@@ -12,8 +12,8 @@ suppressPackageStartupMessages({
 # Flags for code chunks
 datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -182,13 +182,13 @@ donutrecord <- ggplot(df1) +
   
   geom_textvline(aes(xintercept = aouter,
                      label = "start of album >>"), 
-                 hjust = 0.02, vjust = 1, linetype = 0,
-                 size = 3.2, color = 'gray77') +
+                 hjust = 0.025, vjust = 1, linetype = 0,
+                 size = 3.4, color = 'gray77') +
   
   geom_textvline(aes(xintercept = aouter,
                      label = "<< end of album"), 
-                 hjust = 0.98, vjust = 1, linetype = 0,
-                 size = 3.2, color = 'gray77') +
+                 hjust = 0.975, vjust = 1, linetype = 0,
+                 size = 3.4, color = 'gray77') +
   
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(0, 6), expand = expansion(0,0)) +
@@ -397,7 +397,7 @@ ggsave(file = paste0(i, ".svg"), plot = donutbite,
        width = square, height = square) 
 
 # Select a few tracks to dig into for liner notes
-linernotes = c(2, 3, 6, 7, 13, 21, 31)
+linernotes = c(1:6, 7, 13, 21, 31)
 
 if (i %in% linernotes) {
   
