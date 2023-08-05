@@ -14,6 +14,7 @@ datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+linermaker = TRUE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -397,7 +398,7 @@ ggsave(file = paste0(i, ".svg"), plot = donutbite,
        width = square, height = square) 
 
 # Select a few tracks to dig into for liner notes
-linernotes = c(1:6, 7, 13, 21, 31)
+linernotes = c(1:max(tracklist$donutstrack))
 
 if (i %in% linernotes) {
   
@@ -453,3 +454,33 @@ ggsave(file = "0.svg", plot = donutlegend,
        width = square, height = square) 
 
 } # End of the 'bitemaker' code chunk
+
+
+# Make the liner notes for donut bites
+if(linermaker) {
+  
+  genretext <- data.frame(sampledgenre = unique(df3[c("sampledgenre")]),
+                          sampledgenretext = c('soultext', 'hiphoptext', 'rocktext', 'unknowntext', 'electronictext','othertext'))
+
+  df7 <- inner_join(df3, genretext, by="sampledgenre") |>
+    group_by(donutstrack,trackname,type) |>
+    summarize(tracksintype = str_flatten(paste0('<span class = "',sampledgenretext,' credit">',
+                                          sampledartist,' - ',
+                                          sampledtrack,' (',
+                                          sampledyear,')</span>')), .groups = "drop") |>
+    arrange(donutstrack, match(type, c("structural", "surface", "lyric"))) |>
+    mutate(typecaps = toupper(type))
+
+  
+  df8 <- df7 |>
+    group_by(donutstrack) |>
+    summarize(gatefoldcredit = str_flatten(paste0(typecaps, tracksintype),"<br>"))|>
+    mutate(gatefoldcredit = str_replace_all(gatefoldcredit, "NA", "?????"))
+
+    
+    
+    # mutate(gatefoldcredit = str_replace(gatefoldcredit, "#N/A - [unknown] (NA)", "unknown"))
+  
+  
+} # End of the 'linermaker' code chunk 
+  
