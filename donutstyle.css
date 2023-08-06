@@ -60,6 +60,7 @@ span {
    flex-wrap: wrap;
    align-content: flex-start;
    gap: 0px;
+   background-color: #eeeaea;
 }
 
 .legend {
@@ -143,14 +144,18 @@ span {
    min-width: 700px;
 }
 
-#album {
+#album,
+#tinylegend {
    position: relative;
    text-align: center;
    margin: 0;
    border-radius: 50%;
 }
 
-#album:hover {
+#album:hover,
+#album:active,
+#tinylegend:hover,
+#tinylegend:active {
   animation-name: spin;
   animation-duration: 3.6s;
   animation-iteration-count: 1;
@@ -332,7 +337,7 @@ span {
 
 footer {
    font-family: 'Satoshi', sans-serif;
-   margin: 150px auto;
+   margin: 150px auto 30px auto;
    width: 50%;
    min-width: 400px;
    text-align: left;

@@ -454,6 +454,9 @@ donutlegend <- ggplot(df6) +
 ggsave(file = "0.svg", plot = donutlegend, 
        width = square, height = square) 
 
+ggsave(file = "0X.svg", plot = donutlegend, 
+       width = 2.5*square, height = 2.5*square) 
+
 } # End of the 'bitemaker' code chunk
 
 
