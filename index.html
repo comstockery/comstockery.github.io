@@ -84,7 +84,7 @@
             <p>By categorizing the <strong>genre</strong> and <strong>type</strong> of each sample instance, we start to see the composition of each track.</p>
             <p>The final attribute&mdash;<strong>time</strong>&mdash;places each sample instance at its location within the track. In each of the images below, sample instances are placed in <strong>three grooves</strong> representing the three types of sample usages. The <strong>position</strong> and <strong>length</strong> of each instance within these grooves represents its timing and duration.</p>
             <p>These visuals are based in part on <a href="./adam-krims-layering-graph.png">layering graphs</a>, a notation for sample-based hip-hop developed by Adam Krims in his 2000 book <a href="https://www.amazon.com/Poetics-Identity-Perspectives-History-Criticism/dp/0521634474"><em>Rap Music and the Poetics of Identity</em></a>.</p>
-            <p>Click on certain tracks to learn more or click the legend to reveal all liner notes.</p>
+            <p>Click on certain tracks to learn more or click the legend to <a data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">reveal all liner notes</a>.</p>
         </div>
         <div id = "allbites">
             <div class = "fourbites">
@@ -125,7 +125,7 @@
                         STRUCTURAL<span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><br>LYRIC<span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
                     </div>
                     <div class = "gatefoldnotes">
-                        <p>That's no mistake&mdash;the first track on the album is labeled as an Outro.</p>
+                        <p>That's no mistake&mdash;the first track on the album is labeled as an outro.</p>
                         <p>After dropping an "I don't care" from Gary Davis, Dilla introduces himself by twisting lyric samples from Skillz and Ras Kass's <strong>Six Figures</strong>. Two phrases in Skillz's second verse, "hit up <em>Jake</em>?" and "you a <em>dealer</em>?" are turned into what we hear as "J, J, J Dilla...Dilla...Dilla..."</p>
                     </div>
                 </div>
@@ -145,6 +145,7 @@
                         <p><strong>Workinonit</strong>, the longest and most complex track on <em>Donuts</em>, presents the album in minature form. Almost every sample reappears later in the album.</p>
                         <p>The Mantronix siren that kicks off the track is the most common sample on the album. That siren, from <strong>King of the Beats</strong>, hypes up various points of eight other tracks on <em>Donuts</em>.</p>
                         <p>Lyric samples from the Beastie Boys' <strong>The New Style</strong> reappear in <strong>The New</strong> and the moans from "Sweet" Charles Sherell's <strong>Yes It's You</strong> show up in <strong>Time: The Donut of the Heart</strong>. The holler from Malcolm McLaren's <strong>Buffalo Gals</strong> and Joeski Love's "huh? what?" are also used in <strong>The Twister (Huh, What)</strong>.</p>
+                        <p>The source of the lyric sample that sounds like "work it out" remains unidentified.</p>
                     </div>
                 </div>
             </div>
@@ -349,23 +350,45 @@
                 </div>
             </div>
             <div class = "fourbites">
-                <div class = "bite">
-                    <img src = "12.svg" alt = "">
-                    <div class = "bitelabel">Airworks</div>
-                </div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#airworks" aria-expanded="false" aria-controls="airworks">
+                    <div class = "bite">
+                        <img src = "12.svg" alt = "">
+                        <div class = "bitelabel">Airworks</div>
+                    </div>
+                </button>
                 <button class="btn" type="button" data-toggle="collapse" data-target="#lightworks" aria-expanded="false" aria-controls="lightworks">
                     <div class = "bite">
                         <img src = "13.svg" alt = "">
                         <div class = "bitelabel">Lightworks</div>
                     </div>
                 </button>
-                <div class = "bite">
-                    <img src = "14.svg" alt = "">
-                    <div class = "bitelabel">Stepson of<br>the Clapper</div>
-                </div>
-                <div class = "bite">
-                    <img src = "15.svg" alt = "">
-                    <div class = "bitelabel">The Twister<br>(Huh, What)</div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#stepson" aria-expanded="false" aria-controls="stepson">
+                    <div class = "bite">
+                        <img src = "14.svg" alt = "">
+                        <div class = "bitelabel">Stepson of<br>the Clapper</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#thetwister" aria-expanded="false" aria-controls="thetwister">
+                    <div class = "bite">
+                        <img src = "15.svg" alt = "">
+                        <div class = "bitelabel">The Twister<br>(Huh, What)</div>
+                    </div>
+                </button>
+            </div>
+            <div class = "collapse" id  = "airworks">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "12X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Airworks">
+                        <div class = "gatefoldbitelabel">
+                            AIRWORKS
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">L.V. Johnson - I Don't Really Care (1981)</span><br>SURFACE<span class = "soultext credit">L.V. Johnson - I Don't Really Care (1981)</span><span class = "electronictext credit">Raymond Scott - Bendix the Tomorrow People (1963)</span><br>LYRIC<span class = "soultext credit">L.V. Johnson - I Don't Really Care (1981)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class = "collapse" id  = "lightworks">
@@ -377,61 +400,178 @@
                         </div>
                     </div>
                     <div class = "gatefoldcredit">
-                        STRUCTURAL
-                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                        <br>
-                        SURFACE
-                        <span class = "electronictext credit">Raymond Scott - Bendix the Tomorrow People</span>    
-                        <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                        <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                        <br>
-                        LYRIC
-                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                        <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
+                        STRUCTURAL<span class = "electronictext credit">Raymond Scott - Lightworks (1959)</span><br>SURFACE<span class = "electronictext credit">Raymond Scott - Bendix the Tomorrow People (1963)</span><span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span><span class = "electronictext credit">Raymond Scott - Lightworks (1959)</span><br>LYRIC<span class = "electronictext credit">Raymond Scott - Lightworks (1959)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
                     </div>
                     <div class = "gatefoldnotes">
-                        <p><strong>Lightworks</strong> might be the only track on the album that only uses samples from electronic and hip-hop sources. Dilla uses two songs from Raymond Scott, a pioneer of electronic music and inventor of several electronic instruments.</p>
+                        <p><strong>Lightworks</strong> might be the only track on the album that only uses samples from electronic and hip-hop sources. Dilla uses two songs from Raymond Scott, a pioneer of electronic music and inventor of several electronic instruments. A <a href="https://en.wikipedia.org/wiki/Manhattan_Research,_Inc.">compilation of Scott's work</a> was released in 2000.</p>
                         <p>Dilla creates another verbal illusion when he transforms the lyrics "light up the skies" and other words in Raymond Scott's <strong>Lightworks</strong> to what sounds like "light up the <em>spliffs</em>." The voice we hear is that of Raymond's wife <a href="https://en.wikipedia.org/wiki/Dorothy_Collins">Dorothy Collins</a>. In the late 1950s, Dorothy worked as a spokesperson and vocalist in TV commercials for Lucky Strike cigarettes.</p>
                     </div>
                 </div>
             </div>
-            <div class = "fourbites">
-                <div class = "bite">
-                    <img src = "16.svg" alt = "">
-                    <div class = "bitelabel">One Eleven</div>
+            <div class = "collapse" id  = "stepson">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "14X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Stepson of the Clapper">
+                        <div class = "gatefoldbitelabel">
+                            STEPSON OF<br>THE CLAPPER
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "rocktext credit">Mountain - Long Red (Live) (1972)</span><br>SURFACE<span class = "rocktext credit">Mountain - Long Red (Live) (1972)</span><br>LYRIC<span class = "rocktext credit">Mountain - Long Red (Live) (1972)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p><strong>Stepson of the Clapper</strong> may be the first track on <em>Donuts</em> to use only samples from one track. But Dilla uses it many ways: structural, surface, and lyric.</p>
+                        <p>Mountain's <strong>Long Red</strong> is one of the <a href="https://www.whosampled.com/Mountain/Long-Red/">most-sampled drum breaks</a> in all of hip-hop; it's been sampled by EPMD, A Tribe Called Quest, Jay-Z, Kanye West, Nas, and Pete Rock & CL Smooth.</p>
+                        <p>Dilla, who was famous for his sense of time, asks us to clap along, then mocks us: "Wrong tempo!"</p>
+                    </div>
                 </div>
-                <div class = "bite">
-                    <img src = "17.svg" alt = "">
-                    <div class = "bitelabel">Two Can Win</div>
-                </div>
-                <div class = "bite">
-                    <img src = "18.svg" alt = "">
-                    <div class = "bitelabel">Don't Cry</div>
-                </div>
-                <div class = "bite">
-                    <img src = "19.svg" alt = "">
-                    <div class = "bitelabel">Anti-American<br>Graffiti</div>
+            </div>
+            <div class = "collapse" id  = "thetwister">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "15X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Twister (Huh, What)">
+                        <div class = "gatefoldbitelabel">
+                            THE TWISTER<br>(HUH, WHAT)
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Stevie Wonder - For Once in My Life (Live) (1969)</span><span class = "rocktext credit">Fred Frith - Kick the Can (Part 1) (1981)</span><br>SURFACE<span class = "soultext credit">Stevie Wonder - For Once in My Life (Live) (1969)</span><span class = "hiphoptext credit">A Tribe Called Quest - His Name Is Mutty Ranks (1998)</span><span class = "hiphoptext credit">Malcolm McLaren - Buffalo Gals (1982)</span><br>LYRIC<span class = "soultext credit">The Temptations - Cloud Nine (Live) (1969)</span><span class = "soultext credit">Stevie Wonder - For Once in My Life (Live) (1969)</span><span class = "hiphoptext credit">Joeski Love - Pee-Wee's Dance (1986)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class = "fourbites">
-                <div class = "bite">
-                    <img src = "20.svg" alt = "">
-                    <div class = "bitelabel">Geek Down</div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#oneeleven" aria-expanded="false" aria-controls="oneeleven">
+                    <div class = "bite">
+                        <img src = "16.svg" alt = "">
+                        <div class = "bitelabel">One Eleven</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#twocanwin" aria-expanded="false" aria-controls="twocanwin">
+                    <div class = "bite">
+                        <img src = "17.svg" alt = "">
+                        <div class = "bitelabel">Two Can<br>Win</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#dontcry" aria-expanded="false" aria-controls="dontcry">
+                    <div class = "bite">
+                        <img src = "18.svg" alt = "">
+                        <div class = "bitelabel">Don't Cry</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#antiamericangraffiti" aria-expanded="false" aria-controls="antiamericangraffiti">
+                    <div class = "bite">
+                        <img src = "19.svg" alt = "">
+                        <div class = "bitelabel">Anti-<br>American<br>Graffiti</div>
+                    </div>
+                </button>
+            </div>
+            <div class = "collapse" id  = "oneeleven">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "16X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track One Eleven">
+                        <div class = "gatefoldbitelabel">
+                            ONE ELEVEN
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Smokey Robinson and The Miracles - A Legend in Its Own Time (1969)</span><br>LYRIC<span class = "soultext credit">Smokey Robinson and The Miracles - A Legend in Its Own Time (1969)</span><span class = "hiphoptext credit">Run-DMC - Here We Go (Live at the Funhouse) (1985)</span><span class = "soultext credit">The Fatback Band feat. King Tim III - King Tim III (Personality Jock) (1979)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
+            </div>
+            <div class = "collapse" id  = "twocanwin">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "17X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Two Can Win">
+                        <div class = "gatefoldbitelabel">
+                            TWO CAN<br>WIN
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Sylvers - Only One Can Win (1972)</span><br>LYRIC<span class = "soultext credit">The Sylvers - Only One Can Win (1972)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "dontcry">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "18X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Don't Cry">
+                        <div class = "gatefoldbitelabel">
+                            DON'T CRY
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Escorts - I Can't Stand (To See You Cry) (1974)</span><br>LYRIC<span class = "soultext credit">The Escorts - I Can't Stand (To See You Cry) (1974)</span><span class = "soultext credit">The Temptations and George Kirby - Comedy Routine: Hello Young Lovers / Cloud Nine / If I Didn't Care (1969)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "antiamericangraffiti">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "19X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Anti-American Graffiti">
+                        <div class = "gatefoldbitelabel">
+                            ANTI-<br>AMERICAN<br>GRAFFITI
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "rocktext credit">Tin Tin - Family Tree (1970)</span><br>SURFACE<span class = "rocktext credit">Tin Tin - Family Tree (1970)</span><br>LYRIC<span class = "rocktext credit">Tin Tin - Family Tree (1970)</span><span class = "othertext credit">David Ossman featuring the Firesign Theatre - Emergency Program Over-Ride (1973)</span><span class = "hiphoptext credit">Joeski Love - Pee-Wee's Dance (1986)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "fourbites">
+                <button class="btn" type="button" data-toggle="collapse" data-target="#geekdown" aria-expanded="false" aria-controls="geekdown">
+                    <div class = "bite">
+                        <img src = "20.svg" alt = "">
+                        <div class = "bitelabel">Geek Down</div>
+                    </div>
+                </button>
                 <button class="btn" type="button" data-toggle="collapse" data-target="#thunder" aria-expanded="false" aria-controls="thunder">
                     <div class = "bite">
                         <img src = "21.svg" alt = "">
                         <div class = "bitelabel">Thunder</div>
                     </div>
                 </button>
-                <div class = "bite">
-                    <img src = "22.svg" alt = "">
-                    <div class = "bitelabel">Gobstopper</div>
-                </div>
-                <div class = "bite">
-                    <img src = "23.svg" alt = "">
-                    <div class = "bitelabel">One for Ghost</div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#gobstopper" aria-expanded="false" aria-controls="gobstopper">
+                    <div class = "bite">
+                        <img src = "22.svg" alt = "">
+                        <div class = "bitelabel">Gobstopper</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#oneforghost" aria-expanded="false" aria-controls="oneforghost">
+                    <div class = "bite">
+                        <img src = "23.svg" alt = "">
+                        <div class = "bitelabel">One for<br>Ghost</div>
+                    </div>
+                </button>
+            </div>
+            <div class = "collapse" id  = "geekdown">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "20X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Geekdown">
+                        <div class = "gatefoldbitelabel">
+                            GEEK DOWN
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Jimi Entley Sound - Charlie's Theme (2002)</span><span class = "soultext credit">ESG - UFO (1981)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class = "collapse" id  = "thunder">
@@ -443,19 +583,7 @@
                         </div>
                     </div>
                     <div class = "gatefoldcredit">
-                        STRUCTURAL
-                        <span class = "soultext credit">Martha Reeves - Sweet Misery</span>    
-                        <br>
-                        SURFACE
-                        <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
-                        <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                        <span class = "soultext credit">Martha Reeves - Sweet Misery</span>   
-                        <br>
-                        LYRIC
-                        <span class = "soultext credit">Bobby Taylor - Who's Making Love (Live)</span>
-                        <span class = "soultext credit">Blinky - I Can't Turn You Loose (Live)</span>
-                        <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
-                        <span class = "soultext credit">The Originals - Sing a Simple Song (Live)</span>
+                        STRUCTURAL<span class = "soultext credit">Martha Reeves - Sweet Misery (1974)</span><br>SURFACE<span class = "soultext credit">Stevie Wonder - For Once in My Life (Live) (1969)</span><span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "soultext credit">Martha Reeves - Sweet Misery (1974)</span><br>LYRIC<span class = "soultext credit">Bobby Taylor - Who's Making Love (Live) (1969)</span><span class = "soultext credit">Blinky - I Can't Turn You Loose (Live) (1969)</span><span class = "soultext credit">Stevie Wonder - For Once in My Life (Live) (1969)</span><span class = "soultext credit">The Originals - Sing a Simple Song (Live) (1969)</span>
                     </div>
                     <div class = "gatefoldnotes">
                         <p>The lyric samples used in <strong>Thunder</strong> are something of a misattribution, as we don't hear vocals from any of the artists listed.</p>
@@ -464,48 +592,206 @@
                     </div>
                 </div>
             </div>
-            <div class = "fourbites">
-                <div class = "bite">
-                    <img src = "24.svg" alt = "">
-                    <div class = "bitelabel">Dilla Says Go</div>
+            <div class = "collapse" id  = "gobstopper">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "22X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Gobstopper">
+                        <div class = "gatefoldbitelabel">
+                            GOBSTOPPER
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Luther Ingram - To the Other Man (1972)</span><br>SURFACE<span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "soultext credit">Luther Ingram - To the Other Man (1972)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
-                <div class = "bite">
-                    <img src = "25.svg" alt = "">
-                    <div class = "bitelabel">Walkinonit</div>
-                </div>
-                <div class = "bite">
-                    <img src = "26.svg" alt = "">
-                    <div class = "bitelabel">The Factory</div>
-                </div>
-                <div class = "bite">
-                    <img src = "27.svg" alt = "">
-                    <div class = "bitelabel">U-Love</div>
+            </div>
+            <div class = "collapse" id  = "oneforghost">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "23X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track One for Ghost">
+                        <div class = "gatefoldbitelabel">
+                            ONE FOR<br>GHOST
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Luther Ingram - To the Other Man (1972)</span><br>SURFACE<span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><br>LYRIC<span class = "soultext credit">Luther Ingram - To the Other Man (1972)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <div class = "fourbites">
-                <div class = "bite">
-                    <img src = "28.svg" alt = "">
-                    <div class = "bitelabel">Hi.</div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#dillasaysgo" aria-expanded="false" aria-controls="dillasaysgo">
+                    <div class = "bite">
+                        <img src = "24.svg" alt = "">
+                        <div class = "bitelabel">Dilla Says<br>Go</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#walkinonit" aria-expanded="false" aria-controls="walkinonit">
+                    <div class = "bite">
+                        <img src = "25.svg" alt = "">
+                        <div class = "bitelabel">Walkinonit</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#thefactory" aria-expanded="false" aria-controls="thefactory">
+                    <div class = "bite">
+                        <img src = "26.svg" alt = "">
+                        <div class = "bitelabel">The Factory</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#ulove" aria-expanded="false" aria-controls="ulove">
+                    <div class = "bite">
+                        <img src = "27.svg" alt = "">
+                        <div class = "bitelabel">U-Love</div>
+                    </div>
+                </button>
+            </div>
+            <div class = "collapse" id  = "dillasaysgo">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "24X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Dilla Says Go">
+                        <div class = "gatefoldbitelabel">
+                            DILLA SAYS<br>GO
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Trammps - Rubber Band (1972)</span><br>LYRIC<span class = "hiphoptext credit">B.R. Gunna feat J. Dilla - Do Ya Thing (2004)</span><span class = "soultext credit">The Trammps - Rubber Band (1972)</span><span class = "hiphoptext credit">Jaylib - No Games (2003)</span><span class = "hiphoptext credit">B.R. Gunna - Intro (2004)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
-                <div class = "bite">
-                    <img src = "29.svg" alt = "">
-                    <div class = "bitelabel">Bye.</div>
+            </div>
+            <div class = "collapse" id  = "walkinonit">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "25X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Walkinonit">
+                        <div class = "gatefoldbitelabel">
+                            WALKINONIT
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Undisputed Truth - Walk on By (1973)</span><br>LYRIC<span class = "soultext credit">The Undisputed Truth - Walk on By (1973)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
-                <div class = "bite">
-                    <img src = "30.svg" alt = "">
-                    <div class = "bitelabel">Last Donut<br>of the Night</div>
+            </div>
+            <div class = "collapse" id  = "thefactory">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "26X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Factory">
+                        <div class = "gatefoldbitelabel">
+                            THE FACTORY
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "electronictext credit">Fred Weinberg - Animosity (1970)</span><br>SURFACE<span class = "unknowntext credit">unknown</span><span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "electronictext credit">Fred Weinberg - Animosity (1970)</span><br>LYRIC<span class = "electronictext credit">Bruce Haack - Mean Old Devil (1979)</span><span class = "electronictext credit">Fred Weinberg - Animosity (1970)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
                 </div>
-                <button class="btn" type="button" data-toggle="collapse" data-target="#welcometotheshow" aria-expanded="false" aria-controls="welcometotheshow">
+            </div>
+            <div class = "collapse" id  = "ulove">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "27X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track U-Love">
+                        <div class = "gatefoldbitelabel">
+                            U-LOVE
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Jerry Butler - Just Because I Really Love You (1968)</span><br>SURFACE<span class = "hiphoptext credit">B.R. Gunna - Intro (2004)</span><br>LYRIC<span class = "hiphoptext credit">B.R. Gunna feat J. Dilla - Do Ya Thing (2004)</span><span class = "soultext credit">Jerry Butler - Just Because I Really Love You (1968)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "fourbites">
+                <button class="btn" type="button" data-toggle="collapse" data-target="#hi" aria-expanded="false" aria-controls="hi">
+                    <div class = "bite">
+                        <img src = "28.svg" alt = "">
+                        <div class = "bitelabel">Hi.</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#bye" aria-expanded="false" aria-controls="bye">
+                    <div class = "bite">
+                        <img src = "29.svg" alt = "">
+                        <div class = "bitelabel">Bye.</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#lastdonut" aria-expanded="false" aria-controls="lastdonut">
+                    <div class = "bite">
+                        <img src = "30.svg" alt = "">
+                        <div class = "bitelabel">Last Donut<br>of the Night</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#welcome" aria-expanded="false" aria-controls="welcome">
                     <div class = "bite">
                         <img src = "31.svg" alt = "">
                         <div class = "bitelabel">Welcome to<br>the Show</div>
                     </div>
                 </button>
             </div>
-            <div class = "collapse" id  = "welcometotheshow">
+            <div class = "collapse" id  = "hi">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "31X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Intro)">
+                        <img src = "28X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Hi.">
+                        <div class = "gatefoldbitelabel">
+                            HI.
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Three Degrees - Maybe (1970)</span><br>LYRIC<span class = "soultext credit">The Three Degrees - Maybe (1970)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "bye">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "29X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Bye.">
+                        <div class = "gatefoldbitelabel">
+                            BYE.
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Isley Brothers - Don't Say Goodnight (It's Time for Love) (Parts 1 & 2) (1980)</span><br>SURFACE<span class = "soultext credit">The Isley Brothers - Don't Say Goodnight (It's Time for Love) (Parts 1 & 2) (1980)</span><br>LYRIC<span class = "soultext credit">The Isley Brothers - Don't Say Goodnight (It's Time for Love) (Parts 1 & 2) (1980)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "lastdonut">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "30X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Last Donut of the Night">
+                        <div class = "gatefoldbitelabel">
+                            LAST DONUT<br>OF THE NIGHT
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Moments - To You With Love (1971)</span><br>SURFACE<span class = "soultext credit">The Moments - To You With Love (1971)</span><br>LYRIC<span class = "soultext credit">Gene Chandler - Rainbow '65 (1965)</span><span class = "soultext credit">The Moments - To You With Love (1971)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "welcome">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "31X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Welcome to the Show">
                         <div class = "gatefoldbitelabel">
                             WELCOME TO<br>THE SHOW
                         </div>
@@ -519,7 +805,7 @@
                         <p>The final seconds are identical to the first seconds of the album. When played on repeat, it's a seamless transition <a href = "#starthere">right back to the beginning</a>.</p>
                     </div>
                 </div>
-            </div>
+            </div>            
         </div>
         <footer>
             <p><strong>Sampling Donuts</strong> was made by <a href="mailto:owen.comstock@gmail.com">Owen Comstock</a>.</p>

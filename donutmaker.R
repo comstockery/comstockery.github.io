@@ -33,6 +33,7 @@ if(datamaker) {
 # Read data into R from Google Sheets
 donutsmain <- read_sheet('https://docs.google.com/spreadsheets/d/14y4hoZEaIZVR0N2K-vOASqkKbftjNUWV3ijvIi0TSXE/edit#gid=1315766256') %>%
   select(1:15) # Drop the last three rows
+# If this gets a 'gargle' error then run this function to pull up the Google / Tidyverse login: gs4_auth(email = NA)
 
 # Form three tidy data frames
 # Donuts track list
