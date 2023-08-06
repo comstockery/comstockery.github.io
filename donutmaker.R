@@ -478,9 +478,6 @@ if(linermaker) {
     mutate(gatefoldcredit = str_replace_all(gatefoldcredit, "NA", "?????"))
 
     
-    
-    # mutate(gatefoldcredit = str_replace(gatefoldcredit, "#N/A - [unknown] (NA)", "unknown"))
-  
   
 } # End of the 'linermaker' code chunk 
   

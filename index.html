@@ -1,472 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <title>SAMPLING DONUTS</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" type="image/x-icon" href="donut.ico">
-      <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
-      <link href="https://api.fontshare.com/css?f[]=satoshi@400,700,900&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      <link rel="stylesheet" type="text/css" href="donutstyle.css">
-   </head>
-   <body>
-      <h1 id = "starthere">SAMPLING DONUTS</h1>
-      <h3><em>visualizing the use of samples in J Dilla's hip-hop classic</em></h3>
-      <div id = "album">
-         <img src = "donutrecord.svg" alt = "a donut of J Dilla's hip-hop album Donuts, in which each track on the album is represented as a slice, covered in sprinkles that represent the samples used on each track">
-         <div id = "albumlabel">
-            J DILLA<br>
-            <strong>DONUTS</strong>
-            <br>
-            <span id = "albumyear">(2006)</span>
-         </div>
-      </div>
-      <div id = "stickylegend">
-         <span class="legend" id = "legendlabel">sampled genres:</span>
-         <span class="legend electronic">electronic / dance</span>
-         <span class="legend soul">soul / funk / disco</span>
-         <span class="legend rock">rock / pop</span>
-         <span class="legend hiphop">hip-hop / rap / r & b</span>
-         <span class="legend other">other</span>
-         <span class="legend unknown">unknown</span>
-      </div>
-      
-      <div class = "writing">
-      <h2>What is <em>Donuts</em>? And who is J Dilla?</h2>
-         <p>J Dilla's <em>Donuts</em> is an album composed <strong>entirely of samples</strong>.</p>
-         <p>What started as a <a href="https://www.factmag.com/2013/09/03/cassettes-cd-rs-donuts-and-zip-files-the-history-of-the-hip-hop-beat-tape/">beat tape</a> shared among friends was finalized in the final year of the life of James Dewitt Yancey, aka Jay Dee and J Dilla.</p>
-         <p>The album was released by <a href="https://www.stonesthrow.com/">Stones Throw Records</a> on J Dilla's 32<sup>nd</sup> birthday: February 7, 2006. J Dilla died from a combination of a blood disorder and lupus three days later.</p>
-         <p>J Dilla produced some of the <a href="https://en.wikipedia.org/wiki/J_Dilla_production_discography">best and most influential music of the late 1990s and early 2000s</a>. But <em>Donuts</em> was different.</p>
-         <p>In Dilla's <a href="https://web.archive.org/web/20200306171933/http://www.nodfactor.com/2010/02/07/still-lives-through-j-dillas-last-interview/">own words</a>, <em>Donuts</em> is "just a compilation of the stuff I thought was a <strong>little too much for the MCs</strong>. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."</p>
-      
-      <h3>What is <em>Sampling Donuts</em>?</h3>
-         <p><em>Sampling Donuts</em> explores the use of sampled material on <em>Donuts</em>.</p>
-         <p>This project uses a mix of <strong>existing</strong> and <strong>generated</strong> data.</p>
-         <p>Some of the data shown here comes from <a href="https://www.whosampled.com/album/J-Dilla/Donuts/">WhoSampled</a>&mdash;a user-populated database of known hip-hop samples. WhoSampled provides information on the <strong>genre</strong> of the sampled material, as well as bibliographic information for the sampled material's <strong>song name</strong>, <strong>artist</strong>, and <strong>release year</strong>.</p>
-         <p>The project also uses new data attributes for the <strong>timing</strong>, <strong>duration</strong>, and <strong>type</strong> of each instance of a sample.</p>
-
-      <h3>What type of music did J Dilla sample from?</h3>
-         <p>Of the <a href="https://www.whosampled.com/browse/">10 genre categories</a> used in WhoSampled's database, more than half of the samples used on <em>Donuts</em> are identified as <strong>soul / funk / disco</strong> samples from the late 1960s or early 1970s. Think James Brown, Eddie Kendricks, Kool and the Gang, the Isley Brothers, and Stevie Wonder.</p>
-         <p>Dilla also liked to reference other <strong>hip-hop</strong>. Almost all of the samples since the early 1980s are hip-hop samples, both from the <a href="https://en.wikipedia.org/wiki/Golden_age_hip_hop">Golden Age of Hip-Hop</a> and from then-contemporary hip-hop artists of the early 2000s.</p>
-      </div>
-      
-      <div class = "wrapper">
-         <div id = "sbyarea">
-            <span class="charttitle"><strong>The 91 known samples on Donuts</strong><br>by release year and genre</span>
-            <img id = "sbychart" src = "samplesbyyear.svg" alt = "column chart of the initial release year of the samples used in Donuts, showing the prevalence of soul songs from the late 1960s and early 1970s">
-         </div>
-      </div>
-      
-      <div class = "writing">
-        <h3>How can you describe a sample?</h3>
-         <p>WhoSampled provides information on which elements were used in a sample, but labeling a sample as a <strong>sound effect</strong>, <strong>hook</strong>, or <strong>drum</strong> may not capture <em>how</em> it's used in a composition.</p>
-         <p>In a dissertation published in 2013, musicologist <a href="https://twitter.com/amandasewellPhD">Dr. Amanda Sewell</a> proposed a <a href="https://hcommons.org/deposits/item/hc:18431/">typology for hip-hop samples</a> to categorize them as: 
-         <ul>
-            <li><strong>STRUCTURAL</strong> samples, which form the harmonic and rhythmic basis of a track,</li>
-            <li><strong>SURFACE</strong> samples, which decorate and punctuate the structural samples, and</li>
-            <li><strong>LYRIC</strong> samples, which contain comprehensible words or phrases.</li>
-         </ul>
-         </p>
-         <p>In <em>Sampling Donuts</em>, I identified each use of a sample and categorized how Dilla used it on each track.</p>
-         <h3>How did Dilla use samples?</h3>
-         <p>Almost every track on <em>Donuts</em> uses just one song&mdash;usually sourced from a <strong>soul / funk / disco</strong> record&mdash;as its structural sample. Dilla rarely used material from multiple sources to compose the harmonic and rythmic foundation of the tracks on <em>Donuts</em>.</p>
-         <p>Despite being considered an instrumental album, almost every track includes at least one lyric sample. Many of these lyric samples are referenced in the track names.</p>
-         <p>In Sewell's typology, when samples of human voices form discernable words, they're considered lyric samples&mdash;even if they aren't the words that the artist sang. However, something like a <a href="https://www.youtube.com/watch?v=JmwcYRZUPYE">James Brown grunt</a> is considered a surface sample.</p>
-      </div>
-      
-      <div class = "wrapper">
-         <div id = "sbtarea">
-            <span class = "charttitle"><strong>How each sample was used on <em>Donuts</em></strong>
-            <br>
-            in order of initial appearance within each track</span>
-            <img id = "sbtchart" src = "samplesbytype.svg" alt = "bar chart of the count of samples on Donuts, faceted by their type of sample, showing how nearly every track on the album uses one soul song as its structural sample">
-         </div>
-      </div>
-
-      <div class = "writing">
-        <h3>How did Dilla vary his compositions on <em>Donuts</em>?</h3>
-         <p>By categorizing the <strong>genre</strong> and <strong>type</strong> of each sample instance, we start to see the composition of each track.</p>
-         <p>The final attribute&mdash;<strong>time</strong>&mdash;places each sample instance at its location within the track. In each of the images below, sample instances are placed in <strong>three grooves</strong> representing the three types of sample usages. The <strong>position</strong> and <strong>length</strong> of each instance within these grooves represents its timing and duration.</p>
-         <p>These visuals are based in part on <a href="./adam-krims-layering-graph.png">layering graphs</a>, a notation for sample-based hip-hop developed by Adam Krims in his 2000 book <a href="https://www.amazon.com/Poetics-Identity-Perspectives-History-Criticism/dp/0521634474"><em>Rap Music and the Poetics of Identity</em></a>.</p>
-         <p>Click on certain tracks to learn more or click the legend to reveal all liner notes.</p>
-      </div>
-      
-      <div id = "allbites">
-         <div class = "fourbites">
-            <button class="btn" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">
-               <div class = "bite">
-                  <img src = "0.svg" alt = "31 images, each representing a track on Donuts, in which each instance of a sample is placed according to its timing and duration within the track">
-                  <div class = "bitelabel">LEGEND</div>
-               </div>
+    <head>
+        <title>SAMPLING DONUTS</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="donut.ico">
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+        <link href="https://api.fontshare.com/css?f[]=satoshi@400,700,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="donutstyle.css">
+    </head>
+    <body>
+        <h1 id = "starthere">SAMPLING DONUTS</h1>
+        <h3><em>visualizing the use of samples in J Dilla's hip-hop classic</em></h3>
+        <div id = "album">
+            <img src = "donutrecord.svg" alt = "a donut of J Dilla's hip-hop album Donuts, in which each track on the album is represented as a slice, covered in sprinkles that represent the samples used on each track">
+            <div id = "albumlabel">
+                J DILLA<br>
+                <strong>DONUTS</strong>
+                <br>
+                <span id = "albumyear">(2006)</span>
+            </div>
+        </div>
+        <div id = "stickylegend">
+            <span class="legend" id = "legendlabel">sampled genres:</span>
+            <span class="legend electronic">electronic / dance</span>
+            <span class="legend soul">soul / funk / disco</span>
+            <span class="legend rock">rock / pop</span>
+            <span class="legend hiphop">hip-hop / rap / r & b</span>
+            <span class="legend other">other</span>
+            <span class="legend unknown">unknown</span>
+        </div>
+        <div class = "writing">
+            <h2>What is <em>Donuts</em>? And who is J Dilla?</h2>
+            <p>J Dilla's <em>Donuts</em> is an album composed <strong>entirely of samples</strong>.</p>
+            <p>What started as a <a href="https://www.factmag.com/2013/09/03/cassettes-cd-rs-donuts-and-zip-files-the-history-of-the-hip-hop-beat-tape/">beat tape</a> shared among friends was finalized in the final year of the life of James Dewitt Yancey, aka Jay Dee and J Dilla.</p>
+            <p>The album was released by <a href="https://www.stonesthrow.com/">Stones Throw Records</a> on J Dilla's 32<sup>nd</sup> birthday: February 7, 2006. J Dilla died from a combination of a blood disorder and lupus three days later.</p>
+            <p>J Dilla produced some of the <a href="https://en.wikipedia.org/wiki/J_Dilla_production_discography">best and most influential music of the late 1990s and early 2000s</a>. But <em>Donuts</em> was different.</p>
+            <p>In Dilla's <a href="https://web.archive.org/web/20200306171933/http://www.nodfactor.com/2010/02/07/still-lives-through-j-dillas-last-interview/">own words</a>, <em>Donuts</em> is "just a compilation of the stuff I thought was a <strong>little too much for the MCs</strong>. That’s basically what it is...me flipping records that people really don’t know how to rap on but they want to rap on."</p>
+            <h3>What is <em>Sampling Donuts</em>?</h3>
+            <p><em>Sampling Donuts</em> explores the use of sampled material on <em>Donuts</em>.</p>
+            <p>This project uses a mix of <strong>existing</strong> and <strong>generated</strong> data.</p>
+            <p>Some of the data shown here comes from <a href="https://www.whosampled.com/album/J-Dilla/Donuts/">WhoSampled</a>&mdash;a user-populated database of known hip-hop samples. WhoSampled provides information on the <strong>genre</strong> of the sampled material, as well as bibliographic information for the sampled material's <strong>song name</strong>, <strong>artist</strong>, and <strong>release year</strong>.</p>
+            <p>The project also uses new data attributes for the <strong>timing</strong>, <strong>duration</strong>, and <strong>type</strong> of each instance of a sample.</p>
+            <h3>What type of music did J Dilla sample from?</h3>
+            <p>Of the <a href="https://www.whosampled.com/browse/">10 genre categories</a> used in WhoSampled's database, more than half of the samples used on <em>Donuts</em> are identified as <strong>soul / funk / disco</strong> samples from the late 1960s or early 1970s. Think James Brown, Eddie Kendricks, Kool and the Gang, the Isley Brothers, and Stevie Wonder.</p>
+            <p>Dilla also liked to reference other <strong>hip-hop</strong>. Almost all of the samples since the early 1980s are hip-hop samples, both from the <a href="https://en.wikipedia.org/wiki/Golden_age_hip_hop">Golden Age of Hip-Hop</a> and from then-contemporary hip-hop artists of the early 2000s.</p>
+        </div>
+        <div class = "wrapper">
+            <div id = "sbyarea">
+                <span class="charttitle"><strong>The 64 known samples on Donuts</strong><br>by release year and genre</span>
+                <img id = "sbychart" src = "samplesbyyear.svg" alt = "column chart of the initial release year of the samples used in Donuts, showing the prevalence of soul songs from the late 1960s and early 1970s">
+            </div>
+        </div>
+        <div class = "writing">
+            <h3>How can you describe a sample?</h3>
+            <p>WhoSampled provides information on which elements were used in a sample, but labeling a sample as a <strong>sound effect</strong>, <strong>hook</strong>, or <strong>drum</strong> may not capture <em>how</em> it's used in a composition.</p>
+            <p>In a dissertation published in 2013, musicologist <a href="https://twitter.com/amandasewellPhD">Dr. Amanda Sewell</a> proposed a <a href="https://hcommons.org/deposits/item/hc:18431/">typology for hip-hop samples</a> to categorize them as: 
+            <ul>
+                <li><strong>STRUCTURAL</strong> samples, which form the harmonic and rhythmic basis of a track,</li>
+                <li><strong>SURFACE</strong> samples, which decorate and punctuate the structural samples, and</li>
+                <li><strong>LYRIC</strong> samples, which contain comprehensible words or phrases.</li>
+            </ul>
+            </p>
+            <p>In <em>Sampling Donuts</em>, I identified each use of a sample and categorized how Dilla used it on each track.</p>
+            <h3>How did Dilla use samples?</h3>
+            <p>Almost every track on <em>Donuts</em> uses just one song&mdash;usually sourced from a <strong>soul / funk / disco</strong> record&mdash;as its structural sample. Dilla rarely used material from multiple sources to compose the harmonic and rythmic foundation of the tracks on <em>Donuts</em>.</p>
+            <p>Despite being considered an instrumental album, almost every track includes at least one lyric sample. Many of these lyric samples are referenced in the track names.</p>
+            <p>In Sewell's typology, when samples of human voices form discernable words, they're considered lyric samples&mdash;even if they aren't the words that the artist sang. However, something like a <a href="https://www.youtube.com/watch?v=JmwcYRZUPYE">James Brown grunt</a> is considered a surface sample.</p>
+        </div>
+        <div class = "wrapper">
+            <div id = "sbtarea">
+                <span class = "charttitle"><strong>How each sample was used on <em>Donuts</em></strong>
+                <br>
+                in order of initial appearance within each track</span>
+                <img id = "sbtchart" src = "samplesbytype.svg" alt = "bar chart of the count of samples on Donuts, faceted by their type of sample, showing how nearly every track on the album uses one soul song as its structural sample">
+            </div>
+        </div>
+        <div class = "writing">
+            <h3>How did Dilla vary his compositions on <em>Donuts</em>?</h3>
+            <p>By categorizing the <strong>genre</strong> and <strong>type</strong> of each sample instance, we start to see the composition of each track.</p>
+            <p>The final attribute&mdash;<strong>time</strong>&mdash;places each sample instance at its location within the track. In each of the images below, sample instances are placed in <strong>three grooves</strong> representing the three types of sample usages. The <strong>position</strong> and <strong>length</strong> of each instance within these grooves represents its timing and duration.</p>
+            <p>These visuals are based in part on <a href="./adam-krims-layering-graph.png">layering graphs</a>, a notation for sample-based hip-hop developed by Adam Krims in his 2000 book <a href="https://www.amazon.com/Poetics-Identity-Perspectives-History-Criticism/dp/0521634474"><em>Rap Music and the Poetics of Identity</em></a>.</p>
+            <p>Click on certain tracks to learn more or click the legend to reveal all liner notes.</p>
+        </div>
+        <div id = "allbites">
+            <div class = "fourbites">
+                <button class="btn" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">
+                    <div class = "bite">
+                        <img src = "0.svg" alt = "31 images, each representing a track on Donuts, in which each instance of a sample is placed according to its timing and duration within the track">
+                        <div class = "bitelabel">LEGEND</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#donutsoutro" aria-expanded="false" aria-controls="donutsoutro">
+                    <div class = "bite">
+                        <img src = "1.svg" alt = "">
+                        <div class = "bitelabel">Donuts<br>(Outro)</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#workinonit" aria-expanded="false" aria-controls="workinonit">
+                    <div class = "bite">
+                        <img src = "2.svg" alt = "">
+                        <div class = "bitelabel">Workinonit</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#waves" aria-expanded="false" aria-controls="waves">
+                    <div class = "bite">
+                        <img src = "3.svg" alt = "">
+                        <div class = "bitelabel">Waves</div>
+                    </div>
+                </button>
+            </div>
+            <div class = "collapse" id  = "donutsoutro">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "1X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Outro)">
+                        <div class = "gatefoldbitelabel">
+                            DONUTS<br>(OUTRO)
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><br>LYRIC<span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>That's no mistake&mdash;the first track on the album is labeled as an Outro.</p>
+                        <p>After dropping an "I don't care" from Gary Davis, Dilla introduces himself by twisting lyric samples from Skillz and Ras Kass's <strong>Six Figures</strong>. Two phrases in Skillz's second verse, "hit up <em>Jake</em>?" and "you a <em>dealer</em>?" are turned into what we hear as "J, J, J Dilla...Dilla...Dilla..."</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "workinonit">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "2X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Workinonit">
+                        <div class = "gatefoldbitelabel">
+                            WORKINONIT
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "rocktext credit">10cc - The Worst Band in the World (1974)</span><br>SURFACE<span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "rocktext credit">10cc - The Worst Band in the World (1974)</span><span class = "soultext credit">"Sweet" Charles Sherrell - Yes It's You (1974)</span><span class = "electronictext credit">Raymond Scott - Sprite: Melonball Bounce (1963)</span><span class = "hiphoptext credit">Malcolm McLaren - Buffalo Gals (1982)</span><br>LYRIC<span class = "hiphoptext credit">Beastie Boys - The New Style (1986)</span><span class = "rocktext credit">10cc - The Worst Band in the World (1974)</span><span class = "unknowntext credit">unknown</span><span class = "hiphoptext credit">Joeski Love - Pee-Wee's Dance (1986)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p><strong>Workinonit</strong>, the longest and most complex track on <em>Donuts</em>, presents the album in minature form. Almost every sample reappears later in the album.</p>
+                        <p>The Mantronix siren that kicks off the track is the most common sample on the album. That siren, from <strong>King of the Beats</strong>, hypes up various points of eight other tracks on <em>Donuts</em>.</p>
+                        <p>Lyric samples from the Beastie Boys' <strong>The New Style</strong> reappear in <strong>The New</strong> and the moans from "Sweet" Charles Sherell's <strong>Yes It's You</strong> show up in <strong>Time: The Donut of the Heart</strong>. The holler from Malcolm McLaren's <strong>Buffalo Gals</strong> and Joeski Love's "huh? what?" are also used in <strong>The Twister (Huh, What)</strong>.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "collapse" id  = "waves">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "3X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Waves">
+                        <div class = "gatefoldbitelabel">
+                            WAVES
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "rocktext credit">10cc - Johnny, Don't Do It (1973)</span><br>SURFACE<span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "unknowntext credit">unknown</span><br>LYRIC<span class = "hiphoptext credit">B.R. Gunna - Intro (2004)</span><span class = "rocktext credit">10cc - Johnny, Don't Do It (1973)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>Some sources attribute the "Let's go!" vocal that kicks off <strong>Waves</strong> to gospel singer Kirk Franklin, but it's more likely from fellow Detroit production duo and Slum Village affiliate B.R. Gunna. On <em>Dirty District Vol. 2</em>, B.R. Gunna's <strong>Intro</strong> leads in to <strong>Do Ya Thang</strong>, which features Dilla.</p>
+                        <p>Many <em>Donuts</em> fans have noted the 10cc lyrics used here, which Dilla manipulated from <strong>Johnny, Don't Do It</strong> to the affirmative: Johnny, do it! This may be a message of encouragement to Dilla's younger brother John, aka Illa J, who indeed followed his brother's footsteps into hip-hop.</p>
+                        <p>Faint radio-style messages are also apparent in the loop from the 10cc sample, but the source of the indecipherable female vocal snippet that <a href="https://youtu.be/vykkfDITkQs?t=50">first appears at the 50-second mark</a> remains unidentified.</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "fourbites">
+                <button class="btn" type="button" data-toggle="collapse" data-target="#lightmyfire" aria-expanded="false" aria-controls="lightmyfire">
+                    <div class = "bite">
+                        <img src = "4.svg" alt = "">
+                        <div class = "bitelabel">Light My Fire</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#thenew" aria-expanded="false" aria-controls="thenew">
+                    <div class = "bite">
+                        <img src = "5.svg" alt = "">
+                        <div class = "bitelabel">The New</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#stop" aria-expanded="false" aria-controls="stop">
+                    <div class = "bite">
+                        <img src = "6.svg" alt = "">
+                        <div class = "bitelabel">Stop!</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#people" aria-expanded="false" aria-controls="people">
+                    <div class = "bite">
+                        <img src = "7.svg" alt = "">
+                        <div class = "bitelabel">People</div>
+                    </div>
+            </div>
             </button>
-            <div class = "bite">
-               <img src = "1.svg" alt = "">
-               <div class = "bitelabel">Donuts (Outro)</div>
+            <div class = "collapse" id  = "lightmyfire">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "4X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Light My Fire">
+                        <div class = "gatefoldbitelabel">
+                            LIGHT MY FIRE
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Africa - Light My Fire (1968)</span><br>LYRIC<span class = "soultext credit">Africa - Light My Fire (1968)</span><span class = "soultext credit">James Brown - My Thang (1974)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#workinonit" aria-expanded="false" aria-controls="workinonit">
-               <div class = "bite">
-                  <img src = "2.svg" alt = "">
-                  <div class = "bitelabel">Workinonit</div>
-               </div>
-            </button>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#waves" aria-expanded="false" aria-controls="waves">
-               <div class = "bite">
-                  <img src = "3.svg" alt = "">
-                  <div class = "bitelabel">Waves</div>
-               </div>
-            </button>
-         </div>
-         <div class = "collapse" id  = "workinonit">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "2X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Workinonit">
-                  <div class = "gatefoldbitelabel">
-                     WORKINONIT
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "rocktext credit">10cc - Worst Band in the World</span>
-                  <br>
-                  SURFACE
-                  <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                  <span class = "rocktext credit">10cc - Worst Band in the World</span>
-                  <span class = "soultext credit">"Sweet" Charles Sherrell - Yes It's You</span>    
-                  <span class = "electronictext credit">Raymond Scott - Sprite: Mellonball Bounce</span>    
-                  <span class = "hiphoptext credit">Malcolm McLaren - Buffalo Gals</span>
-                  <br>    
-                  LYRIC
-                  <span class = "hiphoptext credit">Beastie Boys - The New Style</span>
-                  <span class = "rocktext credit">10cc - Worst Band in the World</span>
-                  <span class = "unknowntext credit">unknown</span>
-                  <span class = "hiphoptext credit">Joeski Love - Pee-Wee's Dance</span>
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p><strong>Workinonit</strong>, the longest and most complex track on <em>Donuts</em>, presents the album in minature form. Almost every sample reappears later in the album.</p>
-                  <p>The Mantronix siren that kicks off the track is the most common sample on the album. That siren, from <strong>King of the Beats</strong>, hypes up various points of eight other tracks on <em>Donuts</em>.</p>
-                  <p>Lyric samples from the Beastie Boys' <strong>The New Style</strong> reappear in <strong>The New</strong> and the moans from "Sweet" Charles Sherell's <strong>Yes It's You</strong> show up in <strong>Time: The Donut of the Heart</strong>. The holler from Malcolm McLaren's <strong>Buffalo Gals</strong> and Joeski Love's "huh? what?" are also used in <strong>The Twister (Huh, What)</strong>.</p>
-               </div>
+            <div class = "collapse" id  = "thenew">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "5X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The New">
+                        <div class = "gatefoldbitelabel">
+                            THE NEW
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Detroit Emeralds - What'cha Gonna Wear Tomorrow (1973)</span><br>SURFACE<span class = "soultext credit">Detroit Emeralds - What'cha Gonna Wear Tomorrow (1973)</span><br>LYRIC<span class = "hiphoptext credit">Beastie Boys - The New Style (1986)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "collapse" id  = "waves">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "3X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Waves">
-                  <div class = "gatefoldbitelabel">
-                     WAVES
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "rocktext credit">10cc - Johnny, Don't Do It</span>
-                  <br>
-                  SURFACE
-                  <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                  <span class = "unknowntext credit">unknown</span>
-                  <br>    
-                  LYRIC
-                  <span class = "hiphoptext credit">B.R. Gunna - Intro</span>
-                  <span class = "rocktext credit">10cc - Johnny, Don't Do It</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p>Some sources attribute the "Let's go!" vocal that kicks off <strong>Waves</strong> to gospel singer Kirk Franklin, but it's more likely from fellow Detroit production duo and Slum Village affiliate B.R. Gunna. On <em>Dirty District Vol. 2</em>, B.R. Gunna's <strong>Intro</strong> leads in to <strong>Do Ya Thang</strong>, which features Dilla.</p>
-                  <p>Many <em>Donuts</em> fans have noted the 10cc lyrics used here, which Dilla manipulated from <strong>Johnny, Don't Do It</strong> to the affirmative: Johnny: Do it!. This may be a message of encouragement to Dilla's younger brother, Illa J, who indeed followed his brother's footsteps into hip-hop.</p>
-                  <p>Faint radio-style messages are also apparent in the loop from the 10cc sample, but the source of the indecipherable female vocal snippet that <a href="https://youtu.be/vykkfDITkQs?t=50">appears at the 50-second mark</a> remains unidentified.</p>
-               </div>
+            <div class = "collapse" id  = "stop">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "6X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Stop">
+                        <div class = "gatefoldbitelabel">
+                            STOP!
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Dionne Warwick - You're Gonna Need Me (1973)</span><br>SURFACE<span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span><br>LYRIC<span class = "hiphoptext credit">Jadakiss feat. Anthony Hamilton - Why (2004)</span><span class = "soultext credit">Dionne Warwick - You're Gonna Need Me (1973)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>One of the more bittersweet tracks on the album, <strong>Stop!</strong> is built around Dianne Warwick's <strong>You're Gonna Need Me</strong>, with the lyrics "you're gonna want me back / in your arms." The track starts with Jadakiss's laugh and a verbal illusion: Dilla transforms Jadakiss's "it's dat real!" to what you might hear as "is death real?"</p>
+                        <p>This track contains the only fraction of silence on the album: about one minute into <strong>Stop!</strong>, after Dianne sings "you better stop," the music...stops.</p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "4.svg" alt = "">
-               <div class = "bitelabel">Light My Fire</div>
+            <div class = "collapse" id  = "people">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "7X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track People">
+                        <div class = "gatefoldbitelabel">
+                            PEOPLE
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Eddie Kendricks - My People…Hold On (1972)</span><br>SURFACE<span class = "soultext credit">Eddie Kendricks - My People…Hold On (1972)</span><span class = "othertext credit">Asha Bhosle - Mujhe Maar Daalo (1973)</span><span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><br>LYRIC<span class = "soultext credit">Eddie Kendricks - My People…Hold On (1972)</span><span class = "hiphoptext credit">Run-DMC - Here We Go (Live at the Funhouse) (1985)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>Dilla uses different parts of <strong>My People...Hold On</strong> from former Temptations member Eddie Kendricks in ways that illustrate Sewell's sample typology: Dilla uses the drums in the introduction of the song as a <em>structural</em> component, the phased heavy breathing as a <em>surface</em> sample that comes in and out of the track, and the vocals of "my people! hold on!" as a straightforward <em>lyric</em> sample.</p>
+                        <p>The song <strong>Mujhe Maar Daalo</strong>, sung by Asha Bhosle, is from the 1974 Indian film <em>Geetaa Mera Naam</em>, or <em>Geetaa is My Name</em>. Around the same time <em>Donuts</em> was baking, Dilla's friend and collaborator Madlib was producing his <a href="https://www.stonesthrow.com/store/beat-konducta-vol-3-4-beat-konducta-in-india/"><em>Beat Konducta in India</em></a> album, which also heavily samples from Bollywood soundtracks.</p>
+                    </div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "5.svg" alt = "">
-               <div class = "bitelabel">The New</div>
+            <div class = "fourbites">
+                <button class="btn" type="button" data-toggle="collapse" data-target="#thediffrence" aria-expanded="false" aria-controls="thediffrence">
+                    <div class = "bite">
+                        <img src = "8.svg" alt = "">
+                        <div class = "bitelabel">The Diff'rence</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#mash" aria-expanded="false" aria-controls="mash">
+                    <div class = "bite">
+                        <img src = "9.svg" alt = "">
+                        <div class = "bitelabel">Mash</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#timethedonut" aria-expanded="false" aria-controls="timethedonut">
+                    <div class = "bite">
+                        <img src = "10.svg" alt = "">
+                        <div class = "bitelabel">Time: The<br>Donut of<br>the Heart</div>
+                    </div>
+                </button>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#glazed" aria-expanded="false" aria-controls="glazed">
+                    <div class = "bite">
+                        <img src = "11.svg" alt = "">
+                        <div class = "bitelabel">Glazed</div>
+                    </div>
+                </button>
             </div>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#stop" aria-expanded="false" aria-controls="collapseExample">
-               <div class = "bite">
-                  <img src = "6.svg" alt = "">
-                  <div class = "bitelabel">Stop!</div>
-               </div>
-            </button>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#people" aria-expanded="false" aria-controls="people">
-               <div class = "bite">
-                  <img src = "7.svg" alt = "">
-                  <div class = "bitelabel">People</div>
-               </div>
-         </div>
-         </button>
-         <div class = "collapse" id  = "stop">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "6X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Stop">
-                  <div class = "gatefoldbitelabel">
-                     STOP!
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "soultext credit">Dionne Warwick - You're Gonna Need Me</span>
-                  <br>
-                  SURFACE
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-                  <br>    
-                  LYRIC
-                  <span class = "hiphoptext credit">Jadakiss feat. Anthony Hamilton - Why</span>
-                  <span class = "soultext credit">Dionne Warwick - You're Gonna Need Me</span>
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p>One of the more bittersweet tracks on the album, <strong>Stop!</strong> is built around Dianne Warwick's <strong>You're Gonna Need Me</strong>, with the lyrics "you're gonna want me back / in your arms." The track starts with Jadakiss's laugh and a verbal illusion: Dilla transforms Jadakiss's "it's dat real!" to what you might hear as "is death real?"</p>
-                  <p>This track contains the only fraction of silence on the album: about one minute into <strong>Stop!</strong>, after Dianne sings "you better stop," the music...stops.</p>
-               </div>
+            <div class = "collapse" id  = "thediffrence">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "8X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Diff'rence">
+                        <div class = "gatefoldbitelabel">
+                            THE DIFF'RENCE
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Kool & the Gang - Fruitman (1974)</span><br>SURFACE<span class = "hiphoptext credit">Mantronix - King of the Beats (1988)</span><span class = "soultext credit">Kool & the Gang - Fruitman (1974)</span><span class = "soultext credit">Kool & the Gang - Jungle Boogie (1973)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span><br>LYRIC<span class = "soultext credit">Kool & the Gang - Fruitman (1974)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "collapse" id  = "people">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "7X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track People">
-                  <div class = "gatefoldbitelabel">
-                     PEOPLE
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "soultext credit">Eddie Kendricks - My People...Hold On</span>
-                  <br>
-                  SURFACE
-                  <span class = "soultext credit">Eddie Kendricks - My People...Hold On</span>
-                  <span class = "othertext credit">Asha Bhosle - Mujhe Maar Daalo</span>
-                  <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                  <br>
-                  LYRIC
-                  <span class = "soultext credit">Eddie Kendricks - My People...Hold On</span>
-                  <span class = "hiphoptext credit">Run DMC - Here We Go (Live at the Funhouse)</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p>Dilla uses different parts of <strong>My People...Hold On</strong> from former Temptations member Eddie Kendricks in ways that illustrate the sample typology: he uses the drums in the introduction of the song as a structural component, the phased heavy breathing as a surface sample that comes in and out of the track, and the vocals of "my people! hold on!" as a straightforward lyric sample.</p>
-                  <p>The song <strong>Mujhe Maar Daalo</strong>, sung by Asha Bhosle, is from the 1974 Indian film <em>Geetaa Mera Naam</em>, or <em>Geetaa is My Name</em>. Around the same time <em>Donuts</em> was baking, Dilla's friend and collaborator Madlib was producing his <a href="https://www.stonesthrow.com/store/beat-konducta-vol-3-4-beat-konducta-in-india/"><em>Beat Konducta in India</em></a> album, which also heavily samples from Bollywood soundtracks.</p>
-               </div>
+            <div class = "collapse" id  = "mash">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "9X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Mash">
+                        <div class = "gatefoldbitelabel">
+                            MASH
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "othertext credit">Galt MacDermot - Golden Apples - Part II (1971)</span><br>SURFACE<span class = "soultext credit">Lou Rawls - Season of the Witch (1969)</span><br>LYRIC<span class = "rocktext credit">Frank Zappa - Dance Contest (1981)</span><span class = "soultext credit">Lou Rawls - Season of the Witch (1969)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "8.svg" alt = "">
-               <div class = "bitelabel">The Diff'rence</div>
+            <div class = "collapse" id  = "timethedonut">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "10X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Time: The Donut of the Heart">
+                        <div class = "gatefoldbitelabel">
+                            TIME: THE<br>DONUT OF<br>THE HEART
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">The Jackson 5 - All I Do is Think of You (1975)</span><br>SURFACE<span class = "soultext credit">"Sweet" Charles Sherrell - Yes It's You (1974)</span><br>LYRIC<span class = "soultext credit">The Jackson 5 - All I Do is Think of You (1975)</span><span class = "soultext credit">"Sweet" Charles Sherrell - Strangers in the Night (1974)</span><span class = "unknowntext credit">unknown</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "9.svg" alt = "">
-               <div class = "bitelabel">Mash</div>
+            <div class = "collapse" id  = "glazed">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "11X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Glazed">
+                        <div class = "gatefoldbitelabel">
+                            GLAZED
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Gene Chandler and Jerry Butler - You Just Can't Win (By Making the Same Mistake) (1970)</span><br>SURFACE<span class = "soultext credit">Ramsey Lewis - Dreams (1973)</span><span class = "soultext credit">Lou Rawls - Season of the Witch (1969)</span><br>LYRIC<span class = "soultext credit">Edwin Starr - Ball of Confusion (That's What the World Is Today) (1971)</span><span class = "soultext credit">Lou Rawls - Season of the Witch (1969)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p></p>
+                    </div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "10.svg" alt = "">
-               <div class = "bitelabel">Time: The Donut<br>of the Heart</div>
+            <div class = "fourbites">
+                <div class = "bite">
+                    <img src = "12.svg" alt = "">
+                    <div class = "bitelabel">Airworks</div>
+                </div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#lightworks" aria-expanded="false" aria-controls="lightworks">
+                    <div class = "bite">
+                        <img src = "13.svg" alt = "">
+                        <div class = "bitelabel">Lightworks</div>
+                    </div>
+                </button>
+                <div class = "bite">
+                    <img src = "14.svg" alt = "">
+                    <div class = "bitelabel">Stepson of<br>the Clapper</div>
+                </div>
+                <div class = "bite">
+                    <img src = "15.svg" alt = "">
+                    <div class = "bitelabel">The Twister<br>(Huh, What)</div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "11.svg" alt = "">
-               <div class = "bitelabel">Glazed</div>
+            <div class = "collapse" id  = "lightworks">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "13X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Lightworks">
+                        <div class = "gatefoldbitelabel">
+                            LIGHTWORKS
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL
+                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
+                        <br>
+                        SURFACE
+                        <span class = "electronictext credit">Raymond Scott - Bendix the Tomorrow People</span>    
+                        <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
+                        <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
+                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
+                        <br>
+                        LYRIC
+                        <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
+                        <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p><strong>Lightworks</strong> might be the only track on the album that only uses samples from electronic and hip-hop sources. Dilla uses two songs from Raymond Scott, a pioneer of electronic music and inventor of several electronic instruments.</p>
+                        <p>Dilla creates another verbal illusion when he transforms the lyrics "light up the skies" and other words in Raymond Scott's <strong>Lightworks</strong> to what sounds like "light up the <em>spliffs</em>." The voice we hear is that of Raymond's wife <a href="https://en.wikipedia.org/wiki/Dorothy_Collins">Dorothy Collins</a>. In the late 1950s, Dorothy worked as a spokesperson and vocalist in TV commercials for Lucky Strike cigarettes.</p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "12.svg" alt = "">
-               <div class = "bitelabel">Airworks</div>
+            <div class = "fourbites">
+                <div class = "bite">
+                    <img src = "16.svg" alt = "">
+                    <div class = "bitelabel">One Eleven</div>
+                </div>
+                <div class = "bite">
+                    <img src = "17.svg" alt = "">
+                    <div class = "bitelabel">Two Can Win</div>
+                </div>
+                <div class = "bite">
+                    <img src = "18.svg" alt = "">
+                    <div class = "bitelabel">Don't Cry</div>
+                </div>
+                <div class = "bite">
+                    <img src = "19.svg" alt = "">
+                    <div class = "bitelabel">Anti-American<br>Graffiti</div>
+                </div>
             </div>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#lightworks" aria-expanded="false" aria-controls="lightworks">
-               <div class = "bite">
-                  <img src = "13.svg" alt = "">
-                  <div class = "bitelabel">Lightworks</div>
-               </div>
-            </button>
-            <div class = "bite">
-               <img src = "14.svg" alt = "">
-               <div class = "bitelabel">Stepson of<br>the Clapper</div>
+            <div class = "fourbites">
+                <div class = "bite">
+                    <img src = "20.svg" alt = "">
+                    <div class = "bitelabel">Geek Down</div>
+                </div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#thunder" aria-expanded="false" aria-controls="thunder">
+                    <div class = "bite">
+                        <img src = "21.svg" alt = "">
+                        <div class = "bitelabel">Thunder</div>
+                    </div>
+                </button>
+                <div class = "bite">
+                    <img src = "22.svg" alt = "">
+                    <div class = "bitelabel">Gobstopper</div>
+                </div>
+                <div class = "bite">
+                    <img src = "23.svg" alt = "">
+                    <div class = "bitelabel">One for Ghost</div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "15.svg" alt = "">
-               <div class = "bitelabel">The Twister<br>(Huh, What)</div>
+            <div class = "collapse" id  = "thunder">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "21X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Thunder">
+                        <div class = "gatefoldbitelabel">
+                            THUNDER
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL
+                        <span class = "soultext credit">Martha Reeves - Sweet Misery</span>    
+                        <br>
+                        SURFACE
+                        <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
+                        <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
+                        <span class = "soultext credit">Martha Reeves - Sweet Misery</span>   
+                        <br>
+                        LYRIC
+                        <span class = "soultext credit">Bobby Taylor - Who's Making Love (Live)</span>
+                        <span class = "soultext credit">Blinky - I Can't Turn You Loose (Live)</span>
+                        <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
+                        <span class = "soultext credit">The Originals - Sing a Simple Song (Live)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>The lyric samples used in <strong>Thunder</strong> are something of a misattribution, as we don't hear vocals from any of the artists listed.</p>
+                        <p>The lyric samples all come from a Motown Records live album called <em>Motortown Revue</em>, recorded in Detroit's Fox Theater. Instead of the performing artists, we hear crowd noise and the voice of the (uncredited) <a href="https://soul-concerts.fandom.com/wiki/December_25,_1968-January_1,_1969_Fox_Theatre,_Detroit,_MI?file=Image-1485179669.jpg">MC Michael Paine</a>, who introduces each act with "Ladies and gentlemen!"</p>
+                        <p>J Dilla used that same three word phrase from mulitple songs.</p>
+                    </div>
+                </div>
             </div>
-         </div>
-         <div class = "collapse" id  = "lightworks">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "13X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Lightworks">
-                  <div class = "gatefoldbitelabel">
-                     LIGHTWORKS
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                  <br>
-                  SURFACE
-                  <span class = "electronictext credit">Raymond Scott - Bendix the Tomorrow People</span>    
-                  <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-                  <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                  <br>
-                  LYRIC
-                  <span class = "electronictext credit">Raymond Scott - Lightworks</span>    
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p><strong>Lightworks</strong> might be the only track on the album that only uses samples from electronic and hip-hop sources. Dilla uses two songs from Raymond Scott, a pioneer of electronic music and inventor of several electronic instruments.</p>
-                  <p>Dilla creates another verbal illusion when he transforms the lyrics "light up the skies" and other words in Raymond Scott's <strong>Lightworks</strong> to what sounds like "light up the <em>spliffs</em>." The voice we hear is that of Raymond's wife <a href="https://en.wikipedia.org/wiki/Dorothy_Collins">Dorothy Collins</a>. In the late 1950s, Dorothy worked as a spokesperson and vocalist in TV commercials for Lucky Strike cigarettes.</p>
-               </div>
+            <div class = "fourbites">
+                <div class = "bite">
+                    <img src = "24.svg" alt = "">
+                    <div class = "bitelabel">Dilla Says Go</div>
+                </div>
+                <div class = "bite">
+                    <img src = "25.svg" alt = "">
+                    <div class = "bitelabel">Walkinonit</div>
+                </div>
+                <div class = "bite">
+                    <img src = "26.svg" alt = "">
+                    <div class = "bitelabel">The Factory</div>
+                </div>
+                <div class = "bite">
+                    <img src = "27.svg" alt = "">
+                    <div class = "bitelabel">U-Love</div>
+                </div>
             </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "16.svg" alt = "">
-               <div class = "bitelabel">One Eleven</div>
+            <div class = "fourbites">
+                <div class = "bite">
+                    <img src = "28.svg" alt = "">
+                    <div class = "bitelabel">Hi.</div>
+                </div>
+                <div class = "bite">
+                    <img src = "29.svg" alt = "">
+                    <div class = "bitelabel">Bye.</div>
+                </div>
+                <div class = "bite">
+                    <img src = "30.svg" alt = "">
+                    <div class = "bitelabel">Last Donut<br>of the Night</div>
+                </div>
+                <button class="btn" type="button" data-toggle="collapse" data-target="#welcometotheshow" aria-expanded="false" aria-controls="welcometotheshow">
+                    <div class = "bite">
+                        <img src = "31.svg" alt = "">
+                        <div class = "bitelabel">Welcome to<br>the Show</div>
+                    </div>
+                </button>
             </div>
-            <div class = "bite">
-               <img src = "17.svg" alt = "">
-               <div class = "bitelabel">Two Can Win</div>
+            <div class = "collapse" id  = "welcometotheshow">
+                <div class = "gatefold">
+                    <div class = "gatefoldbite">
+                        <img src = "31X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Intro)">
+                        <div class = "gatefoldbitelabel">
+                            WELCOME TO<br>THE SHOW
+                        </div>
+                    </div>
+                    <div class = "gatefoldcredit">
+                        STRUCTURAL<span class = "soultext credit">Motherlode - When I Die (1970)</span><span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><br>LYRIC<span class = "soultext credit">Motherlode - When I Die (1970)</span><span class = "unknowntext credit">unknown</span><span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
+                    </div>
+                    <div class = "gatefoldnotes">
+                        <p>Just as the album starts with an outro, the album ends with an introduction. (On some releases of <em>Donuts</em>, this track is listed as <strong>Donuts (Intro)</strong>.)</p>
+                        <p>Dilla closes out the album with Motherlode's <strong>When I Die</strong>, which contains the lyric "when I die, I hope I'll be / the kind of man that you thought I could be."</p>
+                        <p>The final seconds are identical to the first seconds of the album. When played on repeat, it's a seamless transition <a href = "#starthere">right back to the beginning</a>.</p>
+                    </div>
+                </div>
             </div>
-            <div class = "bite">
-               <img src = "18.svg" alt = "">
-               <div class = "bitelabel">Don't Cry</div>
-            </div>
-            <div class = "bite">
-               <img src = "19.svg" alt = "">
-               <div class = "bitelabel">Anti-American<br>Graffiti</div>
-            </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "20.svg" alt = "">
-               <div class = "bitelabel">Geek Down</div>
-            </div>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#thunder" aria-expanded="false" aria-controls="thunder">
-               <div class = "bite">
-                  <img src = "21.svg" alt = "">
-                  <div class = "bitelabel">Thunder</div>
-               </div>
-            </button>
-            <div class = "bite">
-               <img src = "22.svg" alt = "">
-               <div class = "bitelabel">Gobstopper</div>
-            </div>
-            <div class = "bite">
-               <img src = "23.svg" alt = "">
-               <div class = "bitelabel">One for Ghost</div>
-            </div>
-         </div>
-         <div class = "collapse" id  = "thunder">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "21X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Thunder">
-                  <div class = "gatefoldbitelabel">
-                     THUNDER
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "soultext credit">Martha Reeves - Sweet Misery</span>    
-                  <br>
-                  SURFACE
-                  <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
-                  <span class = "hiphoptext credit">Mantronix - King of the Beats</span>
-                  <span class = "soultext credit">Martha Reeves - Sweet Misery</span>   
-                  <br>
-                  LYRIC
-                  <span class = "soultext credit">Bobby Taylor - Who's Making Love (Live)</span>
-                  <span class = "soultext credit">Blinky - I Can't Turn You Loose (Live)</span>
-                  <span class = "soultext credit">Stevie Wonder - For Once in My Life (Live)</span>
-                  <span class = "soultext credit">The Originals - Sing a Simple Song (Live)</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p>The lyric samples used in <strong>Thunder</strong> are something of a misattribution, as we don't hear vocals from any of the artists listed.</p>
-                  <p>The lyric samples all come from a Motown Records live album called <em>Motortown Revue</em>, recorded in Detroit's Fox Theater. Instead of the performing artists, we hear crowd noise and the voice of the (uncredited) <a href="https://soul-concerts.fandom.com/wiki/December_25,_1968-January_1,_1969_Fox_Theatre,_Detroit,_MI?file=Image-1485179669.jpg">MC Michael Paine</a>, who introduces each act with "Ladies and gentlemen!"</p>
-                  <p>J Dilla used that same three word phrase from mulitple songs.</p>
-               </div>
-            </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "24.svg" alt = "">
-               <div class = "bitelabel">Dilla Says Go</div>
-            </div>
-            <div class = "bite">
-               <img src = "25.svg" alt = "">
-               <div class = "bitelabel">Walkinonit</div>
-            </div>
-            <div class = "bite">
-               <img src = "26.svg" alt = "">
-               <div class = "bitelabel">The Factory</div>
-            </div>
-            <div class = "bite">
-               <img src = "27.svg" alt = "">
-               <div class = "bitelabel">U-Love</div>
-            </div>
-         </div>
-         <div class = "fourbites">
-            <div class = "bite">
-               <img src = "28.svg" alt = "">
-               <div class = "bitelabel">Hi.</div>
-            </div>
-            <div class = "bite">
-               <img src = "29.svg" alt = "">
-               <div class = "bitelabel">Bye.</div>
-            </div>
-            <div class = "bite">
-               <img src = "30.svg" alt = "">
-               <div class = "bitelabel">Last Donut<br>of the Night</div>
-            </div>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#welcometotheshow" aria-expanded="false" aria-controls="welcometotheshow">
-               <div class = "bite">
-                  <img src = "31.svg" alt = "">
-                  <div class = "bitelabel">Welcome to<br>the Show</div>
-               </div>
-            </button>
-         </div>
-         <div class = "collapse" id  = "welcometotheshow">
-            <div class = "gatefold">
-               <div class = "gatefoldbite">
-                  <img src = "31X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Intro)">
-                  <div class = "gatefoldbitelabel">
-                     WELCOME TO<br>THE SHOW
-                  </div>
-               </div>
-               <div class = "gatefoldcredit">
-                  STRUCTURAL
-                  <span class = "soultext credit">Motherlode - When I Die</span> 
-                  <span class = "soultext credit">Gary Davis - Stay With Me</span> 
-                  <br>
-                  LYRIC
-                  <span class = "soultext credit">Motherlode - When I Die</span> 
-                  <span class = "unknowntext credit">unknown</span>
-                  <span class = "soultext credit">Gary Davis - Stay With Me</span> 
-                  <span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures</span>
-               </div>
-               <div class = "gatefoldnotes">
-                  <p>Just as the album starts with an outro, the album ends with an introduction. Dilla closes out the album with Motherlode's <strong>When I Die</strong>, which contains the lyric "when I die, I hope I'll be / the kind of man that you thought I could be."</p>
-                  <p>The final seconds are identical to the first seconds of the album. When played on repeat, it's a seamless transition <a href = "#starthere">right back to the beginning</a>.</p>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class = "quotationbox">
-         <span class = "quotation">"Digital sampling is an art form that deserves and needs the full protection of the law. We are overdue for the legislation of a compulsory license for portions of compositions and recordings, as we already have for full compositions. Call it Dilla's Law."</span>
-         <span class = "attribution">&mdash;Dan Charnas,<br><a href="https://dillati.me/"><em>Dilla Time</em></a>,<br>published February 2022</span>
-      </div>
-      <div class = "writing">
-         <p>In 2019, the Music Sales Corporation acquired the copyright to the music of the band 10cc, whose work Dilla (allegedly) sampled. This corporation&mdash;not the artist or songwriter, but a company with the means to purchase intellectual property&mdash;<a href="https://www.rollingstone.com/pro/news/j-dilla-10cc-sample-lawsuit-workinonit-1053913/">sued J Dilla's estate</a>, record label, and publisher for an undisclosed amount of damages.
-         </p>
-         <p>Albums like <em>Donuts</em> are difficult to create in part because of the challenges of acquiring permissions for publishing rights and master rights of sampled material. The 2009 PBS documentary <a href="https://vimeo.com/9958864"><em>Copyright Criminals</em></a> and its companion book, Kembrew McLeod and Peter DiCola's <a href="https://www.dukeupress.edu/creative-license"><em>Creative License</em></a>, examine the law and culture of digital sampling.</p>
-         <p>Among other things, the <a href="https://www.ala.org/advocacy/copyright">American Library Association</a> advocates for changes in copyright law, including reductions in the statutory damages available to rights holders.</p>
-      </div>
-      <footer>
-         <p><strong>Sampling Donuts</strong> was made by Owen Comstock.</p>
-         <p>Sampled song data was collected from WhoSampled. Sample type and timing data was transcribed while listening to <em>Donuts</em>. All visualizations were made in R with ggplot2.</p>
-         <p>What began as a series of sketches in April 2020 was completed in December 2022 as the capstone project for the Data Analytics and Visualization program at the Maryland Institute College of Art.</p>
-         <p>Many thanks to those who provided feedback and guidance as I was WORKINONIT!</p>
-      </footer>
-   </body>
+        </div>
+        <footer>
+            <p><strong>Sampling Donuts</strong> was made by <a href="mailto:owen.comstock@gmail.com">Owen Comstock</a>.</p>
+            <p>Sampled song data was collected from WhoSampled. Sample type and timing data was transcribed while listening to <em>Donuts</em> at least a thousand times. All visualizations were made in R with ggplot2.</p>
+            <p>What began as a series of sketches in April 2020 was completed in December 2022 as the <a href="https://www.mica.edu/offices-divisions/office-of-open-studies/mps-programs/mps-capstones/student/owen-comstock/">capstone project</a> for the Data Analytics and Visualization program at the <a href="https://www.mica.edu/">Maryland Institute College of Art</a>.</p>
+            <p>Many thanks to those who provided feedback and guidance as I was WORKINONIT!</p>
+            <p>If you like this and want to see more, maybe <a href="https://www.buymeacoffee.com/samplingdonuts">buy me a donut</a>?</p>
+        </footer>
+    </body>
 </html>

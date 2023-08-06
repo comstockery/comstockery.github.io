@@ -1,7 +1,7 @@
 body {
    font-family: 'Quicksand', sans-serif;
    font-size: 18px;
-   background-color: #eee;
+   background-color: #eeeaea;
    margin: auto;
    max-width: 1280px;
    min-width: 720px;
@@ -54,7 +54,6 @@ span {
    /* Safari */
    position: sticky;
    top: 0;
-   background-color: #eee;
    z-index: 100;
    display: flex;
    justify-content: center;
@@ -67,8 +66,9 @@ span {
    font-family: 'Satoshi', sans-serif;
    color: #fff;
    font-weight: 700;
+   font-size: 1.2em;
    display: inline;
-   padding: 1px 6px 2px 6px;
+   padding: 1px 7px 2px 7px;
    border-radius: 10px;
 }
 
@@ -134,29 +134,7 @@ span {
 .unknowntext {
    /*gray*/
    color: #999;
-}
-
-div.quotationbox {
-   margin: 30px auto;
-   width: 45%;
-   min-width: 500px;
-   background-color: #ddd;
-   color: #444;
-   border-radius: 10px;
-   padding: 8px 10px;
-   font-size: 0.8em;
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-}
-
-span.quotation {
-   text-align: left;
-}
-
-span.attribution {
-   align-self: flex-end;
+   font-style: italic;
 }
 
 .writing {
@@ -354,15 +332,15 @@ span.attribution {
 
 footer {
    font-family: 'Satoshi', sans-serif;
-   margin: 10px auto;
-   width: 30%;
+   margin: 150px auto;
+   width: 50%;
    min-width: 400px;
    text-align: left;
    border: 1px solid #EC4176;
-   border-radius: 10px;
-   padding: 5px 10px;
+   border-radius: 30px;
+   padding: 15px;
    color: #262254;
-   font-size: 0.7em;
+   font-size: 1em;
    line-height: 1.1;
    background-color: #EC417622;
 }
