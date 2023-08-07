@@ -4,9 +4,11 @@ body {
    background-color: #eeeaea;
    margin: auto;
    max-width: 1280px;
-   min-width: 720px;
+   min-width: 600px;
    color: #333;
 }
+
+
 
 h1 {
    font-size: 4em;
@@ -29,7 +31,6 @@ h6 {
    font-weight: 600;
    margin: 20px 5px 5px 5px;
 }
-
 
 p {
    margin: 10px;
@@ -140,17 +141,28 @@ span {
 
 .writing {
    margin: 25px auto;
-   width: 65%;
-   min-width: 700px;
+   max-width: 65%;
 }
 
-#album,
+#record {
+  max-width: 100%;
+}
+
+#album {
+   max-width: 100%;
+   position: relative;
+   text-align: center;
+   margin: 0;
+   border-radius: 50%;
+}
+
 #tinylegend {
    position: relative;
    text-align: center;
    margin: 0;
    border-radius: 50%;
 }
+
 
 #album:hover,
 #album:active,
@@ -196,7 +208,7 @@ span {
 }
 
 .charttitle {
-   position: absolute;
+   display: block;
    font-family: 'Satoshi', sans-serif;
    margin: 0px 5px;
    line-height: 1.05em;
@@ -204,38 +216,27 @@ span {
 
 .wrapper {
    margin: 30px auto;
-   width: 50%;
    display: flex;
    justify-content: center;
+   max-width: 95%;
 }
 
-#sbyarea {
-   position: relative;
-   height: 315px;
-}
 
 #sbychart {
-   position: relative;
-   top: 30px;
-   left: 0px;
-}
-
-#sbtarea {
-   position: relative;
-   height: 720px;
+   max-width: 100%;
+   margin: auto;
+   display: block;
 }
 
 #sbtchart {
-   position: relative;
-   top: 50px;
-   left: 0px;
+   max-width: 100%;
+   margin: auto;
 }
-
 
 #allbites {
    margin: 60px auto;
-   width: 80%;
-   min-width: 720px;
+   max-width: 100%;
+   /*min-width: 720px;*/
    display: flex;
    justify-content: center;
    align-content: center;

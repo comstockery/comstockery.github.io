@@ -16,7 +16,7 @@
         <h1 id = "starthere">SAMPLING DONUTS</h1>
         <h3><em>visualizing the use of samples in J Dilla's hip-hop classic</em></h3>
         <div id = "album">
-            <img src = "donutrecord.svg" alt = "a donut of J Dilla's hip-hop album Donuts, in which each track on the album is represented as a slice, covered in sprinkles that represent the samples used on each track">
+            <img src = "donutrecord.svg" id = "record" alt = "a donut of J Dilla's hip-hop album Donuts, in which each track on the album is represented as a slice, covered in sprinkles that represent the samples used on each track">
             <div id = "albumlabel">
                 J DILLA<br>
                 <strong>DONUTS</strong><br>
@@ -45,12 +45,12 @@
             <p>Some of the data shown here comes from <a href="https://www.whosampled.com/album/J-Dilla/Donuts/">WhoSampled</a>&mdash;a user-populated database of known hip-hop samples. WhoSampled provides information on the <strong>genre</strong> of the sampled material, as well as bibliographic information for the sampled material's <strong>song name</strong>, <strong>artist</strong>, and <strong>release year</strong>.</p>
             <p>The project also uses new data attributes for the <strong>timing</strong>, <strong>duration</strong>, and <strong>type</strong> of each instance of a sample.</p>
             <h2>What type of music did J Dilla sample from?</h2>
-            <p>Of the <a href="https://www.whosampled.com/browse/">10 genre categories</a> used in WhoSampled's database, more than half of the samples used on <em>Donuts</em> are identified as <strong>soul / funk / disco</strong> samples from the late 1960s or early 1970s. Think James Brown, Eddie Kendricks, Kool and the Gang, the Isley Brothers, and Stevie Wonder.</p>
+            <p>Users who submit information to WhoSampled can assign <a href="https://www.whosampled.com/browse/">one of ten genres</a> to a sampled song. More than half of the samples used on <em>Donuts</em> are labeled by users as <strong>soul / funk / disco</strong> samples from the late 1960s or early 1970s. Think James Brown, Eddie Kendricks, Kool and the Gang, the Isley Brothers, and Stevie Wonder.</p>
             <p>Dilla also liked to reference other <strong>hip-hop</strong>. Almost all of the samples since the early 1980s are hip-hop samples, both from the <a href="https://en.wikipedia.org/wiki/Golden_age_hip_hop">Golden Age of Hip-Hop</a> and from then-contemporary hip-hop artists of the early 2000s.</p>
         </div>
         <div class = "wrapper">
             <div id = "sbyarea">
-                <span class="charttitle"><strong>The 64 known samples on Donuts</strong><br>by release year and genre</span>
+                <span class="charttitle"><strong>The 63 known samples on <em>Donuts</em></strong><br>by release year and genre</span>
                 <img id = "sbychart" src = "samplesbyyear.svg" alt = "column chart of the initial release year of the samples used in Donuts, showing the prevalence of soul songs from the late 1960s and early 1970s">
             </div>
         </div>
@@ -67,14 +67,14 @@
             <p>In <em>Sampling Donuts</em>, I identified each use of a sample and categorized how Dilla used it on each track.</p>
             <h2>How did Dilla use samples?</h2>
             <p>Almost every track on <em>Donuts</em> uses just one song&mdash;usually sourced from a <strong>soul / funk / disco</strong> record&mdash;as its structural sample. Dilla rarely used material from multiple sources to compose the harmonic and rythmic foundation of the tracks on <em>Donuts</em>.</p>
-            <p>Despite being considered an instrumental album, almost every track includes at least one lyric sample. Many of these lyric samples are referenced in the track names.</p>
+            <p>Despite being considered an instrumental album, almost every track includes at least one lyric sample; only two tracks have no lyric samples. Many of the lyric samples are referenced in the track names.</p>
             <p>In Sewell's typology, when samples of human voices form discernable words, they're considered lyric samples&mdash;even if they aren't the words that the artist sang. However, something like a <a href="https://www.youtube.com/watch?v=JmwcYRZUPYE">James Brown grunt</a> is considered a surface sample.</p>
         </div>
         <div class = "wrapper">
             <div id = "sbtarea">
-                <span class = "charttitle"><strong>How each sample was used on <em>Donuts</em></strong>
+                <span class = "charttitle"><strong>Each sample on <em>Donuts</em>, by type and genre</strong>
                 <br>
-                in order of initial appearance within each track</span>
+                in order of earliest appearance within each track</span>
                 <img id = "sbtchart" src = "samplesbytype.svg" alt = "bar chart of the count of samples on Donuts, faceted by their type of sample, showing how nearly every track on the album uses one soul song as its structural sample">
             </div>
         </div>
@@ -130,7 +130,7 @@
             <div class = "collapse" id  = "donutsoutro">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "1X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Outro)">
+                        <img src = "1X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Donuts (Outro)">
                         <div class = "gatefoldbitelabel">
                             DONUTS<br>(OUTRO)
                         </div>
@@ -147,7 +147,7 @@
             <div class = "collapse" id  = "workinonit">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "2X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Workinonit">
+                        <img src = "2X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Workinonit">
                         <div class = "gatefoldbitelabel">
                             WORKINONIT
                         </div>
@@ -166,7 +166,7 @@
             <div class = "collapse" id  = "waves">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "3X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Waves">
+                        <img src = "3X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Waves">
                         <div class = "gatefoldbitelabel">
                             WAVES
                         </div>
@@ -210,7 +210,7 @@
             <div class = "collapse" id  = "lightmyfire">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "4X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Light My Fire">
+                        <img src = "4X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Light My Fire">
                         <div class = "gatefoldbitelabel">
                             LIGHT MY FIRE
                         </div>
@@ -226,7 +226,7 @@
             <div class = "collapse" id  = "thenew">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "5X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The New">
+                        <img src = "5X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track The New">
                         <div class = "gatefoldbitelabel">
                             THE NEW
                         </div>
@@ -242,7 +242,7 @@
             <div class = "collapse" id  = "stop">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "6X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Stop">
+                        <img src = "6X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Stop">
                         <div class = "gatefoldbitelabel">
                             STOP!
                         </div>
@@ -259,7 +259,7 @@
             <div class = "collapse" id  = "people">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "7X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track People">
+                        <img src = "7X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track People">
                         <div class = "gatefoldbitelabel">
                             PEOPLE
                         </div>
@@ -302,7 +302,7 @@
             <div class = "collapse" id  = "thediffrence">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "8X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Diff'rence">
+                        <img src = "8X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track The Diff'rence">
                         <div class = "gatefoldbitelabel">
                             THE DIFF'RENCE
                         </div>
@@ -318,7 +318,7 @@
             <div class = "collapse" id  = "mash">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "9X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Mash">
+                        <img src = "9X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Mash">
                         <div class = "gatefoldbitelabel">
                             MASH
                         </div>
@@ -334,7 +334,7 @@
             <div class = "collapse" id  = "timethedonut">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "10X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Time: The Donut of the Heart">
+                        <img src = "10X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Time: The Donut of the Heart">
                         <div class = "gatefoldbitelabel">
                             TIME: THE<br>DONUT OF<br>THE HEART
                         </div>
@@ -350,7 +350,7 @@
             <div class = "collapse" id  = "glazed">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "11X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Glazed">
+                        <img src = "11X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Glazed">
                         <div class = "gatefoldbitelabel">
                             GLAZED
                         </div>
@@ -392,7 +392,7 @@
             <div class = "collapse" id  = "airworks">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "12X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Airworks">
+                        <img src = "12X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Airworks">
                         <div class = "gatefoldbitelabel">
                             AIRWORKS
                         </div>
@@ -408,7 +408,7 @@
             <div class = "collapse" id  = "lightworks">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "13X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Lightworks">
+                        <img src = "13X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Lightworks">
                         <div class = "gatefoldbitelabel">
                             LIGHTWORKS
                         </div>
@@ -425,7 +425,7 @@
             <div class = "collapse" id  = "stepson">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "14X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Stepson of the Clapper">
+                        <img src = "14X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Stepson of the Clapper">
                         <div class = "gatefoldbitelabel">
                             STEPSON OF<br>THE CLAPPER
                         </div>
@@ -443,7 +443,7 @@
             <div class = "collapse" id  = "thetwister">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "15X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Twister (Huh, What)">
+                        <img src = "15X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track The Twister (Huh, What)">
                         <div class = "gatefoldbitelabel">
                             THE TWISTER<br>(HUH, WHAT)
                         </div>
@@ -485,7 +485,7 @@
             <div class = "collapse" id  = "oneeleven">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "16X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track One Eleven">
+                        <img src = "16X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track One Eleven">
                         <div class = "gatefoldbitelabel">
                             ONE ELEVEN
                         </div>
@@ -501,7 +501,7 @@
             <div class = "collapse" id  = "twocanwin">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "17X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Two Can Win">
+                        <img src = "17X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Two Can Win">
                         <div class = "gatefoldbitelabel">
                             TWO CAN<br>WIN
                         </div>
@@ -517,7 +517,7 @@
             <div class = "collapse" id  = "dontcry">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "18X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Don't Cry">
+                        <img src = "18X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Don't Cry">
                         <div class = "gatefoldbitelabel">
                             DON'T CRY
                         </div>
@@ -533,7 +533,7 @@
             <div class = "collapse" id  = "antiamericangraffiti">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "19X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Anti-American Graffiti">
+                        <img src = "19X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Anti-American Graffiti">
                         <div class = "gatefoldbitelabel">
                             ANTI-<br>AMERICAN<br>GRAFFITI
                         </div>
@@ -575,7 +575,7 @@
             <div class = "collapse" id  = "geekdown">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "20X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Geekdown">
+                        <img src = "20X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Geekdown">
                         <div class = "gatefoldbitelabel">
                             GEEK DOWN
                         </div>
@@ -591,7 +591,7 @@
             <div class = "collapse" id  = "thunder">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "21X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Thunder">
+                        <img src = "21X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Thunder">
                         <div class = "gatefoldbitelabel">
                             THUNDER
                         </div>
@@ -609,7 +609,7 @@
             <div class = "collapse" id  = "gobstopper">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "22X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Gobstopper">
+                        <img src = "22X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Gobstopper">
                         <div class = "gatefoldbitelabel">
                             GOBSTOPPER
                         </div>
@@ -625,7 +625,7 @@
             <div class = "collapse" id  = "oneforghost">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "23X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track One for Ghost">
+                        <img src = "23X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track One for Ghost">
                         <div class = "gatefoldbitelabel">
                             ONE FOR<br>GHOST
                         </div>
@@ -667,7 +667,7 @@
             <div class = "collapse" id  = "dillasaysgo">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "24X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Dilla Says Go">
+                        <img src = "24X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Dilla Says Go">
                         <div class = "gatefoldbitelabel">
                             DILLA SAYS<br>GO
                         </div>
@@ -683,7 +683,7 @@
             <div class = "collapse" id  = "walkinonit">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "25X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Walkinonit">
+                        <img src = "25X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Walkinonit">
                         <div class = "gatefoldbitelabel">
                             WALKINONIT
                         </div>
@@ -699,7 +699,7 @@
             <div class = "collapse" id  = "thefactory">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "26X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track The Factory">
+                        <img src = "26X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track The Factory">
                         <div class = "gatefoldbitelabel">
                             THE FACTORY
                         </div>
@@ -715,7 +715,7 @@
             <div class = "collapse" id  = "ulove">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "27X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track U-Love">
+                        <img src = "27X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track U-Love">
                         <div class = "gatefoldbitelabel">
                             U-LOVE
                         </div>
@@ -757,7 +757,7 @@
             <div class = "collapse" id  = "hi">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "28X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Hi.">
+                        <img src = "28X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Hi.">
                         <div class = "gatefoldbitelabel">
                             HI.
                         </div>
@@ -773,7 +773,7 @@
             <div class = "collapse" id  = "bye">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "29X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Bye.">
+                        <img src = "29X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Bye.">
                         <div class = "gatefoldbitelabel">
                             BYE.
                         </div>
@@ -789,7 +789,7 @@
             <div class = "collapse" id  = "lastdonut">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "30X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Last Donut of the Night">
+                        <img src = "30X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Last Donut of the Night">
                         <div class = "gatefoldbitelabel">
                             LAST DONUT<br>OF THE NIGHT
                         </div>
@@ -805,7 +805,7 @@
             <div class = "collapse" id  = "welcome">
                 <div class = "gatefold">
                     <div class = "gatefoldbite">
-                        <img src = "31X.svg" alt = "radial chart showing the timing and duration of each sample's instance on the track Welcome to the Show">
+                        <img src = "31X.svg" class = "largerbite" alt = "radial chart showing the timing and duration of each sample's instance on the track Welcome to the Show">
                         <div class = "gatefoldbitelabel">
                             WELCOME TO<br>THE SHOW
                         </div>
@@ -814,9 +814,9 @@
                         STRUCTURAL<span class = "soultext credit">Motherlode - When I Die (1970)</span><span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><br>LYRIC<span class = "soultext credit">Motherlode - When I Die (1970)</span><span class = "unknowntext credit">unknown</span><span class = "soultext credit">Gary Davis - Stay With Me (1982)</span><span class = "hiphoptext credit">Skillz and Ras Kass - Six Figures (2003)</span>
                     </div>
                     <div class = "gatefoldnotes">
-                        <p>Just as the album starts with an outro, the album ends with an introduction. (On some releases of <em>Donuts</em>, this track is listed as <strong>Donuts (Intro)</strong>.)</p>
+                        <p>Just as the album starts with an outro, the album ends with an introduction. On some releases of <em>Donuts</em>, this track is <a href="https://i.discogs.com/OEwkWzozoek-mlA9wfd37gBbomftjsFYi8R0UtbbWys/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTU1MDMy/MTItMTQzNzg2MDc2/OC02MDc3LmpwZWc.jpeg">listed as <strong>Donuts (Intro)</strong></a>.</p>
                         <p>Dilla closes out the album with Motherlode's <strong>When I Die</strong>, which contains the lyric "when I die, I hope I'll be / the kind of man that you thought I could be."</p>
-                        <p>The final seconds are identical to the first seconds of the album. When played on repeat, it's a seamless transition <a href = "#starthere">right back to the beginning</a>.</p>
+                        <p>The final seconds are identical to the first seconds of the album. When played on repeat, it's a seamless transition <a href = "#starthere">right back to the beginning</a>. Full circle!</p>
                     </div>
                 </div>
             </div>            

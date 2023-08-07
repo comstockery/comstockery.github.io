@@ -10,11 +10,11 @@ suppressPackageStartupMessages({
 
 
 # Flags for code chunks
-datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
+datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
+donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
-linermaker = TRUE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -223,7 +223,7 @@ if(barmaker) {
 # Make a timeline of the sampled songs' release years (count, stacked by genre)
   
 # Data frame of unique sampled tracks  
-df2 <- samplelist %>%
+df2 <- drop_na(samplelist) %>%
   distinct(sampledtrack, .keep_all = TRUE) 
 
 # Count the number of samples of each genre for each year. 
@@ -234,29 +234,30 @@ samplesbyyear <- ggplot(df2,
   # Add vertical line for Donuts release
   geom_segment(x = 2006, xend = 2006, 
                y = 0, yend = 8,
-               color = "gray44", linewidth = 0.5, linetype = 'dotted') +
+               color = "gray66", linewidth = 0.1, linetype = 'solid') +
   # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
                 mapping = aes(x = 2006, y = 7.8, 
-                            label = 'Donuts released (2006)',
-                            angle = -90,
-                            hjust = 0, vjust = 0), 
-              color = 'gray44', fill = NA,
+                            label = 'Donuts<br>released<br>(2006)',
+                            angle = 0,
+                            hjust = 1.1, vjust = 1), 
+              color = 'gray55', fill = NA,
               label.color = NA,
-              size = 3,
+              size = 4,
               label.padding = unit(rep(0, 4), "pt")) +
   # Add color mapping
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Remove any gaps around the plot edge 
   scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
-  scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 0.5)),
+  scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 1)),
                      breaks = seq(0, 8, 2)) +
   # Set up theme
   theme_minimal() +
   theme(legend.position = 'none',
-        axis.line.x = element_line(color = "gray55"),
+        axis.line.x = element_line(color = "gray44"),
+        axis.text = element_text(size = 10),       
         axis.ticks = element_blank(),
-        axis.ticks.x = element_line(color = "gray55"),
+        axis.ticks.x = element_line(color = "gray44"),
         axis.title = element_blank(),
         panel.grid = element_blank(),
         panel.grid.major.y = element_line(color = "gray88"))
@@ -266,7 +267,7 @@ print(samplesbyyear)
 
 # Save the plot as an SVG
 ggsave(file = "samplesbyyear.svg", plot = samplesbyyear, 
-       width = 7, height = 3) 
+       width = 7, height = 2) 
 
 # Data frame that makes an index for each instance of a sample by type
 df3 <- instancelist %>%
@@ -275,6 +276,11 @@ df3 <- instancelist %>%
   mutate(id = 1:n()) %>%
   arrange(donutstrack, type, id) 
 
+supersources <- df3 %>%
+  group_by(sampledtrack) %>%
+  summarise(count = n_distinct(type)) %>%
+  ungroup() %>%
+  filter(count == 3)
 
 samplesbytype <- ggplot(df3) +
   # Plot circles that are actually lines around the individual donuts
