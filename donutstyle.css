@@ -362,14 +362,14 @@ span {
 footer {
    font-family: 'Satoshi', sans-serif;
    margin: 150px auto 30px auto;
-   width: 50%;
-   min-width: 400px;
+   width: 100%;
+   max-width: 540px;
    text-align: left;
    border: 1px solid #EC4176;
    border-radius: 30px;
    padding: 15px;
    color: #262254;
-   font-size: 1em;
+   font-size: 0.9em;
    line-height: 1.1;
    background-color: #EC417622;
 }
