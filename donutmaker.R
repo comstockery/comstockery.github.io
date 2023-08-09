@@ -13,7 +13,7 @@ suppressPackageStartupMessages({
 datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
+bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
 
 
@@ -238,7 +238,7 @@ samplesbyyear <- ggplot(df2,
   # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
                 mapping = aes(x = 2006, y = 7.8, 
-                            label = 'Donuts<br>released<br>(2006)',
+                            label = '<em>Donuts</em><br>released<br>(2006)',
                             angle = 0,
                             hjust = 1.1, vjust = 1), 
               color = 'gray55', fill = NA,
@@ -436,8 +436,12 @@ donutlegend <- ggplot(df6) +
                  hjust = 0.5, vjust = 0.5, linetype = 0,
                  size = 2.4, color = 'gray33') +
   geom_textvline(aes(xintercept = tleadin, 
-                                 label = "start of track"), 
-                 hjust = 0.02, vjust = 1, linetype = 0,
+                     label = "start >>"), 
+                 hjust = 0.03, vjust = 1, linetype = 0,
+                 size = 2.6, color = 'gray33') +
+  geom_textvline(aes(xintercept = tleadin, 
+                     label = "<< end"), 
+                 hjust = 0.97, vjust = 1, linetype = 0,
                  size = 2.6, color = 'gray33') +
   
   # Clip the graph to just the necessary limits, remove any gaps

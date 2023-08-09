@@ -64,7 +64,7 @@ span {
 
 @media only screen and (max-width: 600px) {
   #stickylegend {
-    font-size: 0.9em;
+    font-size: 0.7em;
     line-height: 1;
   }
 }
@@ -89,8 +89,9 @@ span {
    color: #fff;
    font-weight: 700;
    display: inline;
-   padding: 1px 6px 2px 6px;
+   padding: 1px 4px 2px 4px;
    border-radius: 10px;
+   margin: 4px 2px;
 }
 
 #legendlabel {
@@ -329,6 +330,7 @@ span {
    text-align: center;
    margin: 0;
    width: 100%;
+   padding: 15px 0px;
 }
 
 
@@ -407,6 +409,6 @@ footer {
    padding: 15px;
    color: #262254;
    font-size: 0.9em;
-   line-height: 1.1;
+   line-height: 1.2;
    background-color: #EC417622;
 }
