@@ -4,14 +4,14 @@ body {
    background-color: #eeeaea;
    margin: auto;
    max-width: 1280px;
-   /*min-width: 500px;*/
+   min-width: 350px;
    color: #333;
 }
 
 
 
 h1 {
-   font-size: 4em;
+   font-size: 3.5em;
 }
 
 h1,
@@ -19,7 +19,7 @@ h2 {
    text-align: center;
    font-family: 'Satoshi', sans-serif;
    font-weight: 900;
-   margin: 30px 5px 5px 5px;
+   margin: 20px 5px 10px 5px;
 }
 
 h3,
@@ -29,7 +29,7 @@ h6 {
    text-align: center;
    font-family: 'Satoshi', sans-serif;
    font-weight: 600;
-   margin: 30px 5px 5px 5px;
+   margin: 15px 5px 5px 5px;
 }
 
 img {
@@ -54,6 +54,22 @@ span {
    box-sizing: border-box;
 }
 
+
+@media only screen and (max-width: 2400px) {
+  #stickylegend {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #stickylegend {
+    font-size: 0.9em;
+    line-height: 1;
+  }
+}
+
+
 #stickylegend {
    position: -webkit-sticky;
    /* Safari */
@@ -72,9 +88,8 @@ span {
    font-family: 'Satoshi', sans-serif;
    color: #fff;
    font-weight: 700;
-   font-size: 1.2em;
    display: inline;
-   padding: 1px 7px 2px 7px;
+   padding: 1px 6px 2px 6px;
    border-radius: 10px;
 }
 
@@ -189,21 +204,28 @@ span {
     }
 }
 
+@media only screen and (max-width: 2400px) {
+  #albumlabel {
+    font-size: 1.7em;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #albumlabel {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+}
+
 #albumlabel {
    font-family: 'Satoshi', sans-serif;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   font-size: 1.7em;
-   line-height: 1.2;
 }
 
-#albumlegend {
-   text-align: center;
-   margin: 0;
-   font-size: 1.1em;
-}
 
 #albumyear {
    text-align: center;
@@ -298,28 +320,43 @@ span {
    align-items: flex-start;
    align-content: flex-start;
    flex: 1 1 50%;
+   font-weight: bold;
 }
 
 .gatefoldbite {
-   flex: 1 1 30%;
+   flex: 1 1 20%;
    position: relative;
    text-align: center;
    margin: 0;
    width: 100%;
 }
 
+
+@media only screen and (max-width: 2400px) {
+  .gatefoldbitelabel {
+    font-size: 1em;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .gatefoldbitelabel {
+    font-size: 0.8em;
+    line-height: 1;
+  }
+}
+
 .gatefoldbitelabel {
    position: absolute;
    top: 50%;
    left: 50%;
-   width: 50%;
+   width: 60%;
    transform: translate(-50%, -50%);
-   font-size: 1.2em;
-   line-height: 1.1;
+
 }
 
 .gatefoldsongs {
-   flex: 1 1 20%;
+   flex: 1 1 30%;
    width: 100%;
    padding: 15px 30px;
    font-size: 0.7em;
