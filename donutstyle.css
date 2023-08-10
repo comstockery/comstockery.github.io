@@ -298,11 +298,11 @@ span {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   font-size: 0.7em;
+   font-size: 0.8em;
    line-height: 1;
 }
 
- @media screen and (min-width: 800px){
+ @media screen and (min-width: 960px){
      .gatefold {
          font-family: 'Satoshi', sans-serif;
          font-weight: 700;
@@ -341,10 +341,10 @@ span {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   .gatefoldbitelabel {
-    font-size: 0.8em;
-    line-height: 1;
+    font-size: 0.7em;
+    line-height: 0.9;
   }
 }
 

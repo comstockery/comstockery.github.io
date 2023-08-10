@@ -11,7 +11,7 @@ suppressPackageStartupMessages({
 
 # Flags for code chunks
 datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
-donutmaker = FALSE; # TRUE to generate main album donut; otherwise FALSE
+donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
 linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
