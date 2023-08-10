@@ -18,12 +18,11 @@ linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; othe
 
 
 # Define color palette (NA values are defined separately)
-colorvalues = c("electronic/dance" = "#E79556", 
-                "hip-hop/rap/r&b" = "#EC4176", 
-                "other" = "#A13670",
-                "rock/pop" = "#12348D",
-                "soul/funk/disco" = "#9043C3")
-
+colorvalues = c("electronic/dance" = "#E78B0E", 
+                "hip-hop/rap/r&b" = "#DD3B87", 
+                "other" = "#0E98D7",
+                "rock/pop" = "#0E2D81",
+                "soul/funk/disco" = "#6A3B93")
 
 navalue = "#AAAAAA"
 

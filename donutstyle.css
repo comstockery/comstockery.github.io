@@ -98,64 +98,73 @@ span {
    color: #333;
 }
 
+
+/* Set the color scheme for genres 
+:root {
+  --electronic: #E79556;
+  --hiphop: #EC4176;
+  --other: #A13670;
+  --rock: #12348D;
+  --soul: #9043C3;
+  --unknown: #aaa;
+}
+*/
+
+:root {
+  --electronic: #E78B0E;
+  --hiphop: #DD3B87;
+  --other: #0E98D7;
+  --rock: #0E2D81;
+  --soul: #6A3B93;
+  --unknown: #aaa;
+}
+
 .electronic {
-   /*orange*/
-   background-color: #E79556;
+   background-color: var(--electronic);
 }
 
 .hiphop {
-   /*pink*/
-   background-color: #EC4176;
+   background-color: var(--hiphop);
 }
 
 .other {
-   /*dark red*/
-   background-color: #A13670;
+   background-color: var(--other);
 }
 
 .rock {
-   /*blue*/
-   background-color: #12348D;
+   background-color: var(--rock);
 }
 
 .soul {
-   /*dark purple*/
-   background-color: #9043C3;
+   background-color: var(--soul);
 }
 
 .unknown {
-   /*gray*/
-   background-color: #aaa;
+   background-color: var(--unknown);
 }
 
 .electronictext {
-   /*orange*/
-   color: #E79556;
+   color: var(--electronic);
 }
 
 .hiphoptext {
-   /*pink*/
-   color: #EC4176;
+   color: var(--hiphop);
 }
 
 .othertext {
-   /*dark red*/
-   color: #A13670;
+   color: var(--other);
 }
 
 .rocktext {
-   /*blue*/
-   color: #12348D;
+   color: var(--rock);
 }
 
 .soultext {
-   /*dark purple*/
-   color: #9043C3;
+   color: var(--soul);
 }
 
 .unknowntext {
-   /*gray*/
-   color: #999;
+   color: var(--unknown);
    font-style: italic;
 }
 
