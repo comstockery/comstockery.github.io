@@ -1,3 +1,12 @@
+:root {
+  --electronic: #E78B0E;
+  --hiphop: #DD3B87;
+  --other: #0E98D7;
+  --rock: #0E2D81;
+  --soul: #6A3B93;
+  --unknown: #aaa;
+}
+
 body {
    font-family: 'Quicksand', sans-serif;
    font-size: 18px;
@@ -7,8 +16,6 @@ body {
    min-width: 350px;
    color: #333;
 }
-
-
 
 h1 {
    font-size: 3.5em;
@@ -41,8 +48,8 @@ p {
 }
 
 a {
-   font-weight: 900;
-   color: #473ca6;
+   font-weight: 600;
+   color: #10338C;
 }
 
 span {
@@ -110,14 +117,7 @@ span {
 }
 */
 
-:root {
-  --electronic: #E78B0E;
-  --hiphop: #DD3B87;
-  --other: #0E98D7;
-  --rock: #0E2D81;
-  --soul: #6A3B93;
-  --unknown: #aaa;
-}
+
 
 .electronic {
    background-color: var(--electronic);
@@ -413,11 +413,12 @@ footer {
    width: 100%;
    max-width: 540px;
    text-align: left;
-   border: 1px solid #EC4176;
+   border: 1px solid;
+   border-color: var(--hiphop);
    border-radius: 30px;
    padding: 15px;
    color: #262254;
    font-size: 0.9em;
    line-height: 1.2;
-   background-color: #EC417622;
+   background-color: #EABECE;
 }

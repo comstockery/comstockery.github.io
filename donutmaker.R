@@ -12,8 +12,8 @@ suppressPackageStartupMessages({
 # Flags for code chunks
 datamaker = FALSE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
-barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
-bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
+barmaker = FALSE; # TRUE to generate secondary (count) graphs; otherwise FALSE
+bitemaker = FALSE; # TRUE for the track-by-track donut bites; otherwise FALSE
 linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
 
 
@@ -150,7 +150,7 @@ donutrecord <- ggplot(df1) +
   geom_point(aes(x = groove, y = sprinkle,
                  fill = sampledgenre), 
              shape = 21, color = 'gray88', 
-             alpha = 0.9, size = 4.5, stroke = 0.7) +
+             alpha = 0.95, size = 5, stroke = 0.6) +
   
   # Add colors for the sprinkles and remove plot buffers
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
