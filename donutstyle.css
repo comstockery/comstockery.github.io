@@ -64,8 +64,8 @@ span {
 
 @media only screen and (max-width: 2400px) {
   #stickylegend {
-    font-size: 1.2em;
-    line-height: 1.2;
+    font-size: 1.1em;
+    line-height: 1;
   }
 }
 
@@ -96,7 +96,7 @@ span {
    color: #fff;
    font-weight: 700;
    display: inline;
-   padding: 1px 4px 2px 4px;
+   padding: 2px 5px 3px 5px;
    border-radius: 10px;
    margin: 4px 2px;
 }
