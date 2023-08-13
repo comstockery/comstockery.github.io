@@ -380,10 +380,13 @@ span {
    margin: 1px;
 }
 
+.sourcenote {
+   font-weight: 600;
+}
+
 .gatefoldnotes {
    flex: 2 1 360px;
    font-weight: 400;
-
    padding: 15px auto;
    font-size: 0.9em;
 }

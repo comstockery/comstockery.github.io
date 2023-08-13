@@ -185,6 +185,7 @@
 <circle cx='231.55' cy='139.95' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='155.03' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='170.11' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
+<circle cx='200.89' cy='170.11' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='185.18' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='200.89' cy='185.18' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
 <circle cx='185.56' cy='200.26' r='5.50' style='stroke-width: 5.67; stroke: #E0E0E0; fill: #FFFFFF;' />
@@ -228,6 +229,7 @@
 <circle cx='231.55' cy='139.95' r='4.79' style='stroke-width: 4.25; stroke: #DD3B87;' />
 <circle cx='185.56' cy='155.03' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='185.56' cy='170.11' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
+<circle cx='200.89' cy='170.11' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='185.56' cy='185.18' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='200.89' cy='185.18' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='185.56' cy='200.26' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
@@ -418,7 +420,7 @@
 <circle cx='284.00' cy='471.66' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='299.33' cy='471.66' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='284.00' cy='486.73' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
-<circle cx='299.33' cy='486.73' r='4.79' style='stroke-width: 4.25; stroke: #AAAAAA;' />
+<circle cx='299.33' cy='486.73' r='4.79' style='stroke-width: 4.25; stroke: #0E98D7;' />
 <circle cx='314.66' cy='486.73' r='4.79' style='stroke-width: 4.25; stroke: #6A3B93;' />
 <circle cx='329.99' cy='486.73' r='4.79' style='stroke-width: 4.25; stroke: #DD3B87;' />
 </g>
