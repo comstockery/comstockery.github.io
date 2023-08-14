@@ -1,83 +1,82 @@
 :root {
-  --electronic: #E78B0E;
-  --hiphop: #DD3B87;
-  --other: #0E98D7;
-  --rock: #0E2D81;
-  --soul: #6A3B93;
-  --unknown: #aaa;
-  --background: #eeeaea;
+    --electronic: #E78B0E;
+    --hiphop: #DD3B87;
+    --other: #0E98D7;
+    --rock: #0E2D81;
+    --soul: #6A3B93;
+    --unknown: #aaa;
+    --background: #eeeaea;
 }
 
 body {
-   font-family: 'Quicksand', sans-serif;
-   font-size: 18px;
-   background-color: var(--background);
-   margin: auto;
-   max-width: 1280px;
-   min-width: 350px;
-   color: #333;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-color: var(--background);
+    margin: auto;
+    max-width: 1280px;
+    min-width: 350px;
+    color: #333;
 }
 
 h1 {
-   font-size: 3.5em;
+    font-size: 3.5em;
 }
 
 h1,
 h2 {
-   text-align: center;
-   font-family: 'Satoshi', sans-serif;
-   font-weight: 900;
-   margin: 20px 5px 10px 5px;
+    text-align: center;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 900;
+    margin: 20px 5px 10px 5px;
 }
 
 h3,
 h4,
 h5,
 h6 {
-   text-align: center;
-   font-family: 'Satoshi', sans-serif;
-   font-weight: 600;
-   margin: 10px 5px 10px 5px;
+    text-align: center;
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 600;
+    margin: 10px 5px 10px 5px;
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 p {
-   margin: 15px;
+    margin: 15px;
 }
 
 a {
-   font-weight: 600;
-   color: #10338C;
+    font-weight: 600;
+    color: #10338C;
 }
 
 span {
-   margin: 5px;
-   display: inline;
+    display: inline;
 }
 
 * {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .whatisbtn {
-   margin: 15px auto;
-   display: flex;
-   justify-content: center;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
 }
 
-h4.whatis {
-  color: #999;
-  width: 100%;
-  text-align: center; 
-  border-bottom: 1px solid #bbb; 
-  line-height: 0.1em;
-  margin: 10px 0px; 
+.whatis {
+    color: #999;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #bbb;
+    line-height: 0.1em;
+    margin: 10px 0;
 }
 
-h4.whatis span {
+.whatis span {
     background: var(--background);
     padding: 0 5px;
     margin: 0 100px;
@@ -86,337 +85,331 @@ h4.whatis span {
 }
 
 #donutexplained {
-   margin: 0px auto;
-   width: 60%;
-   max-width: 800px;
-   min-width: 350px;
-   background-color: var(--background);
-   font-size: 0.85em;
+    margin: 0 auto;
+    width: 60%;
+    max-width: 800px;
+    min-width: 350px;
+    background-color: var(--background);
+    font-size: 0.85em;
 }
 
 #donutexplained p {
-  margin: 0px;
-  padding: 5px;
+    margin: 0;
+    padding: 5px;
 }
 
 #donutexcontainer {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 2400px) {
-  #stickylegend {
-    font-size: 1.1em;
-    line-height: 1;
-  }
+    #stickylegend {
+        font-size: 1.1em;
+        line-height: 1;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-  #stickylegend {
-    font-size: 0.7em;
-    line-height: 1;
-  }
+    #stickylegend {
+        font-size: 0.7em;
+        line-height: 1;
+    }
 }
 
-
 #stickylegend {
-   position: -webkit-sticky;
-   /* Safari */
-   position: sticky;
-   top: 0;
-   z-index: 100;
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
-   align-content: flex-start;
-   gap: 0px;
-   background-color: var(--background);
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: var(--background);
 }
 
 .legend {
-   font-family: 'Satoshi', sans-serif;
-   color: #fff;
-   font-weight: 700;
-   display: inline;
-   padding: 2px 5px 3px 5px;
-   border-radius: 10px;
-   margin: 4px 2px;
+    font-family: 'Satoshi', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    display: inline;
+    padding: 2px 5px 3px 5px;
+    border-radius: 10px;
+    margin: 4px 2px;
 }
 
 #legendlabel {
-   color: #333;
+    color: #333;
 }
 
-
 .electronic {
-   background-color: var(--electronic);
+    background-color: var(--electronic);
 }
 
 .hiphop {
-   background-color: var(--hiphop);
+    background-color: var(--hiphop);
 }
 
 .other {
-   background-color: var(--other);
+    background-color: var(--other);
 }
 
 .rock {
-   background-color: var(--rock);
+    background-color: var(--rock);
 }
 
 .soul {
-   background-color: var(--soul);
+    background-color: var(--soul);
 }
 
 .unknown {
-   background-color: var(--unknown);
+    background-color: var(--unknown);
 }
 
 .electronictext {
-   color: var(--electronic);
+    color: var(--electronic);
 }
 
 .hiphoptext {
-   color: var(--hiphop);
+    color: var(--hiphop);
 }
 
 .othertext {
-   color: var(--other);
+    color: var(--other);
 }
 
 .rocktext {
-   color: var(--rock);
+    color: var(--rock);
 }
 
 .soultext {
-   color: var(--soul);
+    color: var(--soul);
 }
 
 .unknowntext {
-   color: var(--unknown);
-   font-style: italic;
+    color: var(--unknown);
+    font-style: italic;
 }
 
 .writing {
-   margin: 25px auto;
-   max-width: 800px;
-   width: 100%;
+    margin: 25px auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 #record {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 #album {
-   max-width: 100%;
-   position: relative;
-   text-align: center;
-   margin: 0;
-   border-radius: 50%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    border-radius: 50%;
 }
 
 #tinylegend {
-   position: relative;
-   text-align: center;
-   margin: 0;
-   border-radius: 50%;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    border-radius: 50%;
 }
-
 
 #album:hover,
 #album:active,
 #tinylegend:hover,
 #tinylegend:active {
-  animation-name: spin;
-  animation-duration: 3.6s;
-  animation-iteration-count: 1;
-  animation-delay: 250ms;
-  animation-timing-function: ease-in-out; 
+    animation-name: spin;
+    animation-duration: 3.6s;
+    animation-iteration-count: 1;
+    animation-delay: 250ms;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes spin {
     from {
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
+
     to {
-        transform:rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @media only screen and (max-width: 2400px) {
-  #albumlabel {
-    font-size: 1.7em;
-    line-height: 1.2;
-  }
+    #albumlabel {
+        font-size: 1.7em;
+        line-height: 1.2;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-  #albumlabel {
-    font-size: 1.1em;
-    line-height: 1;
-  }
+    #albumlabel {
+        font-size: 1.1em;
+        line-height: 1;
+    }
 }
 
 #albumlabel {
-   font-family: 'Satoshi', sans-serif;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    font-family: 'Satoshi', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-
 #albumyear {
-   text-align: center;
-   margin: 0;
-   font-size: 0.7em;
-   vertical-align: text-top;
+    text-align: center;
+    margin: 0;
+    font-size: 0.7em;
+    vertical-align: text-top;
 }
 
 .charttitle {
-   display: block;
-   font-family: 'Satoshi', sans-serif;
-   margin: 0px 5px;
-   line-height: 1.05em;
+    display: block;
+    font-family: 'Satoshi', sans-serif;
+    margin: 0 5px;
+    line-height: 1.05em;
 }
 
 .wrapper {
-   margin: 30px auto;
-   display: flex;
-   justify-content: center;
-   max-width: 95%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    max-width: 95%;
 }
 
 #sbychart {
-   max-width: 100%;
-   margin: auto;
-   display: block;
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
 
 #sbtchart {
-   max-width: 100%;
-   margin: auto;
-   display: block;
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
 
 #allbites {
-   margin: 60px auto;
-   max-width: 100%;
-   /*min-width: 720px;*/
-   display: flex;
-   justify-content: center;
-   align-content: center;
-   flex-direction: column;
+    margin: 60px auto;
+    max-width: 100%;
+    /*min-width: 720px;
+    */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .fourbites {
-   flex-basis: auto;
-   display: flex;
-   justify-content: center;
-   align-content: center;
+    flex-basis: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .bite {
-   position: relative;
-   text-align: center;
-   margin: 0;
-   display: inline;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    display: inline;
 }
 
 .largerbite {
-   width: 100%;
-   max-width: 360px;
+    width: 100%;
+    max-width: 360px;
 }
 
 .bitelabel {
-   font-family: 'Satoshi', sans-serif;
-   color: #444;
-   font-weight: 400;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   font-size: 0.8em;
-   line-height: 1;
+    font-family: 'Satoshi', sans-serif;
+    color: #444;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8em;
+    line-height: 1;
 }
 
- @media screen and (min-width: 960px){
-     .gatefold {
-         font-family: 'Satoshi', sans-serif;
-         font-weight: 700;
-         margin: 30px auto;
-         width: 100%; 
-         display: flex;
-         justify-content: center;
-         flex-direction: row;
-         flex-wrap: wrap;
-         max-width: 1080px;
+@media screen and (min-width: 960px) {
+    .gatefold {
+        font-family: 'Satoshi', sans-serif;
+        font-weight: 700;
+        margin: 30px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1080px;
     }
 }
 
 .gatefoldcredit {
-   display: flex;
-   align-items: flex-start;
-   align-content: flex-start;
-   flex: 1 1 50%;
-   font-weight: bold;
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex: 1 1 50%;
+    font-weight: bold;
 }
 
 .gatefoldbite {
-   flex: 1 1 20%;
-   position: relative;
-   text-align: center;
-   margin: 0;
-   width: 100%;
-   padding: 15px 0px;
+    flex: 1 1 20%;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    padding: 15px 0;
 }
 
-
 @media only screen and (max-width: 2400px) {
-  .gatefoldbitelabel {
-    font-size: 1em;
-    line-height: 1.2;
-  }
+    .gatefoldbitelabel {
+        font-size: 1em;
+        line-height: 1.2;
+    }
 }
 
 @media only screen and (max-width: 480px) {
-  .gatefoldbitelabel {
-    font-size: 0.7em;
-    line-height: 0.9;
-  }
+    .gatefoldbitelabel {
+        font-size: 0.7em;
+        line-height: 0.9;
+    }
 }
 
 .gatefoldbitelabel {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   width: 60%;
-   transform: translate(-50%, -50%);
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    transform: translate(-50%, -50%);
 }
 
 .gatefoldsongs {
-   flex: 1 1 30%;
-   width: 100%;
-   padding: 15px 30px;
-   font-size: 0.7em;
+    flex: 1 1 30%;
+    padding: 15px 30px;
+    font-size: 0.7em;
 }
 
 .credit {
-   font-weight: 900;
-   padding: 1px 0px;
-   display: block;
-   margin: 1px;
+    font-weight: 900;
+    padding: 1px 0;
+    display: block;
+    margin: 1px;
 }
 
 .sourcenote {
-   font-weight: 600;
+    font-weight: 600;
 }
 
 .gatefoldnotes {
-   flex: 2 1 360px;
-   font-weight: 400;
-   padding: 15px auto;
-   font-size: 0.9em;
+    flex: 2 1 360px;
+    font-weight: 400;
+    padding: 15px auto;
+    font-size: 0.9em;
 }
 
 .btn,
@@ -429,28 +422,28 @@ h4.whatis span {
 .collapsed,
 .collapsing,
 .collapsing:active {
-   padding: 0px;
-   background-color: transparent;
-   border: 0px solid transparent;
-   font-size: inherit;
-   line-height: inherit;
-   outline: 0px solid transparent;
-   box-shadow: none;
-   border-radius: 0px;
+    padding: 0;
+    background-color: transparent;
+    border: 0 solid transparent;
+    font-size: inherit;
+    line-height: inherit;
+    outline: 0 solid transparent;
+    box-shadow: none;
+    border-radius: 0;
 }
 
 footer {
-   font-family: 'Satoshi', sans-serif;
-   margin: 100px auto 30px auto;
-   width: 100%;
-   max-width: 576px;
-   text-align: left;
-   border: 1px solid;
-   border-color: var(--hiphop);
-   border-radius: 30px;
-   padding: 5px;
-   color: #262254;
-   font-size: 0.85em;
-   line-height: 1.3;
-   background-color: #EABECE;
+    font-family: 'Satoshi', sans-serif;
+    margin: 100px auto 30px auto;
+    width: 100%;
+    max-width: 576px;
+    text-align: left;
+    border: 1px solid;
+    border-color: var(--hiphop);
+    border-radius: 30px;
+    padding: 5px;
+    color: #262254;
+    font-size: 0.85em;
+    line-height: 1.3;
+    background-color: #EABECE;
 }
