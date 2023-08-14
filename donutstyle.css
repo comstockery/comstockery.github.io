@@ -5,12 +5,13 @@
   --rock: #0E2D81;
   --soul: #6A3B93;
   --unknown: #aaa;
+  --background: #eeeaea;
 }
 
 body {
    font-family: 'Quicksand', sans-serif;
    font-size: 18px;
-   background-color: #eeeaea;
+   background-color: var(--background);
    margin: auto;
    max-width: 1280px;
    min-width: 350px;
@@ -36,7 +37,7 @@ h6 {
    text-align: center;
    font-family: 'Satoshi', sans-serif;
    font-weight: 600;
-   margin: 15px 5px 5px 5px;
+   margin: 10px 5px 10px 5px;
 }
 
 img {
@@ -61,6 +62,46 @@ span {
    box-sizing: border-box;
 }
 
+.whatisbtn {
+   margin: 15px auto;
+   display: flex;
+   justify-content: center;
+}
+
+h4.whatis {
+  color: #999;
+  width: 100%;
+  text-align: center; 
+  border-bottom: 1px solid #bbb; 
+  line-height: 0.1em;
+  margin: 10px 0px; 
+}
+
+h4.whatis span {
+    background: var(--background);
+    padding: 0 5px;
+    margin: 0 100px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+#donutexplained {
+   margin: 0px auto;
+   width: 60%;
+   max-width: 800px;
+   min-width: 350px;
+   background-color: var(--background);
+   font-size: 0.85em;
+}
+
+#donutexplained p {
+  margin: 0px;
+  padding: 5px;
+}
+
+#donutexcontainer {
+  padding-bottom: 20px;
+}
 
 @media only screen and (max-width: 2400px) {
   #stickylegend {
@@ -88,7 +129,7 @@ span {
    flex-wrap: wrap;
    align-content: flex-start;
    gap: 0px;
-   background-color: #eeeaea;
+   background-color: var(--background);
 }
 
 .legend {
@@ -104,19 +145,6 @@ span {
 #legendlabel {
    color: #333;
 }
-
-
-/* Set the color scheme for genres 
-:root {
-  --electronic: #E79556;
-  --hiphop: #EC4176;
-  --other: #A13670;
-  --rock: #12348D;
-  --soul: #9043C3;
-  --unknown: #aaa;
-}
-*/
-
 
 
 .electronic {
@@ -397,6 +425,7 @@ span {
 .btn:focus,
 .btn:visited,
 .btn:focus-visible,
+.collapse,
 .collapsed,
 .collapsing,
 .collapsing:active {
@@ -412,16 +441,16 @@ span {
 
 footer {
    font-family: 'Satoshi', sans-serif;
-   margin: 150px auto 30px auto;
+   margin: 100px auto 30px auto;
    width: 100%;
-   max-width: 540px;
+   max-width: 576px;
    text-align: left;
    border: 1px solid;
    border-color: var(--hiphop);
    border-radius: 30px;
-   padding: 15px;
+   padding: 5px;
    color: #262254;
-   font-size: 0.9em;
-   line-height: 1.2;
+   font-size: 0.85em;
+   line-height: 1.3;
    background-color: #EABECE;
 }

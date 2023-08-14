@@ -4,12 +4,21 @@
         <title>SAMPLING DONUTS</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="A visual exploration of the use of samples on J Dilla's instrumental hip-hop album Donuts.">
         <link rel="icon" type="image/x-icon" href="donut.ico">
         <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
         <link href="https://api.fontshare.com/css?f[]=satoshi@400,700,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script type="application/ld+json">
+            {
+              "@context" : "https://schema.org",
+              "@type" : "WebSite",
+              "name" : "Sampling Donuts",
+              "url" : "https://www.samplingdonuts.com/"
+            }
+        </script>
         <link rel="stylesheet" type="text/css" href="donutstyle.css">
     </head>
     <body>
@@ -24,6 +33,17 @@
             </div>
         </div>
         
+        <button class="whatisbtn btn" type="button" data-toggle="collapse" data-target="#donutexplained" aria-expanded="false" aria-controls="donutexplained">
+          <h4 class="whatis"><span>what is this?</span></h4>
+        </button>        
+        
+        <div class = "collapse" id  = "donutexplained">
+          <div id = "donutexcontainer">
+              <p>The visualization above presents the album <em>Donuts</em> as both a <strong>record</strong> and a <strong>donut</strong>. The record is divided into 31 <strong>slices</strong>, one for each track on the album, and ordered clockwise starting at the 12:00 position. The width of each slice is based on the <strong>running time</strong> of each track.</p>
+              <p>Within each track, sampled songs are placed in a way that resemble donut sprinkles. The position of each sprinkle represents its <strong>release year</strong>, with older songs closer to the outside edge and newer songs closer to the inner edge.</p>
+              <p>The color of each sprinkle represents the <strong>genre</strong> of the sampled material, based on the legend below. Unidentified samples are not shown, as their release years are unknown.</p>
+        </div>
+        </div>
         <div id = "stickylegend">
             <span class="legend" id = "legendlabel">sampled genres:</span>
             <span class="legend electronic">electronic / dance</span>
@@ -89,9 +109,13 @@
             <p>By categorizing the <strong>genre</strong> and <strong>type</strong> of each sample instance, we start to see the composition of each track.</p>
             <p>The final attribute&mdash;<strong>time</strong>&mdash;places each sample instance at its location within the track. In each of the images below, sample instances are placed in <strong>three grooves</strong> representing the three types of samples in Sewell's typology. The <strong>position</strong> and <strong>length</strong> of each instance within these grooves represents its timing and duration.</p>
             <p>These visuals are based in part on <a target="_blank" href="./adam-krims-layering-graph.png">layering graphs</a>, a notation for sample-based hip-hop developed by Adam Krims in his 2000 book <a target="_blank" href="https://www.amazon.com/Poetics-Identity-Perspectives-History-Criticism/dp/0521634474"><em>Rap Music and the Poetics of Identity</em></a>.</p>
-            <p>Each of the 31 tracks below are shown as circular layering graphs. Clicking any individual track reveals liner notes that list the sampled songs and contain interesting details about the samples.</p>
-            <p>Or you can <a data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">explore all the donuts at once!</a></p>
+            <p>Each of the 31 tracks below are shown as circular layering graphs. Click any individual track to reveal <strong>liner notes</strong> about each track and its samples.</p>
         </div>
+        
+        <button class="whatisbtn btn" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">
+          <h4 class="whatis"><span>show all liner notes</span></h4>
+        </button>  
+        
         <div id = "allbites">
             <div class = "fourbites">
                 <button class="btn" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="allnotes">
@@ -885,10 +909,11 @@
             </div>            
         </div>
         </div>
+        
         <footer>
             <p><em><strong>Sampling Donuts</strong></em> was made by <a target="_blank" href="mailto:owen.comstock@gmail.com?subject=Sampling Donuts!">Owen Comstock</a>.</p>
-            <p>Sampled song data came from 90-something WhoSampled pages, which were mostly correct. Each sample instance's type and timing attributes were assigned and transcribed while listening to <em>Donuts</em> at least a thousand times.</p>
-            <p>All visualizations were made in R with <a target="_blank" href="https://ggplot2.tidyverse.org/">ggplot2</a> and presented here with HTML and CSS. The code is available at my <a target="_blank" href="https://github.com/comstockery/comstockery.github.io">GitHub repository</a>. As a self-imposed constraint, this project did not involve Excel or Illustrator.</p>
+            <p>Sampled song data mostly came from 90-something WhoSampled pages, with minor modifications for accuracy and consistency. Each sample instance's type and timing attributes were assigned and transcribed while listening to <em>Donuts</em> at least a thousand times.</p>
+            <p>All visualizations were made in R with <a target="_blank" href="https://ggplot2.tidyverse.org/">ggplot2</a> and presented here with HTML and CSS. The code is available at my <a target="_blank" href="https://github.com/comstockery/comstockery.github.io">GitHub repository</a>. As a self-imposed constraint, this project did not involve Microsoft Excel or Adobe Illustrator.</p>
             <p>What began as a series of sketches in April 2020 was completed in December 2022 as the <a target="_blank" href="https://www.mica.edu/offices-divisions/office-of-open-studies/mps-programs/mps-capstones/student/owen-comstock/">capstone project</a> for the Data Analytics and Visualization program at the <a target="_blank" href="https://www.mica.edu/">Maryland Institute College of Art</a>.</p>
             <p>Many thanks to those who provided encouragement, feedback, and guidance as I was WORKINONIT!</p>
             <p>If you like this and want to see more, maybe <a target="_blank" href="https://www.buymeacoffee.com/samplingdonuts">buy me a donut</a>?</p>

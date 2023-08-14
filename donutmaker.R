@@ -14,7 +14,7 @@ datamaker = TRUE; # TRUE at the start of a session; otherwise FALSE
 donutmaker = TRUE; # TRUE to generate main album donut; otherwise FALSE
 barmaker = TRUE; # TRUE to generate secondary (count) graphs; otherwise FALSE
 bitemaker = TRUE; # TRUE for the track-by-track donut bites; otherwise FALSE
-linermaker = FALSE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
+linermaker = TRUE; # TRUE to generate the HTML for donut bite liner notes; otherwise FALSE
 
 
 # Define color palette (NA values are defined separately)
@@ -206,7 +206,7 @@ donutrecord <- ggplot(df1) +
         axis.ticks = element_blank(),
         axis.text.y = element_blank(),
         panel.grid  = element_blank(),
-        plot.margin = unit(rep(-0.5,4), "inches"))
+        plot.margin = unit(rep(-0.82,4), "inches"))
 
 print(donutrecord)
 
@@ -232,24 +232,24 @@ samplesbyyear <- ggplot(df2,
   geom_bar(color = "gray88", linewidth = 0.5) +
   # Add vertical line for Donuts release
   geom_segment(x = 2006, xend = 2006, 
-               y = 0, yend = 8,
+               y = 0, yend = 9,
                color = "gray66", linewidth = 0.1, linetype = 'solid') +
   # Add vertical label for when Donuts was released
   geom_richtext(data = data.frame(),
-                mapping = aes(x = 2006, y = 7.8, 
+                mapping = aes(x = 2006, y = 8.8, 
                             label = '<em>Donuts</em><br>released<br>(2006)',
                             angle = 0,
                             hjust = 1.1, vjust = 1), 
               color = 'gray55', fill = NA,
               label.color = NA,
-              size = 4,
+              size = 3.5,
               label.padding = unit(rep(0, 4), "pt")) +
   # Add color mapping
   scale_fill_manual(values = colorvalues, na.value = navalue) + 
   # Remove any gaps around the plot edge 
-  scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 1)) +
-  scale_y_continuous(limits = c(0, 8), expand = expansion(add = c(0, 1)),
-                     breaks = seq(0, 8, 2)) +
+  scale_x_continuous(limits = c(1955, 2006), expand = expansion(0, 0)) +
+  scale_y_continuous(limits = c(0, 9), expand = expansion(0, 0),
+                     breaks = seq(0, 9, 1)) +
   # Set up theme
   theme_minimal() +
   theme(legend.position = 'none',
@@ -304,7 +304,6 @@ samplesbytype <- ggplot(df3) +
         legend.position = 'none',
         panel.grid = element_blank(),
         panel.grid.major.y = element_line(color = 'gray77', linewidth = 0.4),
-        # panel.border = element_rect(color = 'gray55', fill = NA, linewidth = 0.8),
         panel.spacing.x = unit(1.3, 'lines'),
         strip.text.x = element_text(size=12, face='bold'),
         strip.clip = 'off') 
