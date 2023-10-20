@@ -6,6 +6,7 @@
     --soul: #6A3B93;
     --unknown: #aaa;
     --background: #eeeaea;
+    --award: 106, 59, 147;
 }
 
 body {
@@ -13,9 +14,15 @@ body {
     font-size: 18px;
     background-color: var(--background);
     margin: auto;
-    max-width: 1280px;
     min-width: 350px;
     color: #333;
+}
+
+#award {
+    text-align: center;
+    background-color: rgba(var(--award), 0.5);
+    font-size: 0.9em;
+    padding: 3px;
 }
 
 h1 {
